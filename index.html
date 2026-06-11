@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pavn31 | Portfolio</title>
+
+<link rel="icon" href="PFP.webp">
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Space Grotesk',sans-serif;
+    background:#0b0b0b;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter:blur(10px);
+    background:rgba(11,11,11,0.8);
+    border-bottom:1px solid #222;
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:700;
+    color:white;
+    text-decoration:none;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    opacity:0.6;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero-profile{
+    margin-bottom:30px;
+}
+
+.hero-profile img{
+    width:240px;
+    height:240px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid rgba(255,255,255,0.1);
+    transition:0.4s ease;
+}
+
+.hero-profile img:hover{
+    transform:scale(1.05);
+}
+
+.hero h1{
+    font-size:6rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:700px;
+    color:#999;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.hero-btns{
+    display:flex;
+    gap:20px;
+}
+
+.btn{
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:50px;
+    transition:0.3s;
+}
+
+.primary{
+    background:white;
+    color:black;
+}
+
+.secondary{
+    border:1px solid #333;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+/* SECTIONS */
+
+section{
+    padding:120px 10%;
+}
+
+.section-title{
+    font-size:3rem;
+    margin-bottom:40px;
+}
+
+/* PROJECTS */
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#111;
+    border:1px solid #222;
+    border-radius:20px;
+    padding:30px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#444;
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#999;
+    line-height:1.7;
+}
+
+/* ABOUT */
+
+.about-text{
+    max-width:850px;
+    color:#999;
+    line-height:2;
+}
+
+/* CONTACT */
+
+.contact-box{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.contact-box a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:white;
+    background:#111;
+    border:1px solid #222;
+    padding:15px 25px;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.contact-box a:hover{
+    transform:translateY(-5px);
+    border-color:#444;
+}
+
+.contact-box i{
+    font-size:1.3rem;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#777;
+    border-top:1px solid #222;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        gap:20px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:3.5rem;
+    }
+
+    .hero-profile img{
+        width:180px;
+        height:180px;
+    }
+
+    .hero-btns{
+        flex-direction:column;
+    }
+
+    .section-title{
+        font-size:2.2rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="#" class="logo">Pavn31</a>
+
+    <nav class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-profile">
+        <img src="assets/PFP.jpg" alt="Pavan Profile">
+    </div>
+
+    <h1>Pavn31</h1>
+
+    <p>
+        AI & Data Science student passionate about software development,
+        machine learning, and building innovative solutions that create
+        real-world impact.
+    </p>
+
+    <div class="hero-btns">
+        <a href="#projects" class="btn primary">View Projects</a>
+        <a href="#contact" class="btn secondary">Contact</a>
+    </div>
+
+</section>
+
+<section id="projects">
+
+    <h2 class="section-title">Projects</h2>
+
+    <div class="card-grid">
+      <div class="card"
+        onclick="window.open('https://github.com/Pavn31/Smart-Blind-Stick', '_blank')">
+
+        <h3>Smart Blind Stick</h3>
+
+        <p>
+         An Arduino-based smart blind stick designed to assist visually impaired individuals using obstacle detection, GPS tracking, GSM alerts, and voice guidance.
+        </p>
+
+      </div>
+
+    </div>
+
+</section>
+
+<section id="blog">
+
+    <h2 class="section-title">Blog</h2>
+
+    <div class="card-grid">
+    </div>
+
+</section>
+
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <p class="about-text">
+        I'm Pavan, an AI & Data Science student who enjoys building projects,
+        learning new technologies, and turning ideas into real-world solutions.
+        My interests include software development, artificial intelligence,
+        machine learning, and modern web design.
+    </p>
+
+</section>
+
+<section id="contact">
+
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact-box">
+
+        <a href="https://github.com/Pavn31" target="_blank">
+            <i class="fab fa-github"></i>
+            GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/pavn-badiger/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+            LinkedIn
+        </a>
+
+        <a href="mailto:pavnbadiger@gmail.com">
+          <i class="fas fa-envelope"></i>
+          Gmail
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Pavn31. All Rights Reserved.
+</footer>
+
+</body>
+</html>
