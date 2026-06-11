@@ -60,38 +60,7 @@ Add your screenshot below:
 
 
 ![Portfolio Preview](assets/Portfolio-ss.png)
-```
 
----
-
-## 🚀 Featured Projects
-
-### Smart Blind Stick
-An IoT-based assistive system designed to help visually impaired individuals navigate safely using ultrasonic sensors, GPS tracking, and emergency alerts.
-
-### Personal Portfolio Website
-A modern portfolio website showcasing projects, technical skills, certifications, blogs, and contact information.
-
-### AI & Data Science Projects
-A collection of beginner-to-intermediate machine learning and data science projects demonstrating practical applications of AI.
-
----
-
-## 🏆 Certifications
-
-- Cisco Networking Academy
-- Python Programming
-- AI & Data Science Courses
-- Additional certifications available on the portfolio website
-
----
-
-## 📫 Connect With Me
-
-- GitHub: https://github.com/Pavn31
-- LinkedIn: [https://linkedin.com/in/](https://www.linkedin.com/in/pavn-badiger/)
-- Email: pavnbadiger@gmail.com
----
 
 ## 💻 Running Locally
 
