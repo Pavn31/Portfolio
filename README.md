@@ -68,11 +68,13 @@ You can easily customize:
 * Social media links
 * Contact details
 
-## 📬 Contact
+## 🌐 Connect With Me
 
-Feel free to connect with me for collaborations, projects, or opportunities.
-
-* Website: [https://www.pavn31.dpdns.org/](https://www.pavn31.dpdns.org/)
-
+<p align="left">
+  <a href="https://github.com/Pavn31">GitHub</a> •
+  <a href="https://www.linkedin.com/in/pavn-badiger/">LinkedIn</a> •
+  <a href="mailto:pavnbadiger@gmail.com">Gmail</a>
+  <a href="https://pavn31.dpdns.org/">Portfolio</a>
+</p>
 
 ⭐ If you like this project, consider giving it a star!
