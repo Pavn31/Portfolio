@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Building a Smart Blind Stick Using Arduino | Pavn31</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Space Grotesk',sans-serif;
+    background:#0b0b0b;
+    color:white;
+    line-height:1.8;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:80px 30px;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:40px;
+    text-decoration:none;
+    color:#999;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    color:white;
+}
+
+h1{
+    font-size:4rem;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.meta{
+    color:#777;
+    margin-bottom:50px;
+}
+
+.tags{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:60px;
+}
+
+.tag{
+    padding:8px 14px;
+    border:1px solid #222;
+    border-radius:50px;
+    color:#bbb;
+    font-size:0.9rem;
+}
+
+h2{
+    margin-top:60px;
+    margin-bottom:20px;
+    font-size:2rem;
+}
+
+p{
+    color:#bdbdbd;
+    margin-bottom:20px;
+}
+
+ul{
+    margin-left:25px;
+    color:#bdbdbd;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+.github-btn{
+    display:inline-block;
+    margin-top:50px;
+    text-decoration:none;
+    background:white;
+    color:black;
+    padding:15px 25px;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.github-btn:hover{
+    transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.5rem;
+    }
+
+    .container{
+        padding:60px 20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <a href="../index.html" class="back-btn">
+        ← Back to Portfolio
+    </a>
+
+    <h1>Building a Smart Blind Stick Using Arduino</h1>
+
+    <div class="meta">
+        Published June 2026.
+    </div>
+
+    <div class="tags">
+        <span class="tag">Arduino</span>
+        <span class="tag">IoT</span>
+        <span class="tag">Embedded Systems</span>
+        <span class="tag">Accessibility</span>
+    </div>
+
+    <h2>Introduction</h2>
+
+    <p>
+        Technology can play a significant role in improving accessibility and independence for people with disabilities. As part of my engineering journey, I developed a Smart Blind Stick designed to assist visually impaired individuals by providing obstacle detection, location tracking, and emergency communication features.
+        This project combines sensors, communication modules, and embedded programming to create a practical assistive device that enhances safety and mobility.
+    </p>
+
+    <h2>Problem Statement</h2>
+
+    <p>
+        Traditional white canes help users detect nearby obstacles but have limitations when it comes to identifying hazards
+        at a distance or sharing location information during emergencies.
+    </p>
+
+    <p>
+        The objective of this project was to develop a smart assistive device capable of:
+    </p>
+    <ul>
+        <li>Detecting obstacles in real time</li>
+        <li>Alerting users through audio notifications</li>
+        <li>Providing GPS-based location tracking</li>
+        <li>Sending emergency alerts through GSM communication</li>
+    </ul>
+
+    <h2>Components Used</h2>
+
+    <ul>
+        <li>Arduino UNO</li>
+        <li>HC-SR04 Ultrasonic Sensor</li>
+        <li>SIM800L GSM Module</li>
+        <li>GPS Module</li>
+        <li>Buzzer</li>
+        <li>Battery Power Supply</li>
+        <li>Connecting Wires</li>
+    </ul>
+
+    <h2>How It Works</h2>
+
+    <p>
+        The ultrasonic sensor continuously measures the distance between the user and nearby obstacles.
+        When an object is detected within a predefined range, the Arduino processes the sensor data and triggers an alert.
+    </p>
+
+    <p>
+        In emergency situations, the GPS module retrieves the user's coordinates and the GSM module sends
+        the location through SMS to family members or caregivers.
+    </p>
+
+    <h2>Challenges Faced</h2>
+
+    <p>
+        One of the biggest challenges was providing a stable power supply to the GSM module.
+        The SIM800L requires sufficient current during transmission, making power management important.
+    </p>
+
+    <p>
+        Additional challenges included sensor accuracy, serial communication handling, and integrating multiple modules into a single system.
+    </p>
+
+    <h2>What I Learned</h2>
+
+    <ul>
+        <li>Arduino Programming</li>
+        <li>Embedded Systems Development</li>
+        <li>Sensor Integration</li>
+        <li>GPS & GSM Communication</li>
+        <li>Hardware Debugging</li>
+        <li>Project Documentation</li>
+    </ul>
+
+    <h2>Future Improvements</h2>
+
+    <ul>
+        <li>Voice Navigation Assistance</li>
+        <li>Bluetooth Connectivity</li>
+        <li>Mobile Application Integration</li>
+        <li>Rechargeable Battery System</li>
+        <li>AI-Based Object Recognition</li>
+        <li>Cloud-Based Location Tracking</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+
+    <p>
+        The Smart Blind Stick project was an excellent opportunity to apply embedded systems concepts to a meaningful real-world problem.
+        By integrating obstacle detection, GPS tracking, and GSM communication, the device provides additional support and safety for visually impaired individuals.
+    </p>
+
+    <p>
+        This project strengthened my technical skills while reinforcing my interest in building technology that creates a positive impact on society.
+    </p>
+
+    <a href="https://github.com/Pavn31/Smart-Blind-Stick" target="_blank" class="github-btn">
+        View Project on GitHub
+    </a>
+
+</div>
+
+</body>
+</html>
