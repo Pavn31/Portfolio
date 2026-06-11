@@ -58,7 +58,7 @@ portfolio/
 
 Add your screenshot below:
 
-```md
+
 ![Portfolio Preview](assets/Portfolio-SS.png)
 ```
 
