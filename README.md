@@ -68,13 +68,11 @@ You can easily customize:
 * Social media links
 * Contact details
 
-## 🌐 Connect With Me
+## 🔗 Connect With Me
 
-<p align="left">
-  <a href="https://github.com/Pavn31">GitHub</a> •
-  <a href="https://www.linkedin.com/in/pavn-badiger/">LinkedIn</a> •
-  <a href="mailto:pavnbadiger@gmail.com">Gmail</a> •
-  <a href="https://pavn31.dpdns.org/">Portfolio</a> •
-</p>
+- 🔗 Portfolio: [https://pavn31.dpdns.org/](https://pavn31.dpdns.org/)
+- 🐙 GitHub: [https://github.com/Pavn31](https://github.com/Pavn31)
+- 💼 LinkedIn: [https://www.linkedin.com/in/pavn-badiger/](https://www.linkedin.com/in/pavn-badiger/)
+- 📧 Gmail: pavnbadiger@gmail.com
 
 ⭐ If you like this project, consider giving it a star!
