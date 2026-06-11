@@ -59,7 +59,7 @@ portfolio/
 Add your screenshot below:
 
 
-![Portfolio Preview](assets/Portfolio-SS.png)
+![Portfolio Preview](assets/Portfolio-ss.png)
 ```
 
 ---
