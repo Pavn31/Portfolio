@@ -73,8 +73,8 @@ You can easily customize:
 <p align="left">
   <a href="https://github.com/Pavn31">GitHub</a> •
   <a href="https://www.linkedin.com/in/pavn-badiger/">LinkedIn</a> •
-  <a href="mailto:pavnbadiger@gmail.com">Gmail</a>
-  <a href="https://pavn31.dpdns.org/">Portfolio</a>
+  <a href="mailto:pavnbadiger@gmail.com">Gmail</a> •
+  <a href="https://pavn31.dpdns.org/">Portfolio</a> •
 </p>
 
 ⭐ If you like this project, consider giving it a star!
