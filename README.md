@@ -69,11 +69,11 @@ An Arduino-powered assistive device designed to help visually impaired individua
 
 ### Dark Mode
 
-<img src="assets/dark-preview.png" alt="Dark Mode Preview" width="100%">
+<img src="assets/Dark-Preview.png" alt="Dark Mode Preview" width="100%">
 
 ### Light Mode
 
-<img src="assets/light-preview.png" alt="Light Mode Preview" width="100%">
+<img src="assets/White-Preview.png" alt="Light Mode Preview" width="100%">
 
 ---
 
