@@ -1,7 +1,7 @@
 // =========================
 // SMOOTH SCROLL ACTIVE LINKS
 // =========================
-console.log("JS LOADED");
+
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-links a");
 
@@ -45,10 +45,10 @@ const revealOnScroll = () => {
         const windowHeight = window.innerHeight;
         const elementTop = el.getBoundingClientRect().top;
 
-        if(link.getAttribute("href") === `#${current}`){
-            console.log("ACTIVE:", current);
-            link.classList.add("active");
-}
+        if(elementTop < windowHeight - 100){
+            el.classList.add("show");
+        }
+
     });
 
 };
