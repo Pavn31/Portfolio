@@ -1,4 +1,4 @@
-````md
+
 # ✨ Pavn31 Portfolio
 
 > A modern, responsive portfolio website built to showcase my projects, blogs, and journey in AI & Data Science.
@@ -99,4 +99,3 @@ If you found this project useful, consider giving it a star.
 <p align="center">
   Made with ❤️ by <strong>Pavan</strong>
 </p>
-```
