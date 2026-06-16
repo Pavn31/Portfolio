@@ -24,22 +24,34 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 html{
     scroll-behavior:smooth;
 }
-:root {
-    --bg-color: #0b0b0b;
-    --text-color: white;
+:root{
+    --bg-color:#0b0b0b;
+    --text-color:#ffffff;
+    --secondary-text:#a1a1aa;
+    --nav-bg:rgba(11,11,11,0.8);
+    --button-bg:#ffffff;
+    --button-text:#000000;
+    --card-bg:#111;
+    --card-border:#222;
 }
 
-.light-mode {
-    --bg-color: #ffffff;
-    --text-color: #111827;
+.light-mode{
+    --bg-color:#f8fafc;
+    --text-color:#111827;
+    --secondary-text:#4b5563;
+    --nav-bg:rgba(255,255,255,0.8);
+    --button-bg:#111827;
+    --button-text:#ffffff;
+    --card-bg:#ffffff;
+    --card-border:#d1d5db;
 }
 
 body{
     font-family:'Space Grotesk',sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
+    background:var(--bg-color);
+    color:var(--text-color);
     overflow-x:hidden;
-    transition: all 0.3s ease;
+    transition:.3s ease;
 }
 
 /* NAVBAR */
@@ -54,31 +66,37 @@ body{
     justify-content:space-between;
     align-items:center;
     backdrop-filter:blur(10px);
-    background:rgba(11,11,11,0.8);
-    border-bottom:1px solid #222;
+    background:var(--nav-bg);
+    border-bottom:1px solid rgba(128,128,128,0.2);
     z-index:1000;
 }
 
 .logo{
     font-size:1.4rem;
     font-weight:700;
-    color:white;
+    color:var(--text-color);
     text-decoration:none;
 }
 
 .nav-links{
     display:flex;
+    align-items: center;
     gap:30px;
 }
-
+#theme-toggle{
+    background:none;
+    border:none;
+    cursor:pointer;
+    font-size:1.2rem;
+}
 .nav-links a{
     text-decoration:none;
-    color:white;
+    color:var(--text-color);
     transition:0.3s;
 }
 
 .nav-links a:hover{
-    opacity:0.6;
+    opacity:0.7;
 }
 
 /* HERO */
@@ -113,15 +131,15 @@ body{
 .hero h1{
     font-size:6rem;
     margin-bottom:15px;
+    color:var(--text-color);
 }
 
 .hero p{
     max-width:700px;
-    color:#999;
+    color:var(--secondary-text);
     line-height:1.8;
     margin-bottom:40px;
 }
-
 .hero-btns{
     display:flex;
     gap:20px;
@@ -135,13 +153,13 @@ body{
 }
 
 .primary{
-    background:white;
-    color:black;
+    background:var(--button-bg);
+    color:var(--button-text);
 }
 
 .secondary{
-    border:1px solid #333;
-    color:white;
+    border:1px solid var(--text-color);
+    color:var(--text-color);
 }
 
 .btn:hover{
@@ -168,8 +186,8 @@ section{
 }
 
 .card{
-    background:#111;
-    border:1px solid #222;
+    background:var(--card-bg);
+    border:1px solid var(--card-border);
     border-radius:20px;
     padding:30px;
     transition:0.3s;
@@ -185,7 +203,7 @@ section{
 }
 
 .card p{
-    color:#999;
+    color:var(--secondary-text);
     line-height:1.7;
 }
 .card img{
@@ -198,7 +216,7 @@ section{
 
 .about-text{
     max-width:850px;
-    color:#999;
+    color:var(--secondary-text);
     line-height:2;
 }
 
@@ -216,9 +234,11 @@ section{
     align-items:center;
     gap:10px;
     text-decoration:none;
-    color:white;
-    background:#111;
-    border:1px solid #222;
+
+    color:var(--text-color);
+    background:var(--card-bg);
+    border:1px solid var(--card-border);
+
     padding:15px 25px;
     border-radius:15px;
     transition:0.3s;
@@ -238,10 +258,9 @@ section{
 footer{
     text-align:center;
     padding:40px;
-    color:#777;
-    border-top:1px solid #222;
+    color:var(--secondary-text);
+    border-top:1px solid var(--card-border);
 }
-
 /* MOBILE */
 
 @media(max-width:768px){
@@ -277,7 +296,7 @@ footer{
 .blog-link{
     display:inline-block;
     margin-top:20px;
-    color:white;
+    color:var(--text-color);
     text-decoration:none;
     font-weight:600;
 }
@@ -303,12 +322,14 @@ footer{
 <header class="navbar">
 
     <a href="#" class="logo">Pavn31</a>
-    <button id="theme-toggle">🌙</button>
+
     <nav class="nav-links">
         <a href="#projects">Projects</a>
         <a href="#blog">Blog</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
+
+        <button id="theme-toggle">🌙</button>
     </nav>
 
 </header>
@@ -378,7 +399,7 @@ footer{
 
         </div>
         <div class="card">
-            <span class="card-grid">02</span>
+            <span class="card-number">02</span>
 
             <h3>The Race Nobody Wins: How Toxic Competition Is Breaking Students</h3>
 
@@ -439,13 +460,22 @@ footer{
 <script>
 const toggleBtn = document.getElementById("theme-toggle");
 
-toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
+if(localStorage.getItem("theme") === "light"){
+    toggleBtn.textContent = "🌙";
+} else {
+    document.body.classList.add("dark-mode");
+    toggleBtn.textContent = "☀️";
+}
 
-    if(document.body.classList.contains("light-mode")){
-        toggleBtn.textContent = "🌙";
-    } else {
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+        localStorage.setItem("theme","dark");
         toggleBtn.textContent = "☀️";
+    } else {
+        localStorage.setItem("theme","light");
+        toggleBtn.textContent = "🌙";
     }
 });
 </script>

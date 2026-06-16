@@ -7,22 +7,29 @@
 html{
     scroll-behavior:smooth;
 }
-:root {
-    --bg-color: #0b0b0b;
-    --text-color: white;
+:root{
+    --bg-color:#ffffff;
+    --text-color:#111111;
+    --card-bg:#f4f4f4;
+    --nav-bg:rgba(255,255,255,0.9);
+    --border-color:#ddd;
+    --muted:#666;
 }
 
-.light-mode {
-    --bg-color: #ffffff;
-    --text-color: #111827;
+.dark-mode{
+    --bg-color:#0b0b0b;
+    --text-color:#ffffff;
+    --card-bg:#111111;
+    --nav-bg:rgba(11,11,11,0.8);
+    --border-color:#222;
+    --muted:#999;
 }
-
 body{
     font-family:'Space Grotesk',sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
+    background:var(--bg-color);
+    color:var(--text-color);
     overflow-x:hidden;
-    transition: all 0.3s ease;
+    transition: .3s ease;
 }
 
 /* NAVBAR */
@@ -45,7 +52,7 @@ body{
 .logo{
     font-size:1.4rem;
     font-weight:700;
-    color:white;
+    color:var(--text-color);
     text-decoration:none;
 }
 
@@ -56,7 +63,7 @@ body{
 
 .nav-links a{
     text-decoration:none;
-    color:white;
+    color:var(--text-color);
     transition:0.3s;
 }
 
@@ -100,7 +107,7 @@ body{
 
 .hero p{
     max-width:700px;
-    color:#999;
+    color:var(--muted);
     line-height:1.8;
     margin-bottom:40px;
 }
@@ -118,13 +125,13 @@ body{
 }
 
 .primary{
-    background:white;
-    color:black;
+    background:var(--text-color);
+    color:var(--bg-color);
 }
 
 .secondary{
-    border:1px solid #333;
-    color:white;
+    border:1px solid var(--border-color);
+    color:var(--text-color);
 }
 
 .btn:hover{
@@ -151,8 +158,8 @@ section{
 }
 
 .card{
-    background:#111;
-    border:1px solid #222;
+    background:var(--card-bg);
+    border:1px solid var(--border-color);
     border-radius:20px;
     padding:30px;
     transition:0.3s;
@@ -168,7 +175,7 @@ section{
 }
 
 .card p{
-    color:#999;
+    color:var(--muted);
     line-height:1.7;
 }
 
@@ -191,7 +198,7 @@ section{
 
 .about-text{
     max-width:850px;
-    color:#999;
+    color:var(--muted);
     line-height:2;
 }
 
@@ -209,9 +216,9 @@ section{
     align-items:center;
     gap:10px;
     text-decoration:none;
-    color:white;
-    background:#111;
-    border:1px solid #222;
+    color:var(--text-color);
+    background:var(--card-bg);
+    border:1px solid var(--border-color);
     padding:15px 25px;
     border-radius:15px;
     transition:0.3s;
@@ -231,8 +238,8 @@ section{
 footer{
     text-align:center;
     padding:40px;
-    color:#777;
-    border-top:1px solid #222;
+    color:var(--muted);
+    border-top:1px solid var(--border-color);
 }
 
 /* SCROLLBAR */
