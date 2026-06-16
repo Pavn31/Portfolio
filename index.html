@@ -25,11 +25,22 @@ html{
     scroll-behavior:smooth;
 }
 
+:root {
+    --bg-color: #ffffff;
+    --text-color: #111111;
+}
+
+.dark-mode {
+    --bg-color: #0b0b0b;
+    --text-color: #ffffff;
+}
+
 body{
     font-family:'Space Grotesk',sans-serif;
-    background:#0b0b0b;
-    color:white;
+    background: var(--bg-color);
+    color: var(--text-color);
     overflow-x:hidden;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* NAVBAR */
@@ -70,7 +81,18 @@ body{
 .nav-links a:hover{
     opacity:0.6;
 }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+#theme-toggle {
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
 /* HERO */
 
 .hero{
@@ -288,10 +310,9 @@ footer{
 </style>
 </head>
 
-<body>
+<body class="dark-mode">
 
 <header class="navbar">
-
     <a href="#" class="logo">Pavn31</a>
 
     <nav class="nav-links">
@@ -301,6 +322,7 @@ footer{
         <a href="#contact">Contact</a>
     </nav>
 
+    <button id="theme-toggle">🌙</button>
 </header>
 
 <section class="hero">
