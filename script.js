@@ -118,8 +118,9 @@ const closeModal = document.querySelector(".close-modal");
 projectCard.addEventListener("click", () => {
     console.log("CARD CLICKED");
     modal.classList.add("active");
+    console.log(modal);
+    console.log(modal.classList);
 });
-
 closeModal.addEventListener("click", () => {
     modal.classList.remove("active");
 });

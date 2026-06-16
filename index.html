@@ -426,6 +426,7 @@ footer{
 .modal.active{
     opacity:1;
     visibility:visible;
+    background:red !important;
 }
 
 .modal-content{
@@ -738,6 +739,8 @@ const closeModal = document.querySelector(".close-modal");
 projectCard.addEventListener("click", () => {
     console.log("CARD CLICKED");
     modal.classList.add("active");
+    console.log(modal);
+    console.log(modal.classList);
 });
 
 closeModal.addEventListener("click", () => {
