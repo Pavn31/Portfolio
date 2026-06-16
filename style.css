@@ -78,7 +78,22 @@ body{
 .nav-links a:hover{
     opacity:0.6;
 }
+.nav-links a.active{
+    color:var(--text-color);
+    font-weight:600;
+    position:relative;
+}
 
+.nav-links a.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:100%;
+    height:2px;
+    background:var(--text-color);
+    border-radius:2px;
+}
 /* HERO */
 
 .hero{
@@ -173,6 +188,7 @@ section{
     border-radius:20px;
     padding:30px;
     transition:0.3s;
+    overflow:hidden;
 }
 
 .card:hover{
@@ -302,4 +318,22 @@ footer{
     .section-title{
         font-size:2.2rem;
     }
+}
+.skills-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.skills-grid span{
+    padding:12px 20px;
+    border-radius:999px;
+    background:var(--card-bg);
+    border:1px solid var(--card-border);
+    cursor:default;
+}
+
+.skills-grid span:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px var(--hover-glow);
 }

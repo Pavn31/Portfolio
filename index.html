@@ -40,7 +40,7 @@ html{
     --card-bg:#111;
     --card-border:#222;
     --hover-border: #444;
-    --hover-glow: rgba(255,255,255,0.25);
+    --hover-glow: rgba(255,255,255,0.45);
 }
 
 .light-mode{
@@ -53,7 +53,7 @@ html{
     --card-bg:#ffffff;
     --card-border:#d1d5db;
     --hover-border: #999;
-    --hover-glow: rgba(0,0,0,0.12);
+    --hover-glow: rgba(0,0,0,0.18);
 }
 
 body{
@@ -114,7 +114,22 @@ body{
 .nav-links a:hover{
     opacity:0.7;
 }
+.nav-links a.active{
+    color:var(--text-color);
+    font-weight:600;
+    position:relative;
+}
 
+.nav-links a.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:100%;
+    height:2px;
+    background:var(--text-color);
+    border-radius:2px;
+}
 /* HERO */
 
 .hero{
@@ -210,14 +225,16 @@ section{
     padding:30px;
     transition:0.3s ease;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .card:hover{
     transform:translateY(-8px);
     border-color:var(--hover-border);
     box-shadow:
-        0 10px 30px var(--hover-glow),
-        0 0 50px var(--hover-glow);
+        0 0 20px var(--hover-glow),
+        0 0 40px var(--hover-glow),
+        0 0 80px var(--hover-glow);
 }
 
 .card h3{
@@ -233,6 +250,10 @@ section{
     height:auto;
     border-radius:12px;
     margin-bottom:20px;
+    transition:.4s ease;
+}
+.card:hover img{
+    transform:scale(1.05);
 }
 /* ABOUT */
 
@@ -335,6 +356,25 @@ footer{
     margin-bottom:15px;
     color:#777;
 }
+.skills-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+}
+
+.skills-grid span{
+    padding:12px 20px;
+    border-radius:999px;
+    background:var(--card-bg);
+    border:1px solid var(--card-border);
+    cursor:default;
+}
+
+.skills-grid span:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px var(--hover-glow);
+}
 
 
 </style>
@@ -350,8 +390,8 @@ footer{
         <a href="#projects">Projects</a>
         <a href="#blog">Blog</a>
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
-
         <button id="theme-toggle">
             <i class="fas fa-moon"></i>
         </button>
@@ -451,9 +491,26 @@ footer{
         My interests include software development, artificial intelligence,
         machine learning, and modern web design.
     </p>
+</section>
+<section id="skills">
+
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid">
+
+        <span>Python</span>
+        <span>Java</span>
+        <span>C</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Machine Learning</span>
+        <span>Arduino</span>
+        <span>Git</span>
+
+    </div>
 
 </section>
-
 <section id="contact">
 
     <h2 class="section-title">Contact</h2>
@@ -502,6 +559,37 @@ toggleBtn.addEventListener("click", () => {
         localStorage.setItem("theme", "dark");
         toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
     }
+});
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 150;
+
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + section.offsetHeight
+        ) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if(link.getAttribute("href") === `#${current}`){
+            link.classList.add("active");
+        }
+
+    });
+
 });
 </script>
 </body>
