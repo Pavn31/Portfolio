@@ -81,7 +81,8 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
     background:var(--nav-bg);
     border-bottom:1px solid rgba(128,128,128,0.2);
     z-index:1000;
@@ -163,7 +164,16 @@ body{
 .hero h1{
     font-size:6rem;
     margin-bottom:15px;
-    color:var(--text-color);
+
+    background:linear-gradient(
+        90deg,
+        var(--text-color),
+        var(--secondary-text)
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
 }
 
 .hero p{
@@ -371,6 +381,20 @@ footer{
     opacity:1;
     transform:translateY(0);
 }
+.light-mode .navbar{
+    background:rgba(255,255,255,0.7);
+    border-bottom:1px solid rgba(0,0,0,0.08);
+}
+.typing-text{
+    height:30px;
+    margin-bottom:20px;
+
+    color:var(--secondary-text);
+
+    font-size:1.15rem;
+    font-weight:500;
+    letter-spacing:0.5px;
+}
 </style>
 </head>
 
@@ -400,7 +424,7 @@ footer{
     </div>
 
     <h1>Pavn31</h1>
-
+    <p class="typing-text"></p>
     <p>
         AI & Data Science student passionate about software development,
         machine learning, and building innovative solutions that create
@@ -567,7 +591,7 @@ window.addEventListener("scroll", () => {
 
 });
 const revealElements = document.querySelectorAll(
-    ".card, .about-text, .contact-box, .section-title, .skills-grid"
+    ".card, .about-text, .contact-box, .section-title"
 );
 
 const revealOnScroll = () => {
@@ -587,6 +611,53 @@ const revealOnScroll = () => {
 
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
+
+const roles = [
+    "AI & Data Science Student",
+    "Software Developer",
+    "Machine Learning Enthusiast",
+    "Problem Solver"
+];
+
+const typingText = document.querySelector(".typing-text");
+
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+
+    const currentRole = roles[roleIndex];
+
+    if(!isDeleting){
+        typingText.textContent =
+            currentRole.substring(0, charIndex + 1);
+
+        charIndex++;
+
+        if(charIndex === currentRole.length){
+            isDeleting = true;
+            setTimeout(typeEffect, 1500);
+            return;
+        }
+
+    } else {
+
+        typingText.textContent =
+            currentRole.substring(0, charIndex - 1);
+
+        charIndex--;
+
+        if(charIndex === 0){
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+        }
+    }
+
+    setTimeout(typeEffect, isDeleting ? 50 : 100);
+}
+
+typeEffect();
 </script>
 </body>
 </html>

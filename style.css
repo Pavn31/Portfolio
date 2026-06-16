@@ -54,11 +54,13 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
     background:var(--nav-bg);
-    border-bottom:1px solid var(--border-color);
+    border-bottom:1px solid rgba(128,128,128,0.2);
     z-index:1000;
 }
+
 
 .logo{
     font-size:1.4rem;
@@ -130,6 +132,16 @@ body{
 .hero h1{
     font-size:6rem;
     margin-bottom:15px;
+
+    background:linear-gradient(
+        90deg,
+        var(--text-color),
+        var(--secondary-text)
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
 }
 
 .hero p{
@@ -336,4 +348,18 @@ footer{
 .show{
     opacity:1;
     transform:translateY(0);
+}
+.light-mode .navbar{
+    background:rgba(255,255,255,0.7);
+    border-bottom:1px solid rgba(0,0,0,0.08);
+}
+.typing-text{
+    height:30px;
+    margin-bottom:20px;
+
+    color:var(--secondary-text);
+
+    font-size:1.15rem;
+    font-weight:500;
+    letter-spacing:0.5px;
 }
