@@ -482,6 +482,8 @@ if(localStorage.getItem("theme") === "light"){
 toggleBtn.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
 
+    console.log(document.body.classList);
+
     if(document.body.classList.contains("light-mode")){
         localStorage.setItem("theme", "light");
         toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
