@@ -7,12 +7,22 @@
 html{
     scroll-behavior:smooth;
 }
+:root {
+    --bg-color: #0b0b0b;
+    --text-color: white;
+}
+
+.light-mode {
+    --bg-color: #ffffff;
+    --text-color: #111827;
+}
 
 body{
     font-family:'Space Grotesk',sans-serif;
-    background:#0b0b0b;
-    color:white;
+    background: var(--bg-color);
+    color: var(--text-color);
     overflow-x:hidden;
+    transition: all 0.3s ease;
 }
 
 /* NAVBAR */
@@ -27,8 +37,8 @@ body{
     justify-content:space-between;
     align-items:center;
     backdrop-filter:blur(10px);
-    background:rgba(11,11,11,0.8);
-    border-bottom:1px solid #222;
+    background:var(--nav-bg);
+    border-bottom:1px solid var(--border-color);
     z-index:1000;
 }
 
