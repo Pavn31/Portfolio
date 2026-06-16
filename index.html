@@ -409,7 +409,7 @@ footer{
     position:fixed;
     inset:0;
 
-    background:rgba(0,0,0,0.6);
+    background:rgba(0,0,0,0.7);
 
     display:flex;
     justify-content:center;
@@ -418,19 +418,17 @@ footer{
     opacity:0;
     visibility:hidden;
 
-    transition:.3s ease;
-
     z-index:2000;
 }
 
 .modal.active{
     opacity:1;
     visibility:visible;
-    background:red !important;
 }
 
 .modal-content{
     background:var(--card-bg);
+    color:var(--text-color);
 
     border:1px solid var(--card-border);
 
@@ -441,9 +439,8 @@ footer{
     width:90%;
 
     text-align:center;
-    background:white !important;
-    color:black !important;
-    border:5px solid lime !important;
+
+    box-shadow:0 20px 60px rgba(0,0,0,0.3);
 }
 
 .close-modal{
