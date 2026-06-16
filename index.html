@@ -405,6 +405,48 @@ footer{
         opacity:0;
     }
 }
+.modal{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,0.6);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.3s ease;
+
+    z-index:2000;
+}
+
+.modal.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.modal-content{
+    background:var(--card-bg);
+
+    border:1px solid var(--card-border);
+
+    padding:35px;
+    border-radius:20px;
+
+    max-width:500px;
+    width:90%;
+
+    text-align:center;
+}
+
+.close-modal{
+    float:right;
+    cursor:pointer;
+    font-size:1.5rem;
+}
 </style>
 </head>
 
@@ -453,8 +495,7 @@ footer{
     <h2 class="section-title">Projects</h2>
 
     <div class="card-grid">
-      <div class="card"
-        onclick="window.open('https://github.com/Pavn31/Smart-Blind-Stick', '_blank')">
+      <div class="card">
         <img src="assets/Smart-Blind-Stick-Circuit-Banner.png" alt="Smart Blind Stick">
         <h3>Smart Blind Stick</h3>
 
@@ -668,6 +709,45 @@ function typeEffect() {
 }
 
 typeEffect();
+const modal = document.getElementById("projectModal");
+const projectCard = document.querySelector("#projects .card");
+const closeModal = document.querySelector(".close-modal");
+
+projectCard.addEventListener("click", () => {
+    modal.classList.add("active");
+});
+
+closeModal.addEventListener("click", () => {
+    modal.classList.remove("active");
+});
+
+modal.addEventListener("click", (e) => {
+    if(e.target === modal){
+        modal.classList.remove("active");
+    }
+});
 </script>
+<div class="modal" id="projectModal">
+
+    <div class="modal-content">
+
+        <span class="close-modal">&times;</span>
+
+        <h2>Smart Blind Stick</h2>
+
+        <p>
+            Arduino-based assistive device with obstacle detection,
+            GPS tracking, GSM alerts, and voice guidance.
+        </p>
+
+        <a href="https://github.com/Pavn31/Smart-Blind-Stick"
+           target="_blank"
+           class="btn primary">
+            View GitHub
+        </a>
+
+    </div>
+
+</div>
 </body>
 </html>

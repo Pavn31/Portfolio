@@ -111,3 +111,20 @@ toggleBtn.addEventListener("click", () => {
     }
 
 });
+const modal = document.getElementById("projectModal");
+const projectCard = document.querySelector("#projects .card");
+const closeModal = document.querySelector(".close-modal");
+
+projectCard.addEventListener("click", () => {
+    modal.classList.add("active");
+});
+
+closeModal.addEventListener("click", () => {
+    modal.classList.remove("active");
+});
+
+modal.addEventListener("click", (e) => {
+    if(e.target === modal){
+        modal.classList.remove("active");
+    }
+});
