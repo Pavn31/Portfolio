@@ -325,8 +325,7 @@ footer{
 .card,
 .about-text,
 .contact-box,
-.section-title,
-.skills-grid{
+.section-title{
     opacity:0;
     transform:translateY(30px);
     transition:
