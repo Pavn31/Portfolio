@@ -356,27 +356,22 @@ footer{
     margin-bottom:15px;
     color:#777;
 }
+.card,
+.about-text,
+.contact-box,
+.section-title,
 .skills-grid{
-    display:flex;
-    flex-wrap:wrap;
-    gap:15px;
-    justify-content:center;
+    opacity:0;
+    transform:translateY(30px);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
 }
 
-.skills-grid span{
-    padding:12px 20px;
-    border-radius:999px;
-    background:var(--card-bg);
-    border:1px solid var(--card-border);
-    cursor:default;
+.show{
+    opacity:1;
+    transform:translateY(0);
 }
-
-.skills-grid span:hover{
-    transform:translateY(-3px);
-    box-shadow:0 0 20px var(--hover-glow);
-}
-
-
 </style>
 </head>
 
@@ -492,25 +487,6 @@ footer{
         machine learning, and modern web design.
     </p>
 </section>
-<section id="skills">
-
-    <h2 class="section-title">Skills</h2>
-
-    <div class="skills-grid">
-
-        <span>Python</span>
-        <span>Java</span>
-        <span>C</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Machine Learning</span>
-        <span>Arduino</span>
-        <span>Git</span>
-
-    </div>
-
-</section>
 <section id="contact">
 
     <h2 class="section-title">Contact</h2>
@@ -591,6 +567,27 @@ window.addEventListener("scroll", () => {
     });
 
 });
+const revealElements = document.querySelectorAll(
+    ".card, .about-text, .contact-box, .section-title, .skills-grid"
+);
+
+const revealOnScroll = () => {
+
+    revealElements.forEach(el => {
+
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 100){
+            el.classList.add("show");
+        }
+
+    });
+
+};
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
 </script>
 </body>
 </html>
