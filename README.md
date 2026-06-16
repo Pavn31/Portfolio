@@ -79,7 +79,7 @@ An Arduino-powered assistive device designed to help visually impaired individua
 
 ## 🔗 Live Demo
 
-[Visit Portfolio](https://pavn31.dpdns.org/)
+[Visit Portfolio](https://pavn31.dpdns.org)
 
 ---
 
