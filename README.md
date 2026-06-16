@@ -1,101 +1,102 @@
-# 🚀 Pavan's Portfolio
+````md
+# ✨ Pavn31 Portfolio
 
-Welcome to my personal portfolio website! This website showcases my projects, technical skills, certifications, achievements, and development journey.
-
-## 🌐 Link
-🔗 [Visit Portfolio](https://www.pavn31.dpdns.org/)
+> A modern, responsive portfolio website built to showcase my projects, blogs, and journey in AI & Data Science.
 
 ---
 
-## 📌 About
+## 🚀 Features
 
-I am a passionate developer interested in Software Development, IoT, Artificial Intelligence, and Data Science. This portfolio serves as a central place to showcase my work, skills, certifications, and learning journey.
-
----
-
-## ✨ Features
-
-- Responsive Design
-- Modern UI/UX
-- Smooth Animations
-- Project Showcase
-- Blog Section
-- Skills & Technologies
-- Contact Information
-- Mobile Friendly
+- 🌙 Dark / Light Mode Toggle
+- 📱 Fully Responsive Design
+- 🎨 Modern & Minimal UI
+- 📝 Blog Section
+- 💼 Project Showcase
+- 📬 Contact Links
+- ⚡ Smooth User Experience
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
-- HTML5
-- CSS3
-- JavaScript
-- Git
-- GitHub
+| Technology | Usage |
+|------------|--------|
+| HTML5 | Structure |
+| CSS3 | Styling |
+| JavaScript | Interactivity |
+| Font Awesome | Icons |
+| Google Fonts | Typography |
 
 ---
 
 ## 📂 Project Structure
 
-```text
-portfolio/
+```bash
+Portfolio/
 │
 ├── assets/
-│   ├── images/
-│   ├── icons/
-│   └── documents/
+│   ├── PFP.jpg
+│   ├── Smart-Blind-Stick-Circuit-Banner.png
+│
+├── blogs/
+│   ├── smart-blind-stick.html
+│   ├── Student-Competition.html
 │
 ├── index.html
 ├── style.css
 ├── script.js
 └── README.md
-```
+````
 
 ---
 
-## 📸 Portfolio Preview
+## 🌟 Featured Project
 
-Add your screenshot below:
+### Smart Blind Stick
 
+An Arduino-powered assistive device designed to help visually impaired individuals.
 
-![Portfolio Preview](assets/Portfolio-ss.png)
+#### Features
 
-
-## 💻 Running Locally
-
-Clone the repository:
-
-```bash
-git clone https://github.com/Pavn31/portfolio.git
-```
-
-Navigate to the project folder:
-
-```bash
-cd portfolio
-```
-
-Open `index.html` in your browser.
+* Obstacle Detection
+* GPS Tracking
+* GSM Emergency Alerts
+* Voice Guidance System
 
 ---
 
-## 📈 Future Improvements
+## 📸 Preview
 
-- Dark/Light Mode Toggle
-- Project Filtering
-- Blog Search
-- Backend Integration
-- Contact Form Functionality
+### Dark Mode
+
+<img src="assets/dark-preview.png" alt="Dark Mode Preview" width="100%">
+
+### Light Mode
+
+<img src="assets/light-preview.png" alt="Light Mode Preview" width="100%">
 
 ---
 
-## ⭐ Show Your Support
+## 🔗 Live Demo
 
-If you like this project, give it a ⭐ on GitHub!
+[Visit Portfolio](https://your-portfolio-link.vercel.app)
+
+---
+
+## 📬 Contact
+
+* GitHub: https://github.com/Pavn31
+* LinkedIn: https://www.linkedin.com/in/pavn-badiger/
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a star.
 
 ---
 
 <p align="center">
   Made with ❤️ by <strong>Pavan</strong>
 </p>
+```
