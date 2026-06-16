@@ -589,6 +589,28 @@ footer{
 <footer>
     © 2026 Pavn31. All Rights Reserved.
 </footer>
+<div class="modal" id="projectModal">
+
+    <div class="modal-content">
+
+        <span class="close-modal">&times;</span>
+
+        <h2>Smart Blind Stick</h2>
+
+        <p>
+            Arduino-based assistive device with obstacle detection,
+            GPS tracking, GSM alerts, and voice guidance.
+        </p>
+
+        <a href="https://github.com/Pavn31/Smart-Blind-Stick"
+           target="_blank"
+           class="btn primary">
+            View GitHub
+        </a>
+
+    </div>
+
+</div>
 <script>
 const toggleBtn = document.getElementById("theme-toggle");
 
@@ -714,6 +736,7 @@ const projectCard = document.querySelector("#projects .card");
 const closeModal = document.querySelector(".close-modal");
 
 projectCard.addEventListener("click", () => {
+    console.log("CARD CLICKED");
     modal.classList.add("active");
 });
 
@@ -727,27 +750,5 @@ modal.addEventListener("click", (e) => {
     }
 });
 </script>
-<div class="modal" id="projectModal">
-
-    <div class="modal-content">
-
-        <span class="close-modal">&times;</span>
-
-        <h2>Smart Blind Stick</h2>
-
-        <p>
-            Arduino-based assistive device with obstacle detection,
-            GPS tracking, GSM alerts, and voice guidance.
-        </p>
-
-        <a href="https://github.com/Pavn31/Smart-Blind-Stick"
-           target="_blank"
-           class="btn primary">
-            View GitHub
-        </a>
-
-    </div>
-
-</div>
 </body>
 </html>
