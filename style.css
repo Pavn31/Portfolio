@@ -2,6 +2,12 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease,
+        transform .3s ease;
 }
 
 html{
@@ -14,6 +20,7 @@ html{
     --nav-bg:rgba(255,255,255,0.9);
     --border-color:#ddd;
     --muted:#666;
+    --hover-glow: rgba(0,0,0,0.12);
 }
 
 .dark-mode{
@@ -23,6 +30,7 @@ html{
     --nav-bg:rgba(11,11,11,0.8);
     --border-color:#222;
     --muted:#999;
+    --hover-glow: rgba(255,255,255,0.25);
 }
 body{
     font-family:'Space Grotesk',sans-serif;
@@ -92,12 +100,13 @@ body{
     height:240px;
     object-fit:cover;
     border-radius:50%;
-    border:3px solid rgba(255,255,255,0.1);
+    border:3px solid var(--border-color);
     transition:0.4s ease;
 }
 
 .hero-profile img:hover{
     transform:scale(1.05);
+    box-shadow:0 0 35px var(--hover-glow);
 }
 
 .hero h1{
@@ -136,6 +145,7 @@ body{
 
 .btn:hover{
     transform:translateY(-4px);
+    box-shadow: 0 0 20px var(--hover-glow);
 }
 
 /* SECTIONS */
@@ -168,6 +178,9 @@ section{
 .card:hover{
     transform:translateY(-8px);
     border-color:#444;
+    box-shadow:
+        0 10px 30px var(--hover-glow),
+        0 0 50px var(--hover-glow);
 }
 
 .card h3{
@@ -227,6 +240,7 @@ section{
 .contact-box a:hover{
     transform:translateY(-5px);
     border-color:#444;
+    box-shadow:0 0 20px var(--hover-glow);
 }
 
 .contact-box i{

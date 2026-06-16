@@ -11,9 +11,11 @@ window.addEventListener("scroll", () => {
 
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 150;
-        const sectionHeight = section.clientHeight;
 
-        if (scrollY >= sectionTop) {
+        if(
+            scrollY >= sectionTop &&
+            scrollY < sectionTop + section.offsetHeight
+        ){
             current = section.getAttribute("id");
         }
     });
@@ -84,26 +86,28 @@ window.addEventListener("mousemove", (e) => {
     let y = (window.innerHeight / 2 - e.pageY) / 40;
 
     profileImage.style.transform =
-        `translate(${x}px, ${y}px)`;
+    `translate(${x}px, ${y}px) scale(1.02)`;
 
 });
 const toggleBtn = document.getElementById("theme-toggle");
 
-if(localStorage.getItem("theme") === "light"){
-    document.body.classList.add("light-mode");
-    toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-} else {
+if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark-mode");
     toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+} else {
+    toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
 }
 
 toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
 
-    if(document.body.classList.contains("light-mode")){
-        localStorage.setItem("theme", "light");
-        toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
         localStorage.setItem("theme", "dark");
         toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+    } else {
+        localStorage.setItem("theme", "light");
+        toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
     }
+
 });
