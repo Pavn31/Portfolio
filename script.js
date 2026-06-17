@@ -130,3 +130,15 @@ modal.addEventListener("click", (e) => {
         modal.classList.remove("active");
     }
 });
+const heroName = document.getElementById("hero-name");
+
+let clickCount = 0;
+
+heroName.addEventListener("click", () => {
+    clickCount++;
+
+    if (clickCount === 5) {
+        alert("🚀 Easter Egg Found!");
+        clickCount = 0;
+    }
+});
