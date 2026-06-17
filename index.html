@@ -448,12 +448,15 @@ footer{
     cursor:pointer;
     font-size:1.5rem;
 }
-#secret-message{
+#matrix{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
     display:none;
-    text-align:center;
-    margin:20px;
-    font-size:1.2rem;
-    font-weight:600;
+    z-index:9999;
+    pointer-events:none;
 }
 </style>
 </head>
@@ -462,7 +465,7 @@ footer{
 
 <header class="navbar">
 
-    <a href="#" class="logo">Pavn31</a>
+    <a href="#" class="logo" id="logo">Pavn31</a>
 
     <nav class="nav-links">
         <a href="#home">Home</a>
@@ -761,20 +764,76 @@ modal.addEventListener("click", (e) => {
         modal.classList.remove("active");
     }
 });
-const heroName = document.getElementById("hero-name");
+const logo = document.getElementById("logo");
+
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const chars = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const fontSize = 16;
+const columns = Math.floor(canvas.width / fontSize);
+
+const drops = Array(columns).fill(1);
+
+function drawMatrix() {
+    ctx.fillStyle = "rgba(0,0,0,0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#0F0";
+    ctx.font = fontSize + "px monospace";
+
+    for(let i=0;i<drops.length;i++){
+
+        const text =
+            chars[Math.floor(Math.random()*chars.length)];
+
+        ctx.fillText(
+            text,
+            i * fontSize,
+            drops[i] * fontSize
+        );
+
+        if(
+            drops[i] * fontSize > canvas.height &&
+            Math.random() > 0.975
+        ){
+            drops[i] = 0;
+        }
+
+        drops[i]++;
+    }
+}
 
 let clickCount = 0;
 
-heroName.addEventListener("click", () => {
+logo.addEventListener("click",(e)=>{
+
+    e.preventDefault();
+
     clickCount++;
 
-    console.log("Count:", clickCount);
-
     if(clickCount === 5){
-        alert("🚀 Easter Egg Found!");
+
+        canvas.style.display = "block";
+
+        const matrixInterval =
+            setInterval(drawMatrix,33);
+
+        setTimeout(()=>{
+
+            clearInterval(matrixInterval);
+
+            canvas.style.display = "none";
+
+        },10000);
+
         clickCount = 0;
     }
 });
 </script>
+<canvas id="matrix"></canvas>
 </body>
 </html>
