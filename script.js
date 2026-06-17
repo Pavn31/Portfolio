@@ -188,13 +188,14 @@ function drawMatrix() {
 let clickCount = 0;
 
 logo.addEventListener("click",(e)=>{
-
     e.preventDefault();
 
     clickCount++;
+    console.log("Logo clicked:", clickCount);
 
     if(clickCount === 5){
 
+        alert("Matrix Activated!");
         canvas.style.display = "block";
 
         const matrixInterval =

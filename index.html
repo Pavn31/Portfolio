@@ -162,9 +162,6 @@ body{
 }
 
 .hero h1{
-    font-size:6rem;
-    margin-bottom:15px;
-    cursor:pointer;
     background:linear-gradient(
         90deg,
         var(--text-color),
@@ -809,12 +806,13 @@ function drawMatrix() {
 let clickCount = 0;
 
 logo.addEventListener("click",(e)=>{
-
     e.preventDefault();
 
     clickCount++;
+    console.log("Logo clicked:", clickCount);
 
     if(clickCount === 5){
+        alert("Matrix Activated!");
 
         canvas.style.display = "block";
 
