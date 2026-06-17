@@ -1,835 +1,783 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Pavn31 | Portfolio</title>
-
-<link rel="icon" href="PFP.webp">
-
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<style>
-
-*{
-     transition:
-        background-color .3s ease,
-        color .3s ease,
-        border-color .3s ease,
-        box-shadow .3s ease,
-        transform .3s ease;
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-:root{
-    --bg-color:#0b0b0b;
-    --text-color:#ffffff;
-    --secondary-text:#a1a1aa;
-    --nav-bg:rgba(11,11,11,0.8);
-    --button-bg:#ffffff;
-    --button-text:#000000;
-    --card-bg:#111;
-    --card-border:#222;
-    --hover-border: #444;
-    --hover-glow: rgba(255,255,255,0.12);
-}
-
-.light-mode{
-    --bg-color:#f8fafc;
-    --text-color:#111827;
-    --secondary-text:#4b5563;
-    --nav-bg:rgba(255,255,255,0.8);
-    --button-bg:#111827;
-    --button-text:#ffffff;
-    --card-bg:#ffffff;
-    --card-border:#d1d5db;
-    --hover-border: #999;
-    --hover-glow: rgba(0,0,0,0.12);
-}
-
-body{
-    font-family:'Space Grotesk',sans-serif;
-    background:var(--bg-color);
-    color:var(--text-color);
-    overflow-x:hidden;
-    transition:.3s ease;
-}
-#theme-toggle{
-    background:none;
-    border:none;
-    cursor:pointer;
-    font-size:1.2rem;
-    color:var(--text-color);
-}
-/* NAVBAR */
-
-.navbar{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    backdrop-filter:blur(16px);
-    -webkit-backdrop-filter:blur(16px);
-    background:var(--nav-bg);
-    border-bottom:1px solid rgba(128,128,128,0.2);
-    z-index:1000;
-}
-
-.logo{
-    font-size:1.4rem;
-    font-weight:700;
-    color:var(--text-color);
-    text-decoration:none;
-}
-
-.nav-links{
-    display:flex;
-    align-items: center;
-    gap:30px;
-}
-#theme-toggle{
-    background:none;
-    border:none;
-    cursor:pointer;
-    font-size:1.2rem;
-}
-.nav-links a{
-    text-decoration:none;
-    color:var(--text-color);
-    transition:0.3s;
-}
-
-.nav-links a:hover{
-    opacity:0.7;
-}
-.nav-links a.active{
-    color:var(--text-color);
-    font-weight:600;
-    position:relative;
-}
-
-.nav-links a.active::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-6px;
-    width:100%;
-    height:2px;
-    background:var(--text-color);
-    border-radius:2px;
-}
-/* HERO */
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:120px 20px;
-}
-
-.hero-profile{
-    margin-bottom:30px;
-}
-
-.hero-profile img{
-    width:240px;
-    height:240px;
-    object-fit:cover;
-    border-radius:50%;
-    border:3px solid var(--card-border);
-    transition:0.4s ease;
-}
-
-.hero-profile img:hover{
-    transform:scale(1.05);
-    box-shadow: 0 0 35px var(--hover-glow);
-}
-
-.hero h1{
-    background:linear-gradient(
-        90deg,
-        var(--text-color),
-        var(--secondary-text)
-    );
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    background-clip:text;
-}
-
-.hero p{
-    max-width:700px;
-    color:var(--secondary-text);
-    line-height:1.8;
-    margin-bottom:40px;
-}
-.hero-btns{
-    display:flex;
-    gap:20px;
-}
-
-.btn{
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:50px;
-    transition:0.3s;
-}
-
-.primary{
-    background:var(--button-bg);
-    color:var(--button-text);
-}
-
-.secondary{
-    border:1px solid var(--text-color);
-    color:var(--text-color);
-}
-
-.btn:hover{
-    transform:translateY(-4px);
-    box-shadow: 0 0 20px var(--hover-glow);
-}
-
-/* SECTIONS */
-
-section{
-    padding:120px 10%;
-}
-
-.section-title{
-    font-size:3rem;
-    margin-bottom:40px;
-}
-
-/* PROJECTS */
-
-.card-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:var(--card-bg);
-    border:1px solid var(--card-border);
-    border-radius:20px;
-    padding:30px;
-    transition:0.3s ease;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    border-color:var(--hover-border);
-    box-shadow:
-        0 0 20px var(--hover-glow),
-        0 0 40px var(--hover-glow),
-        0 0 80px var(--hover-glow);
-}
-
-.card h3{
-    margin-bottom:15px;
-}
-
-.card p{
-    color:var(--secondary-text);
-    line-height:1.7;
-}
-.card img{
-    width:100%;
-    height:auto;
-    border-radius:12px;
-    margin-bottom:20px;
-    transition:.4s ease;
-}
-.card:hover img{
-    transform:scale(1.05);
-}
-/* ABOUT */
-
-.about-text{
-    max-width:850px;
-    color:var(--secondary-text);
-    line-height:2;
-}
-
-/* CONTACT */
-
-.contact-box{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
-}
-
-.contact-box a{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    text-decoration:none;
-
-    color:var(--text-color);
-    background:var(--card-bg);
-    border:1px solid var(--card-border);
-
-    padding:15px 25px;
-    border-radius:15px;
-    transition:0.3s;
-}
-
-.contact-box a:hover{
-    transform:translateY(-5px);
-    border-color:var(--hover-border);
-    box-shadow: 0 0 20px var(--hover-glow);
-}
-
-.contact-box i{
-    font-size:1.3rem;
-}
-
-/* FOOTER */
-
-footer{
-    text-align:center;
-    padding:40px;
-    color:var(--secondary-text);
-    border-top:1px solid var(--card-border);
-}
-/* MOBILE */
-
-@media(max-width:768px){
-
-    .navbar{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .nav-links{
-        gap:20px;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .hero h1{
-        font-size:3.5rem;
-    }
-
-    .hero-profile img{
-        width:180px;
-        height:180px;
-    }
-
-    .hero-btns{
-        flex-direction:column;
-    }
-
-    .section-title{
-        font-size:2.2rem;
-    }
-}
-.blog-link{
-    display:inline-block;
-    margin-top:20px;
-    color:var(--text-color);
-    text-decoration:none;
-    font-weight:600;
-}
-
-.blog-link:hover
-{
-    opacity:0.7;
-}
-
-.card-number
-{
-    display:block;
-    margin-bottom:15px;
-    color:#777;
-}
-.card,
-.about-text,
-.contact-box,
-.section-title{
-    opacity:0;
-    transform:translateY(30px);
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
-}
-
-.show{
-    opacity:1;
-    transform:translateY(0);
-}
-.light-mode .navbar{
-    background:rgba(255,255,255,0.7);
-    border-bottom:1px solid rgba(0,0,0,0.08);
-}
-.typing-text{
-    height:30px;
-    margin-bottom:20px;
-
-    color:var(--secondary-text);
-
-    font-size:1.15rem;
-    font-weight:500;
-    letter-spacing:0.5px;
-}
-.typing-text::after{
-    content:"|";
-    animation:blink 0.8s infinite;
-}
-
-@keyframes blink{
-    50%{
-        opacity:0;
-    }
-}
-.modal{
-    position:fixed;
-    inset:0;
-
-    background:rgba(0,0,0,0.7);
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    opacity:0;
-    visibility:hidden;
-
-    z-index:2000;
-}
-
-.modal.active{
-    opacity:1;
-    visibility:visible;
-}
-
-.modal-content{
-    background:var(--card-bg);
-    color:var(--text-color);
-
-    border:1px solid var(--card-border);
-
-    padding:35px;
-    border-radius:20px;
-
-    max-width:500px;
-    width:90%;
-
-    text-align:center;
-
-    box-shadow:0 20px 60px rgba(0,0,0,0.3);
-}
-
-.close-modal{
-    float:right;
-    cursor:pointer;
-    font-size:1.5rem;
-}
-#matrix{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    display:none;
-    z-index:9999;
-    pointer-events:none;
-}
-</style>
-</head>
-
-<body>
-
-<header class="navbar">
-
-    <a href="#" class="logo" id="logo">Pavn31</a>
-
-    <nav class="nav-links">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pavn31 | Portfolio</title>
+
+    <link rel="icon" href="PFP.webp" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      * {
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease,
+          border-color 0.3s ease,
+          box-shadow 0.3s ease,
+          transform 0.3s ease;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+      :root {
+        --bg-color: #0b0b0b;
+        --text-color: #ffffff;
+        --secondary-text: #a1a1aa;
+        --nav-bg: rgba(11, 11, 11, 0.8);
+        --button-bg: #ffffff;
+        --button-text: #000000;
+        --card-bg: #111;
+        --card-border: #222;
+        --hover-border: #444;
+        --hover-glow: rgba(255, 255, 255, 0.12);
+      }
+
+      .light-mode {
+        --bg-color: #f8fafc;
+        --text-color: #111827;
+        --secondary-text: #4b5563;
+        --nav-bg: rgba(255, 255, 255, 0.8);
+        --button-bg: #111827;
+        --button-text: #ffffff;
+        --card-bg: #ffffff;
+        --card-border: #d1d5db;
+        --hover-border: #999;
+        --hover-glow: rgba(0, 0, 0, 0.12);
+      }
+
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        background: var(--bg-color);
+        color: var(--text-color);
+        overflow-x: hidden;
+        transition: 0.3s ease;
+      }
+      #theme-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: var(--text-color);
+      }
+      /* NAVBAR */
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        background: var(--nav-bg);
+        border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--text-color);
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+      #theme-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text-color);
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover {
+        opacity: 0.7;
+      }
+      .nav-links a.active {
+        color: var(--text-color);
+        font-weight: 600;
+        position: relative;
+      }
+
+      .nav-links a.active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 2px;
+        background: var(--text-color);
+        border-radius: 2px;
+      }
+      /* HERO */
+
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 120px 20px;
+      }
+
+      .hero-profile {
+        margin-bottom: 30px;
+      }
+
+      .hero-profile img {
+        width: 240px;
+        height: 240px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid var(--card-border);
+        transition: 0.4s ease;
+      }
+
+      .hero-profile img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 35px var(--hover-glow);
+      }
+
+      .hero h1 {
+        background: linear-gradient(
+          90deg,
+          var(--text-color),
+          var(--secondary-text)
+        );
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero p {
+        max-width: 700px;
+        color: var(--secondary-text);
+        line-height: 1.8;
+        margin-bottom: 40px;
+      }
+
+      .btn {
+        text-decoration: none;
+        padding: 15px 30px;
+        border-radius: 50px;
+        transition: 0.3s;
+      }
+
+      .primary {
+        background: var(--button-bg);
+        color: var(--button-text);
+      }
+
+      .secondary {
+        border: 1px solid var(--text-color);
+        color: var(--text-color);
+      }
+
+      .btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 0 20px var(--hover-glow);
+      }
+
+      /* SECTIONS */
+
+      section {
+        padding: 120px 10%;
+      }
+
+      .section-title {
+        font-size: 3rem;
+        margin-bottom: 40px;
+      }
+
+      /* PROJECTS */
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+      }
+
+      .card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 20px;
+        padding: 30px;
+        transition: 0.3s ease;
+        cursor: pointer;
+        overflow: hidden;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        border-color: var(--hover-border);
+        box-shadow:
+          0 0 20px var(--hover-glow),
+          0 0 40px var(--hover-glow),
+          0 0 80px var(--hover-glow);
+      }
+
+      .card h3 {
+        margin-bottom: 15px;
+      }
+
+      .card p {
+        color: var(--secondary-text);
+        line-height: 1.7;
+      }
+      .card img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        transition: 0.4s ease;
+      }
+      .card:hover img {
+        transform: scale(1.05);
+      }
+      /* ABOUT */
+
+      .about-text {
+        max-width: 850px;
+        color: var(--secondary-text);
+        line-height: 2;
+      }
+
+      /* CONTACT */
+
+      .contact-box {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+      }
+
+      .contact-box a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+
+        color: var(--text-color);
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+
+        padding: 15px 25px;
+        border-radius: 15px;
+        transition: 0.3s;
+      }
+
+      .contact-box a:hover {
+        transform: translateY(-5px);
+        border-color: var(--hover-border);
+        box-shadow: 0 0 20px var(--hover-glow);
+      }
+
+      .contact-box i {
+        font-size: 1.3rem;
+      }
+
+      /* FOOTER */
+
+      footer {
+        text-align: center;
+        padding: 40px;
+        color: var(--secondary-text);
+        border-top: 1px solid var(--card-border);
+      }
+      /* MOBILE */
+
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .nav-links {
+          gap: 20px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .hero h1 {
+          font-size: 3.5rem;
+        }
+
+        .hero-profile img {
+          width: 180px;
+          height: 180px;
+        }
+
+        .hero-btns {
+          flex-direction: column;
+        }
+
+        .section-title {
+          font-size: 2.2rem;
+        }
+      }
+      .blog-link {
+        display: inline-block;
+        margin-top: 20px;
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .blog-link:hover {
+        opacity: 0.7;
+      }
+
+      .card-number {
+        display: block;
+        margin-bottom: 15px;
+        color: #777;
+      }
+      .card,
+      .about-text,
+      .contact-box,
+      .section-title {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s ease;
+      }
+
+      .show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .light-mode .navbar {
+        background: rgba(255, 255, 255, 0.7);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      }
+      .typing-text {
+        height: 30px;
+        margin-bottom: 20px;
+
+        color: var(--secondary-text);
+
+        font-size: 1.15rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+      .typing-text::after {
+        content: "|";
+        animation: blink 0.8s infinite;
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+      .modal {
+        position: fixed;
+        inset: 0;
+
+        background: rgba(0, 0, 0, 0.7);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        opacity: 0;
+        visibility: hidden;
+
+        z-index: 2000;
+      }
+
+      .modal.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .modal-content {
+        background: var(--card-bg);
+        color: var(--text-color);
+
+        border: 1px solid var(--card-border);
+
+        padding: 35px;
+        border-radius: 20px;
+
+        max-width: 500px;
+        width: 90%;
+
+        text-align: center;
+
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      .close-modal {
+        float: right;
+        cursor: pointer;
+        font-size: 1.5rem;
+      }
+      #matrix {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        z-index: 9999;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="navbar">
+      <a href="#" class="logo" id="logo">Pavn31</a>
+
+      <nav class="nav-links">
         <a href="#home">Home</a>
         <a href="#projects">Projects</a>
         <a href="#blog">Blog</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <button id="theme-toggle">
-            <i class="fas fa-moon"></i>
+          <i class="fas fa-moon"></i>
         </button>
-    </nav>
+      </nav>
+    </header>
 
-</header>
-
-<section id ="home" class="hero">
-
-    <div class="hero-profile">
-        <img src="assets/PFP.jpg" alt="Pavan Profile">
-    </div>
-
-    <h1 id="hero-name"></h1>
-    <p class="typing-text"></p>
-    <p>
-        AI & Data Science student passionate about software development,
-        machine learning, and building innovative solutions that create
-        real-world impact.
-    </p>
-
-    <div class="hero-btns">
-        <a href="#projects" class="btn primary">View Projects</a>
-        <a href="#contact" class="btn secondary">Contact</a>
-    </div>
-
-</section>
-
-<section id="projects">
-
-    <h2 class="section-title">Projects</h2>
-
-    <div class="card-grid">
-      <div class="card">
-        <img src="assets/Smart-Blind-Stick-Circuit-Banner.png" alt="Smart Blind Stick">
-        <h3>Smart Blind Stick</h3>
-
-        <p>
-         An Arduino-based smart blind stick designed to assist visually impaired individuals using obstacle detection, GPS tracking, GSM alerts, and voice guidance.
-        </p>
-
+    <section id="home" class="hero">
+      <div class="hero-profile">
+        <img src="assets/PFP.jpg" alt="Pavan Profile" />
       </div>
 
-    </div>
+      <h1 id="hero-name"></h1>
+      <p class="typing-text"></p>
+      <p>
+        AI & Data Science student passionate about software development, machine
+        learning, and building innovative solutions that create real-world
+        impact.
+      </p>
+    </section>
 
-</section>
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
 
-<section id="blog">
-
-    <h2 class="section-title">Blog</h2>
-
-    <div class="card-grid">
-
+      <div class="card-grid">
         <div class="card">
+          <img
+            src="assets/Smart-Blind-Stick-Circuit-Banner.png"
+            alt="Smart Blind Stick"
+          />
+          <h3>Smart Blind Stick</h3>
 
-            <span class="card-number">01</span>
+          <p>
+            An Arduino-based smart blind stick designed to assist visually
+            impaired individuals using obstacle detection, GPS tracking, GSM
+            alerts, and voice guidance.
+          </p>
+        </div>
+      </div>
+    </section>
 
-            <h3>Building a Smart Blind Stick Using Arduino</h3>
+    <section id="blog">
+      <h2 class="section-title">Blog</h2>
 
-            <p>
-                My journey of building a Smart Blind Stick using Arduino UNO,
-                Ultrasonic Sensors, GPS, GSM, and Voice Alerts to assist
-                visually impaired individuals.
-            </p>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-number">01</span>
 
-            <a href="blogs/smart-blind-stick.html" class="blog-link">
-                Read Article →
-            </a>
+          <h3>Building a Smart Blind Stick Using Arduino</h3>
 
+          <p>
+            My journey of building a Smart Blind Stick using Arduino UNO,
+            Ultrasonic Sensors, GPS, GSM, and Voice Alerts to assist visually
+            impaired individuals.
+          </p>
+
+          <a href="blogs/smart-blind-stick.html" class="blog-link">
+            Read Article →
+          </a>
         </div>
         <div class="card">
-            <span class="card-number">02</span>
+          <span class="card-number">02</span>
 
-            <h3>The Race Nobody Wins: How Toxic Competition Is Breaking Students</h3>
+          <h3>
+            The Race Nobody Wins: How Toxic Competition Is Breaking Students
+          </h3>
 
-            <p>
-                An exploration of how toxic academic competition creates stress, burnout, and anxiety among students, often shifting the focus away from meaningful learning and personal growth.
-            </p>
+          <p>
+            An exploration of how toxic academic competition creates stress,
+            burnout, and anxiety among students, often shifting the focus away
+            from meaningful learning and personal growth.
+          </p>
 
-            <a href="blogs/Student-Competition.html" class="blog-link">
-                Read Article →
-            </a>
+          <a href="blogs/Student-Competition.html" class="blog-link">
+            Read Article →
+          </a>
         </div>
+      </div>
+    </section>
 
-    </div>
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
 
-</section>
-
-<section id="about">
-
-    <h2 class="section-title">About Me</h2>
-
-    <p class="about-text">
+      <p class="about-text">
         I'm Pavan, an AI & Data Science student who enjoys building projects,
         learning new technologies, and turning ideas into real-world solutions.
         My interests include software development, artificial intelligence,
         machine learning, and modern web design.
-    </p>
-</section>
-<section id="contact">
+      </p>
+    </section>
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
 
-    <h2 class="section-title">Contact</h2>
-
-    <div class="contact-box">
-
+      <div class="contact-box">
         <a href="https://github.com/Pavn31" target="_blank">
-            <i class="fab fa-github"></i>
-            GitHub
+          <i class="fab fa-github"></i>
+          GitHub
         </a>
 
         <a href="https://www.linkedin.com/in/pavn-badiger/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-            LinkedIn
+          <i class="fab fa-linkedin"></i>
+          LinkedIn
         </a>
 
         <a href="mailto:pavnbadiger@gmail.com">
           <i class="fas fa-envelope"></i>
           Gmail
         </a>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<footer>
-    © 2026 Pavn31. All Rights Reserved.
-</footer>
-<div class="modal" id="projectModal">
-
-    <div class="modal-content">
-
+    <footer>© 2026 Pavn31. All Rights Reserved.</footer>
+    <div class="modal" id="projectModal">
+      <div class="modal-content">
         <span class="close-modal">&times;</span>
 
         <h2>Smart Blind Stick</h2>
 
         <p>
-            Arduino-based assistive device with obstacle detection,
-            GPS tracking, GSM alerts, and voice guidance.
+          Arduino-based assistive device with obstacle detection, GPS tracking,
+          GSM alerts, and voice guidance.
         </p>
 
-        <a href="https://github.com/Pavn31/Smart-Blind-Stick"
-           target="_blank"
-           class="btn primary">
-            View GitHub
+        <a
+          href="https://github.com/Pavn31/Smart-Blind-Stick"
+          target="_blank"
+          class="btn primary"
+        >
+          View GitHub
         </a>
-
+      </div>
     </div>
+    <canvas id="matrix"></canvas>
+    <script>
+      const toggleBtn = document.getElementById("theme-toggle");
 
-</div>
-<canvas id="matrix"></canvas>
-<script>
-const toggleBtn = document.getElementById("theme-toggle");
-
-if(localStorage.getItem("theme") === "light"){
-    document.body.classList.add("light-mode");
-    toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-} else {
-    toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-}
-
-toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
-
-    if(document.body.classList.contains("light-mode")){
-        localStorage.setItem("theme", "light");
+      if (localStorage.getItem("theme") === "light") {
+        document.body.classList.add("light-mode");
         toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-        localStorage.setItem("theme", "dark");
+      } else {
         toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-});
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-links a");
+      }
 
-window.addEventListener("scroll", () => {
+      toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
 
-    let current = "";
+        if (document.body.classList.contains("light-mode")) {
+          localStorage.setItem("theme", "light");
+          toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+          localStorage.setItem("theme", "dark");
+          toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+      });
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".nav-links a");
 
-    sections.forEach(section => {
+      window.addEventListener("scroll", () => {
+        let current = "";
 
-        const sectionTop = section.offsetTop - 150;
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 150;
 
-        if (
+          if (
             window.scrollY >= sectionTop &&
             window.scrollY < sectionTop + section.offsetHeight
-        ) {
+          ) {
             current = section.getAttribute("id");
-        }
+          }
+        });
 
-    });
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
 
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        if(link.getAttribute("href") === `#${current}`){
+          if (link.getAttribute("href") === `#${current}`) {
             link.classList.add("active");
-        }
+          }
+        });
+      });
+      const revealElements = document.querySelectorAll(
+        ".card, .about-text, .contact-box, .section-title",
+      );
 
-    });
+      const revealOnScroll = () => {
+        revealElements.forEach((el) => {
+          const windowHeight = window.innerHeight;
+          const elementTop = el.getBoundingClientRect().top;
 
-});
-const revealElements = document.querySelectorAll(
-    ".card, .about-text, .contact-box, .section-title"
-);
-
-const revealOnScroll = () => {
-
-    revealElements.forEach(el => {
-
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-
-        if(elementTop < windowHeight - 100){
+          if (elementTop < windowHeight - 100) {
             el.classList.add("show");
-        }
+          }
+        });
+      };
 
-    });
+      window.addEventListener("scroll", revealOnScroll);
+      revealOnScroll();
 
-};
+      const roles = [
+        "AI & Data Science Student",
+        "Software Developer",
+        "Machine Learning Enthusiast",
+        "Problem Solver",
+      ];
 
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
+      const typingText = document.querySelector(".typing-text");
 
-const roles = [
-    "AI & Data Science Student",
-    "Software Developer",
-    "Machine Learning Enthusiast",
-    "Problem Solver"
-];
+      let roleIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
 
-const typingText = document.querySelector(".typing-text");
+      function typeEffect() {
+        const currentRole = roles[roleIndex];
 
-let roleIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+        if (!isDeleting) {
+          typingText.textContent = currentRole.substring(0, charIndex + 1);
 
-function typeEffect() {
+          charIndex++;
 
-    const currentRole = roles[roleIndex];
-
-    if(!isDeleting){
-        typingText.textContent =
-            currentRole.substring(0, charIndex + 1);
-
-        charIndex++;
-
-        if(charIndex === currentRole.length){
+          if (charIndex === currentRole.length) {
             isDeleting = true;
             setTimeout(typeEffect, 1500);
             return;
-        }
+          }
+        } else {
+          typingText.textContent = currentRole.substring(0, charIndex - 1);
 
-    } else {
+          charIndex--;
 
-        typingText.textContent =
-            currentRole.substring(0, charIndex - 1);
-
-        charIndex--;
-
-        if(charIndex === 0){
+          if (charIndex === 0) {
             isDeleting = false;
             roleIndex = (roleIndex + 1) % roles.length;
+          }
         }
-    }
+        hgf;
 
-    setTimeout(typeEffect, isDeleting ? 50 : 100);
-}
+        setTimeout(typeEffect, isDeleting ? 50 : 100);
+      }
 
-typeEffect();
-const modal = document.getElementById("projectModal");
-const projectCard = document.querySelector("#projects .card");
-const closeModal = document.querySelector(".close-modal");
+      typeEffect();
+      const modal = document.getElementById("projectModal");
+      const projectCard = document.querySelector("#projects .card");
+      const closeModal = document.querySelector(".close-modal");
 
-projectCard.addEventListener("click", () => {
-    console.log("CARD CLICKED");
-    modal.classList.add("active");
-    console.log(modal);
-    console.log(modal.classList);
-});
+      projectCard.addEventListener("click", () => {
+        console.log("CARD CLICKED");
+        modal.classList.add("active");
+        console.log(modal);
+        console.log(modal.classList);
+      });
 
-closeModal.addEventListener("click", () => {
-    modal.classList.remove("active");
-});
-
-modal.addEventListener("click", (e) => {
-    if(e.target === modal){
+      closeModal.addEventListener("click", () => {
         modal.classList.remove("active");
-    }
-});
-const logo = document.getElementById("logo");
+      });
 
-const canvas = document.getElementById("matrix");
-const ctx = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-const chars = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const fontSize = 16;
-const columns = Math.floor(canvas.width / fontSize);
-
-const drops = Array(columns).fill(1);
-
-function drawMatrix() {
-    ctx.fillStyle = "rgba(0,0,0,0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.fillStyle = "#0F0";
-    ctx.font = fontSize + "px monospace";
-
-    for(let i=0;i<drops.length;i++){
-
-        const text =
-            chars[Math.floor(Math.random()*chars.length)];
-
-        ctx.fillText(
-            text,
-            i * fontSize,
-            drops[i] * fontSize
-        );
-
-        if(
-            drops[i] * fontSize > canvas.height &&
-            Math.random() > 0.975
-        ){
-            drops[i] = 0;
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.remove("active");
         }
+      });
+      const logo = document.getElementById("logo");
 
-        drops[i]++;
-    }
-}
+      const canvas = document.getElementById("matrix");
+      const ctx = canvas.getContext("2d");
 
-let clickCount = 0;
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
 
-logo.addEventListener("click",(e)=>{
-    e.preventDefault();
+      const chars = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      const fontSize = 16;
+      const columns = Math.floor(canvas.width / fontSize);
 
-    clickCount++;
-    console.log("Logo clicked:", clickCount);
+      const drops = Array(columns).fill(1);
 
-    if(clickCount === 5){
-        alert("Matrix Activated!");
+      function drawMatrix() {
+        ctx.fillStyle = "rgba(0,0,0,0.05)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        canvas.style.display = "block";
+        ctx.fillStyle = "#0F0";
+        ctx.font = fontSize + "px monospace";
 
-        const matrixInterval =
-            setInterval(drawMatrix,33);
+        for (let i = 0; i < drops.length; i++) {
+          const text = chars[Math.floor(Math.random() * chars.length)];
 
-        setTimeout(()=>{
+          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0;
+          }
+
+          drops[i]++;
+        }
+      }
+
+      let clickCount = 0;
+
+      logo.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        clickCount++;
+
+        if (clickCount === 5) {
+          canvas.style.display = "block";
+
+          const matrixInterval = setInterval(drawMatrix, 33);
+
+          setTimeout(() => {
             clearInterval(matrixInterval);
 
             canvas.style.display = "none";
+          }, 10000);
 
-        },10000);
-
-        clickCount = 0;
-    }
-});
-</script>
-</body>
+          clickCount = 0;
+        }
+      });
+    </script>
+  </body>
 </html>

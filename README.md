@@ -1,4 +1,3 @@
-
 # ✨ Pavn31 Portfolio
 
 > A modern, responsive portfolio website built to showcase my projects, blogs, and journey in AI & Data Science.
@@ -19,13 +18,13 @@
 
 ## 🛠 Tech Stack
 
-| Technology | Usage |
-|------------|--------|
-| HTML5 | Structure |
-| CSS3 | Styling |
-| JavaScript | Interactivity |
-| Font Awesome | Icons |
-| Google Fonts | Typography |
+| Technology   | Usage         |
+| ------------ | ------------- |
+| HTML5        | Structure     |
+| CSS3         | Styling       |
+| JavaScript   | Interactivity |
+| Font Awesome | Icons         |
+| Google Fonts | Typography    |
 
 ---
 
@@ -46,7 +45,7 @@ Portfolio/
 ├── style.css
 ├── script.js
 └── README.md
-````
+```
 
 ---
 
@@ -58,10 +57,10 @@ An Arduino-powered assistive device designed to help visually impaired individua
 
 #### Features
 
-* Obstacle Detection
-* GPS Tracking
-* GSM Emergency Alerts
-* Voice Guidance System
+- Obstacle Detection
+- GPS Tracking
+- GSM Emergency Alerts
+- Voice Guidance System
 
 ---
 
@@ -85,8 +84,8 @@ An Arduino-powered assistive device designed to help visually impaired individua
 
 ## 📬 Contact
 
-* GitHub: https://github.com/Pavn31
-* LinkedIn: https://www.linkedin.com/in/pavn-badiger/
+- GitHub: https://github.com/Pavn31
+- LinkedIn: https://www.linkedin.com/in/pavn-badiger/
 
 ---
 
