@@ -491,12 +491,30 @@
       }
 
       .leetcode-card img {
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        object-fit: cover;
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+        border: none;
+      }
+
+      .leetcode-card h3 {
         margin-bottom: 15px;
-        border: 2px solid var(--card-border);
+        font-size: 1.4rem;
+      }
+
+      .leetcode-card p {
+        margin: 8px 0;
+        color: var(--secondary-text);
+      }
+
+      .leetcode-card span {
+        color: var(--text-color);
+        font-weight: 600;
+      }
+
+      .leetcode-card .btn {
+        margin-top: 20px;
+        display: inline-block;
       }
     </style>
   </head>
@@ -625,18 +643,18 @@
           <p>Following: <span id="github-following">0</span></p>
         </div>
 
-        <div class="dashboard-card github-card">
+        <div class="dashboard-card leetcode-card">
           <img
-            src="https://assets.leetcode.com/static_assets/public/icons/favicon-96x96.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
             alt="LeetCode"
           />
 
           <h3>Pavnbadiger25</h3>
-
-          <p>Solved: <span>42</span></p>
-          <p>Easy: <span>25</span></p>
-          <p>Medium: <span>15</span></p>
-          <p>Hard: <span>2</span></p>
+          <img
+            src="https://leetcard.jacoblin.cool/Pavnbadiger25?theme=dark&font=Space%20Grotesk"
+            alt="LeetCode Stats"
+            style="width: 100%; border-radius: 12px; margin: 15px 0"
+          />
           <a
             href="https://leetcode.com/u/pavnbadiger25/"
             target="_blank"

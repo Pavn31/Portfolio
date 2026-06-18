@@ -481,10 +481,28 @@ footer {
 }
 
 .leetcode-card img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
+  border: none;
+}
+
+.leetcode-card h3 {
   margin-bottom: 15px;
-  border: 2px solid var(--card-border);
+  font-size: 1.4rem;
+}
+
+.leetcode-card p {
+  margin: 8px 0;
+  color: var(--secondary-text);
+}
+
+.leetcode-card span {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.leetcode-card .btn {
+  margin-top: 20px;
+  display: inline-block;
 }
