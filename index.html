@@ -45,7 +45,6 @@
         --card-border: #222;
         --hover-border: #444;
         --hover-glow: rgba(255, 255, 255, 0.12);
-        --card-border: #222;
       }
 
       .light-mode {
@@ -456,7 +455,6 @@
       .dashboard-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
         gap: 20px;
         margin-top: 30px;
       }
@@ -476,45 +474,17 @@
           0 0 20px var(--hover-glow),
           0 0 40px var(--hover-glow);
       }
-      .dashboard-card h1 {
-        font-size: 2.5rem;
-        margin-top: 10px;
-      }
 
-      .dashboard-card h3 {
-        margin-bottom: 10px;
-      }
-      .dashboard-card p {
-        margin: 10px 0;
-        color: var(--secondary-text);
-      }
-
-      .dashboard-card span {
-        color: var(--text-color);
-        font-weight: 600;
-      }
       .github-card {
         text-align: center;
       }
+
       .github-card img {
         width: 90px;
         height: 90px;
         border-radius: 50%;
-        margin-bottom: 15px;
         object-fit: cover;
-        border: 2px solid var(--card-border);
-      }
-      .github-card h3 {
-        margin-bottom: 10px;
-      }
-      .leetcode-card p {
-        margin: 10px 0;
-        color: var(--secondary-text);
-      }
-
-      .leetcode-card span {
-        color: var(--text-color);
-        font-weight: 600;
+        margin-bottom: 15px;
       }
     </style>
   </head>
@@ -570,42 +540,6 @@
       </div>
     </section>
 
-    <section id="dashboard">
-      <h2 class="section-title">Developer Dashboard</h2>
-
-      <div class="dashboard-grid">
-        <div class="dashboard-card">
-          <h3>Current Time</h3>
-          <h1 id="clock">00:00:00</h1>
-        </div>
-
-        <div class="dashboard-card">
-          <h3>Quote</h3>
-          <p id="quote"></p>
-        </div>
-        <div class="dashboard-card github-card">
-          <img id="github-avatar" src="" alt="GitHub Avatar" />
-
-          <h3 id="github-user">Loading...</h3>
-
-          <p>Repos: <span id="github-repos">0</span></p>
-          <p>Followers: <span id="github-followers">0</span></p>
-          <p>Following: <span id="github-following">0</span></p>
-        </div>
-        <div class="dashboard-card leetcode-card">
-          <h3>LeetCode Stats</h3>
-
-          <p><strong>Username:</strong> <span id="lc-user">Loading...</span></p>
-          <p>
-            <strong>Total Solved:</strong> <span id="lc-total">Loading...</span>
-          </p>
-          <p><strong>Easy:</strong> <span id="lc-easy">Loading...</span></p>
-          <p><strong>Medium:</strong> <span id="lc-medium">Loading...</span></p>
-          <p><strong>Hard:</strong> <span id="lc-hard">Loading...</span></p>
-        </div>
-      </div>
-    </section>
-
     <section id="blog">
       <h2 class="section-title">Blog</h2>
 
@@ -654,6 +588,45 @@
         My interests include software development, artificial intelligence,
         machine learning, and modern web design.
       </p>
+    </section>
+    <section id="dashboard">
+      <h2 class="section-title">Developer Dashboard</h2>
+
+      <div class="dashboard-grid">
+        <div class="dashboard-card">
+          <h3>Current Time</h3>
+          <h1 id="clock">00:00:00</h1>
+        </div>
+
+        <div class="dashboard-card">
+          <h3>Quote</h3>
+          <p id="quote"></p>
+        </div>
+
+        <div class="dashboard-card github-card">
+          <img id="github-avatar" src="" alt="GitHub Avatar" />
+
+          <h3 id="github-user">Loading...</h3>
+
+          <p>Repos: <span id="github-repos">0</span></p>
+          <p>Followers: <span id="github-followers">0</span></p>
+          <p>Following: <span id="github-following">0</span></p>
+        </div>
+
+        <div class="dashboard-card">
+          <h3>LeetCode</h3>
+
+          <p>Username: Pavnbadiger25</p>
+
+          <a
+            href="https://leetcode.com/u/Pavnbadiger25/"
+            target="_blank"
+            class="blog-link"
+          >
+            View Profile →
+          </a>
+        </div>
+      </div>
     </section>
     <section id="contact">
       <h2 class="section-title">Contact</h2>
@@ -879,13 +852,11 @@
         }
       });
       function updateClock() {
-        const now = new Date();
-
-        document.getElementById("clock").textContent = now.toLocaleTimeString();
+        document.getElementById("clock").textContent =
+          new Date().toLocaleTimeString();
       }
 
       setInterval(updateClock, 1000);
-
       updateClock();
 
       const quotes = [
@@ -893,15 +864,16 @@
         "Build. Break. Learn.",
         "Stay curious.",
         "Consistency beats motivation.",
-        "Small progress is still progress.",
       ];
 
       document.getElementById("quote").textContent =
         quotes[Math.floor(Math.random() * quotes.length)];
+
       fetch("https://api.github.com/users/Pavn31")
-        .then((response) => response.json())
+        .then((res) => res.json())
         .then((data) => {
           document.getElementById("github-avatar").src = data.avatar_url;
+
           document.getElementById("github-user").textContent = data.login;
 
           document.getElementById("github-repos").textContent =
@@ -912,25 +884,6 @@
 
           document.getElementById("github-following").textContent =
             data.following;
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-      fetch("https://leetcode-stats-api.herokuapp.com/Pavnbadiger25")
-        .then((response) => response.json())
-        .then((data) => {
-          document.getElementById("lc-user").textContent = "Pavnbadiger25";
-
-          document.getElementById("lc-total").textContent = data.totalSolved;
-
-          document.getElementById("lc-easy").textContent = data.easySolved;
-
-          document.getElementById("lc-medium").textContent = data.mediumSolved;
-
-          document.getElementById("lc-hard").textContent = data.hardSolved;
-        })
-        .catch((error) => {
-          console.error("LeetCode API Error:", error);
         });
     </script>
   </body>
