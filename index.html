@@ -6,7 +6,7 @@
 
     <title>Pavn31 | Portfolio</title>
 
-    <link rel="icon" href="PFP.webp" />
+    <link rel="icon" href="PFP.jpg" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -486,6 +486,18 @@
         object-fit: cover;
         margin-bottom: 15px;
       }
+      .leetcode-card {
+        text-align: center;
+      }
+
+      .leetcode-card img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+        border: 2px solid var(--card-border);
+      }
     </style>
   </head>
 
@@ -613,15 +625,22 @@
           <p>Following: <span id="github-following">0</span></p>
         </div>
 
-        <div class="dashboard-card">
-          <h3>LeetCode</h3>
+        <div class="dashboard-card github-card">
+          <img
+            src="https://assets.leetcode.com/static_assets/public/icons/favicon-96x96.png"
+            alt="LeetCode"
+          />
 
-          <p>Username: Pavnbadiger25</p>
+          <h3>Pavnbadiger25</h3>
 
+          <p>Solved: <span>42</span></p>
+          <p>Easy: <span>25</span></p>
+          <p>Medium: <span>15</span></p>
+          <p>Hard: <span>2</span></p>
           <a
-            href="https://leetcode.com/u/Pavnbadiger25/"
+            href="https://leetcode.com/u/pavnbadiger25/"
             target="_blank"
-            class="blog-link"
+            class="btn secondary"
           >
             View Profile →
           </a>

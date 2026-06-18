@@ -476,3 +476,15 @@ footer {
   color: var(--text-color);
   font-weight: 600;
 }
+.leetcode-card {
+  text-align: center;
+}
+
+.leetcode-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid var(--card-border);
+}
