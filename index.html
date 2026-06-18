@@ -535,6 +535,38 @@
         grid-template-columns: 1fr 1fr;
         gap: 20px;
       }
+      .easter-egg {
+        position: fixed;
+        inset: 0;
+
+        width: 100vw;
+        height: 100vh;
+
+        object-fit: cover;
+
+        z-index: 99999;
+
+        opacity: 0;
+
+        animation: easterFade 8s ease forwards;
+      }
+      @keyframes easterFade {
+        0% {
+          opacity: 0;
+        }
+
+        10% {
+          opacity: 1;
+        }
+
+        90% {
+          opacity: 1;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
     </style>
   </head>
 
@@ -870,16 +902,7 @@
 
           easterEgg.src = "assets/easter-egg.gif";
 
-          easterEgg.style.position = "fixed";
-          easterEgg.style.top = "50%";
-          easterEgg.style.left = "50%";
-          easterEgg.style.transform = "translate(-50%, -50%)";
-
-          easterEgg.style.width = "400px";
-          easterEgg.style.maxWidth = "90vw";
-
-          easterEgg.style.zIndex = "99999";
-          easterEgg.style.borderRadius = "20px";
+          easterEgg.classList.add("easter-egg");
 
           document.body.appendChild(easterEgg);
 
