@@ -44,7 +44,7 @@
         --card-bg: #5c0028;
         --card-border: #8a003c;
         --hover-border: #8a003c;
-        --hover-glow: rgba(210, 4, 45, 0.7);
+        --hover-glow: rgba(255, 182, 193, 0.6);
       }
 
       .light-mode {
@@ -291,31 +291,17 @@
 
         color: var(--text-color);
         background: var(--card-bg);
-        border: 3px solid var(--card-border);
+        border: 1px solid var(--card-border);
 
         padding: 15px 25px;
-        border-radius: 0;
+        border-radius: 15px;
         transition: 0.3s;
-        clip-path: polygon(
-          0 8px,
-          8px 8px,
-          8px 0,
-          calc(100% - 8px) 0,
-          calc(100% - 8px) 8px,
-          100% 8px,
-          100% calc(100% - 8px),
-          calc(100% - 8px) calc(100% - 8px),
-          calc(100% - 8px) 100%,
-          8px 100%,
-          8px calc(100% - 8px),
-          0 calc(100% - 8px)
-        );
       }
 
       .contact-box a:hover {
-        border-color: #d2042d;
+        transform: translateY(-5px);
+        border-color: var(--hover-border);
         box-shadow: 0 0 20px var(--hover-glow);
-        transform: translateY(-4px);
       }
 
       .contact-box i {
@@ -588,7 +574,7 @@
       </p>
     </section>
 
-    <section id="✨projects">
+    <section id="projects">
       <h2 class="section-title">Projects</h2>
 
       <div class="card-grid">
@@ -604,7 +590,7 @@
       </div>
     </section>
 
-    <section id="🍒blog">
+    <section id="blog">
       <h2 class="section-title">Blog</h2>
 
       <div class="card-grid">
@@ -643,7 +629,7 @@
       </div>
     </section>
 
-    <section id="👁️about">
+    <section id="about">
       <h2 class="section-title">About Me</h2>
 
       <p class="about-text">
@@ -653,7 +639,7 @@
         machine learning, and modern web design.
       </p>
     </section>
-    <section id="📊dashboard">
+    <section id="dashboard">
       <h2 class="section-title">Developer Dashboard</h2>
 
       <div class="dashboard-grid">
@@ -713,7 +699,7 @@
         </div>
       </div>
     </section>
-    <section id="📬contact">
+    <section id="contact">
       <h2 class="section-title">Contact</h2>
 
       <div class="contact-box">
