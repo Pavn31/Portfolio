@@ -233,3 +233,8 @@ fetch("https://leetcode-stats-api.herokuapp.com/Pavnbadiger25")
   .catch((error) => {
     console.error("LeetCode API Error:", error);
   });
+let visits = localStorage.getItem("visits") || 0;
+visits++;
+localStorage.setItem("visits", visits);
+
+document.getElementById("visitor-count").textContent = visits;

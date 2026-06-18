@@ -530,6 +530,13 @@
       .github-graph-card {
         grid-column: 1 / -1;
       }
+      #visitor-count {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-right: 15px;
+        color: var(--text-color);
+        font-family: inherit;
+      }
     </style>
   </head>
 
@@ -542,6 +549,9 @@
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
+        <span id="visitor-count">
+          <img src="https://count.getloli.com/get/@pavn31?theme=rule34" />
+        </span>
         <button id="theme-toggle">
           <i class="fas fa-moon"></i>
         </button>
@@ -943,6 +953,11 @@
           document.getElementById("github-following").textContent =
             data.following;
         });
+      let visits = localStorage.getItem("visits") || 0;
+      visits++;
+      localStorage.setItem("visits", visits);
+
+      document.getElementById("visitor-count").textContent = visits;
     </script>
   </body>
 </html>
