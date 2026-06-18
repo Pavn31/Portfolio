@@ -6,7 +6,7 @@
 
     <title>Pavn31 | Portfolio</title>
 
-    <link rel="icon" href="assets/PFP.jpg" />
+    <link rel="icon" href="assets/icon.png" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -68,11 +68,16 @@
         transition: 0.3s ease;
       }
       #theme-toggle {
-        background: none;
-        border: none;
+        background: transparent;
+        border: 1px solid var(--card-border);
+        border-radius: 50%;
+        width: 42px;
+        height: 42px;
         cursor: pointer;
         font-size: 1.2rem;
-        color: var(--text-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       /* NAVBAR */
 
@@ -104,11 +109,9 @@
         align-items: center;
         gap: 30px;
       }
-      #theme-toggle {
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 1.2rem;
+      #theme-toggle:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px var(--hover-glow);
       }
       .nav-links a {
         text-decoration: none;
@@ -552,9 +555,7 @@
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <button id="theme-toggle">
-          <i class="fas fa-moon"></i>
-        </button>
+        <button id="theme-toggle">🌸</button>
       </nav>
     </header>
 
@@ -577,10 +578,6 @@
 
       <div class="card-grid">
         <div class="card">
-          <img
-            src="assets/Smart-Blind-Stick-Circuit-Banner.png"
-            alt="Smart Blind Stick"
-          />
           <h3>Smart Blind Stick</h3>
 
           <p>
@@ -749,9 +746,9 @@
 
       if (localStorage.getItem("theme") === "light") {
         document.body.classList.add("light-mode");
-        toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        toggleBtn.innerHTML = "🌙";
       } else {
-        toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        toggleBtn.innerHTML = "🌸";
       }
 
       toggleBtn.addEventListener("click", () => {
@@ -759,10 +756,10 @@
 
         if (document.body.classList.contains("light-mode")) {
           localStorage.setItem("theme", "light");
-          toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+          toggleBtn.innerHTML = "🌙";
         } else {
           localStorage.setItem("theme", "dark");
-          toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+          toggleBtn.innerHTML = "🌸";
         }
       });
       const sections = document.querySelectorAll("section");
