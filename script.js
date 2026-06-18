@@ -183,3 +183,23 @@ logo.addEventListener("click", (e) => {
     clickCount = 0;
   }
 });
+function updateClock() {
+  const now = new Date();
+
+  document.getElementById("clock").textContent = now.toLocaleTimeString();
+}
+
+setInterval(updateClock, 1000);
+
+updateClock();
+
+const quotes = [
+  "Code. Sleep. Repeat.",
+  "Build. Break. Learn.",
+  "Stay curious.",
+  "Consistency beats motivation.",
+  "Small progress is still progress.",
+];
+
+document.getElementById("quote").textContent =
+  quotes[Math.floor(Math.random() * quotes.length)];
