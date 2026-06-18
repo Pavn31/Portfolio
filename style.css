@@ -467,3 +467,12 @@ footer {
 .github-card h3 {
   margin-bottom: 10px;
 }
+.leetcode-card p {
+  margin: 10px 0;
+  color: var(--secondary-text);
+}
+
+.leetcode-card span {
+  color: var(--text-color);
+  font-weight: 600;
+}

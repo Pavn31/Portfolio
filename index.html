@@ -507,6 +507,15 @@
       .github-card h3 {
         margin-bottom: 10px;
       }
+      .leetcode-card p {
+        margin: 10px 0;
+        color: var(--secondary-text);
+      }
+
+      .leetcode-card span {
+        color: var(--text-color);
+        font-weight: 600;
+      }
     </style>
   </head>
 
@@ -582,6 +591,17 @@
           <p>Repos: <span id="github-repos">0</span></p>
           <p>Followers: <span id="github-followers">0</span></p>
           <p>Following: <span id="github-following">0</span></p>
+        </div>
+        <div class="dashboard-card leetcode-card">
+          <h3>LeetCode Stats</h3>
+
+          <p><strong>Username:</strong> <span id="lc-user">Loading...</span></p>
+          <p>
+            <strong>Total Solved:</strong> <span id="lc-total">Loading...</span>
+          </p>
+          <p><strong>Easy:</strong> <span id="lc-easy">Loading...</span></p>
+          <p><strong>Medium:</strong> <span id="lc-medium">Loading...</span></p>
+          <p><strong>Hard:</strong> <span id="lc-hard">Loading...</span></p>
         </div>
       </div>
     </section>
@@ -895,6 +915,22 @@
         })
         .catch((error) => {
           console.error(error);
+        });
+      fetch("https://leetcode-stats-api.herokuapp.com/Pavnbadiger25")
+        .then((response) => response.json())
+        .then((data) => {
+          document.getElementById("lc-user").textContent = "Pavnbadiger25";
+
+          document.getElementById("lc-total").textContent = data.totalSolved;
+
+          document.getElementById("lc-easy").textContent = data.easySolved;
+
+          document.getElementById("lc-medium").textContent = data.mediumSolved;
+
+          document.getElementById("lc-hard").textContent = data.hardSolved;
+        })
+        .catch((error) => {
+          console.error("LeetCode API Error:", error);
         });
     </script>
   </body>

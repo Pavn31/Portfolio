@@ -217,3 +217,19 @@ fetch("https://api.github.com/users/Pavn31")
   .catch((error) => {
     console.error(error);
   });
+fetch("https://leetcode-stats-api.herokuapp.com/Pavnbadiger25")
+  .then((response) => response.json())
+  .then((data) => {
+    document.getElementById("lc-user").textContent = "Pavnbadiger25";
+
+    document.getElementById("lc-total").textContent = data.totalSolved;
+
+    document.getElementById("lc-easy").textContent = data.easySolved;
+
+    document.getElementById("lc-medium").textContent = data.mediumSolved;
+
+    document.getElementById("lc-hard").textContent = data.hardSolved;
+  })
+  .catch((error) => {
+    console.error("LeetCode API Error:", error);
+  });
