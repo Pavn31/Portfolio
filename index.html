@@ -42,7 +42,7 @@
         --button-bg: #d2042d;
         --button-text: #ffffff;
         --card-bg: #5c0028;
-        --card-border: #222;
+        --card-border: #8a003c;
         --hover-border: #8a003c;
         --hover-glow: rgba(210, 4, 45, 0.7);
       }
@@ -93,7 +93,7 @@
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         background: var(--nav-bg);
-        border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+        border-bottom: 1px solid rgba(210, 4, 45, 0.25);
         z-index: 1000;
       }
 
@@ -101,7 +101,7 @@
         font-size: 1.4rem;
         font-weight: 700;
         color: var(--text-color);
-        text-decoration: none;
+        text-shadow: 0 0 10px rgba(210, 4, 45, 0.5);
       }
 
       .nav-links {
@@ -135,7 +135,7 @@
         bottom: -6px;
         width: 100%;
         height: 2px;
-        background: var(--text-color);
+        background: #d2042d;
         border-radius: 2px;
       }
       /* HERO */
@@ -161,6 +161,7 @@
         border-radius: 50%;
         border: 3px solid var(--card-border);
         transition: 0.4s ease;
+        box-shadow: 0 0 25px rgba(210, 4, 45, 0.25);
       }
 
       .hero-profile img:hover {
@@ -883,8 +884,9 @@
       function drawMatrix() {
         ctx.fillStyle = "rgba(0,0,0,0.05)";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        ctx.fillStyle = "#0F0";
+        ctx.shadowColor = "#ff4d88";
+        ctx.shadowBlur = 10;
+        ctx.fillStyle = "#ff4d88";
         ctx.font = fontSize + "px monospace";
 
         for (let i = 0; i < drops.length; i++) {
