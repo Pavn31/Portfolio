@@ -175,6 +175,7 @@
           var(--text-color),
           var(--secondary-text)
         );
+        font-size: 5rem;
 
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -322,16 +323,18 @@
         .navbar {
           flex-direction: column;
           gap: 15px;
+          padding: 15px;
         }
 
         .nav-links {
-          gap: 20px;
+          gap: 12px;
           flex-wrap: wrap;
           justify-content: center;
+          font-size: 0.9rem;
         }
 
         .hero h1 {
-          font-size: 3.5rem;
+          font-size: 2.5rem;
         }
 
         .hero-profile img {
@@ -339,12 +342,18 @@
           height: 180px;
         }
 
-        .hero-btns {
-          flex-direction: column;
-        }
-
         .section-title {
           font-size: 2.2rem;
+        }
+
+        .dashboard-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .github-graph-card img,
+        .dashboard-card img {
+          max-width: 100%;
+          height: auto;
         }
       }
       .blog-link {
