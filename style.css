@@ -521,3 +521,13 @@ footer {
 .github-graph-card {
   grid-column: 1 / -1;
 }
+.github-stats img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}

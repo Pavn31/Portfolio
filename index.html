@@ -530,6 +530,16 @@
       .github-graph-card {
         grid-column: 1 / -1;
       }
+      .github-stats img {
+        width: 100%;
+        border-radius: 12px;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
     </style>
   </head>
 
@@ -677,9 +687,16 @@
         </div>
         <div class="dashboard-card github-graph-card">
           <h3>GitHub Contributions</h3>
-
+          <img
+            src="https://github-readme-activity-graph.vercel.app/graph?username=Pavn31&theme=github-dark&hide_border=true"
+            class="github-graph"
+          />
           <img
             src="https://github-readme-stats.vercel.app/api?username=Pavn31&show_icons=true&theme=transparent"
+            width="100%"
+          />
+          <img
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pavn31&layout=compact&theme=transparent"
             width="100%"
           />
         </div>
