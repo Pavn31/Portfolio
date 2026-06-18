@@ -518,3 +518,6 @@ footer {
   text-align: center;
   margin-bottom: 20px;
 }
+.github-graph-card {
+  grid-column: 1 / -1;
+}

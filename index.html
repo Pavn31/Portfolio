@@ -465,14 +465,13 @@
         border-radius: 20px;
         padding: 30px;
         transition: 0.3s ease;
+        min-height: 250px;
       }
 
       .dashboard-card:hover {
-        transform: translateY(-8px);
+        transform: translateY(-5px);
         border-color: var(--hover-border);
-        box-shadow:
-          0 0 20px var(--hover-glow),
-          0 0 40px var(--hover-glow);
+        box-shadow: none;
       }
 
       .github-card {
@@ -527,6 +526,9 @@
       .dashboard-card h3 {
         text-align: center;
         margin-bottom: 20px;
+      }
+      .github-graph-card {
+        grid-column: 1 / -1;
       }
     </style>
   </head>
@@ -652,7 +654,7 @@
           <p>Followers: <span id="github-followers">0</span></p>
           <p>Following: <span id="github-following">0</span></p>
         </div>
-        <div class="dashboard-card">
+        <div class="dashboard-card github-graph-card">
           <h3>GitHub Contributions</h3>
 
           <img
