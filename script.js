@@ -203,3 +203,17 @@ const quotes = [
 
 document.getElementById("quote").textContent =
   quotes[Math.floor(Math.random() * quotes.length)];
+fetch("https://api.github.com/users/Pavn31")
+  .then((response) => response.json())
+  .then((data) => {
+    document.getElementById("github-user").textContent = data.login;
+
+    document.getElementById("github-repos").textContent = data.public_repos;
+
+    document.getElementById("github-followers").textContent = data.followers;
+
+    document.getElementById("github-following").textContent = data.following;
+  })
+  .catch((error) => {
+    console.error(error);
+  });

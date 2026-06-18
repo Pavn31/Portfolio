@@ -423,13 +423,33 @@ footer {
 
 .dashboard-card {
   background: var(--card-bg);
-  padding: 25px;
+  border: 1px solid var(--card-border);
   border-radius: 20px;
-  border: 1px solid var(--border-color);
-
-  transition: 0.3s;
+  padding: 30px;
+  transition: 0.3s ease;
 }
 
 .dashboard-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  border-color: var(--hover-border);
+  box-shadow:
+    0 0 20px var(--hover-glow),
+    0 0 40px var(--hover-glow);
+}
+.dashboard-card h1 {
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+.dashboard-card h3 {
+  margin-bottom: 10px;
+}
+.dashboard-card p {
+  margin: 10px 0;
+  color: var(--secondary-text);
+}
+
+.dashboard-card span {
+  color: var(--text-color);
+  font-weight: 600;
 }
