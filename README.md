@@ -16,6 +16,8 @@
 
 ---
 
+
+
 ## 🛠 Tech Stack
 
 | Technology   | Usage         |
@@ -27,6 +29,8 @@
 | Google Fonts | Typography    |
 
 ---
+
+
 
 ## 📂 Project Structure
 
