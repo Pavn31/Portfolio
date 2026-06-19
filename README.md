@@ -30,7 +30,7 @@
 
 ## 📂 Project Structure
 
-```bash
+
 Portfolio/
 │
 ├── assets/
@@ -45,7 +45,7 @@ Portfolio/
 ├── style.css
 ├── script.js
 └── README.md
-```
+
 
 ---
 
@@ -66,13 +66,13 @@ An Arduino-powered assistive device designed to help visually impaired individua
 
 ## 📸 Preview
 
-### Dark Mode
+### Cherry Red Mode
 
-<img src="assets/Dark-Preview.png" alt="Dark Mode Preview" width="100%">
+<img src="assets/Cherry-Red-mode.png" alt="Dark Mode Preview" width="100%">
 
-### Light Mode
+### Light Pink Mode
 
-<img src="assets/White-Preview.png" alt="Light Mode Preview" width="100%">
+<img src="assets/Light-Pink-mode.png" alt="Light Mode Preview" width="100%">
 
 ---
 
