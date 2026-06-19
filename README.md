@@ -2,21 +2,23 @@
 
 > A modern, responsive portfolio website built to showcase my projects, blogs, and journey in AI & Data Science.
 
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3\&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black)
+
 ---
 
 ## 🚀 Features
 
-- 🌙 Dark / Light Mode Toggle
-- 📱 Fully Responsive Design
-- 🎨 Modern & Minimal UI
-- 📝 Blog Section
-- 💼 Project Showcase
-- 📬 Contact Links
-- ⚡ Smooth User Experience
+* 🌙 Dark / Light Theme Toggle
+* 📱 Fully Responsive Design
+* 🎨 Modern & Minimal UI
+* 📝 Personal Blog Section
+* 💼 Project Showcase
+* 📬 Social & Contact Links
+* ⚡ Smooth Animations and Transitions
 
 ---
-
-
 
 ## 🛠 Tech Stack
 
@@ -30,25 +32,26 @@
 
 ---
 
-
 ## 📂 Project Structure
 
-'''
+```text
 Portfolio/
 │
 ├── assets/
 │   ├── PFP.jpg
 │   ├── Smart-Blind-Stick-Circuit-Banner.png
+│   ├── Cherry-Red-mode.png
+│   └── Light-Pink-mode.png
 │
 ├── blogs/
 │   ├── smart-blind-stick.html
-│   ├── Student-Competition.html
+│   └── Student-Competition.html
 │
 ├── index.html
 ├── style.css
 ├── script.js
 └── README.md
-'''
+```
 
 ---
 
@@ -56,45 +59,46 @@ Portfolio/
 
 ### Smart Blind Stick
 
-An Arduino-powered assistive device designed to help visually impaired individuals.
+An Arduino-powered assistive device designed to help visually impaired individuals navigate more safely and independently.
 
 #### Features
 
-- Obstacle Detection
-- GPS Tracking
-- GSM Emergency Alerts
-- Voice Guidance System
+* 🚧 Obstacle Detection
+* 📍 GPS Tracking
+* 📞 GSM Emergency Alerts
+* 🔊 Voice Guidance System
 
 ---
 
 ## 📸 Preview
 
-### Cherry Red Mode
+### ❤️ Cherry Red Theme
 
-<img src="assets/Cherry-Red-mode.png" alt="Dark Mode Preview" width="100%">
+<img src="assets/Cherry-Red-mode.png" alt="Cherry Red Theme" width="100%">
 
-### Light Pink Mode
+### 🌸 Light Pink Theme
 
-<img src="assets/Light-Pink-mode.png" alt="Light Mode Preview" width="100%">
+<img src="assets/Light-Pink-mode.png" alt="Light Pink Theme" width="100%">
 
 ---
 
 ## 🔗 Live Demo
 
-[Visit Portfolio](https://pavn31.dpdns.org)
+🌐 **Portfolio Website**
+https://pavn31.dpdns.org
 
 ---
 
 ## 📬 Contact
 
-- GitHub: https://github.com/Pavn31
-- LinkedIn: https://www.linkedin.com/in/pavn-badiger/
+* GitHub: https://github.com/Pavn31
+* LinkedIn: https://www.linkedin.com/in/pavn-badiger/
 
 ---
 
 ## ⭐ Support
 
-If you found this project useful, consider giving it a star.
+If you found this project useful, consider giving it a ⭐ on GitHub.
 
 ---
 
