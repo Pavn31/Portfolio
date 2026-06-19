@@ -31,10 +31,9 @@
 ---
 
 
-
 ## 📂 Project Structure
 
-
+'''
 Portfolio/
 │
 ├── assets/
@@ -49,7 +48,7 @@ Portfolio/
 ├── style.css
 ├── script.js
 └── README.md
-
+'''
 
 ---
 
