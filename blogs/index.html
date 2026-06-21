@@ -37,10 +37,11 @@
       }
 
       h1 {
-        font-family: "Cormorant Garamond", serif;
+        font-family: "Instrument Serif", serif;
         font-size: 4rem;
         font-weight: 400;
         margin-bottom: 10px;
+        font-style: italic;
       }
 
       .subtitle {
@@ -63,8 +64,9 @@
       }
 
       .title {
-        font-family: "Cormorant Garamond", serif;
+        font-family: "Instrument Serif", serif;
         font-size: 2rem;
+        font-style: italic;
       }
 
       .back {
@@ -79,10 +81,11 @@
       }
 
       .logo {
-        font-family: "Cormorant Garamond", serif;
+        font-family: "Instrument Serif", serif;
         font-size: 2rem;
         color: white;
         text-decoration: none;
+        font-style: italic;
       }
 
       .socials {
@@ -98,6 +101,20 @@
       }
       .socials a:hover {
         color: white;
+      }
+      .tags {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+      }
+
+      .tags span {
+        font-size: 0.8rem;
+        color: #94a3b8;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 4px 10px;
+        border-radius: 999px;
       }
     </style>
   </head>
@@ -124,11 +141,20 @@
 
     <a class="post" href="smart-blind-stick.html">
       <div class="date">June 2026</div>
+      <div class="tags">
+        <span>Arduino</span>
+        <span>IoT</span>
+        <span>Accessibility</span>
+      </div>
       <div class="title">Smart Blind Stick</div>
     </a>
 
     <a class="post" href="Student-Competition.html">
       <div class="date">June 2026</div>
+      <div class="tags">
+        <span>Competition</span>
+        <span>Engineering</span>
+      </div>
       <div class="title">Student Competition</div>
     </a>
   </body>
