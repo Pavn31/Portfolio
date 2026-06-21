@@ -46,17 +46,6 @@
         --hover-border: #8a003c;
       }
 
-      .light-mode {
-        --bg-color: #ffe6ef;
-        --text-color: #4a001f;
-        --secondary-text: #7a3854;
-        --nav-bg: rgba(255, 230, 239, 0.85);
-        --button-bg: #d2042d;
-        --button-text: #ffffff;
-        --card-bg: #fff4f8;
-        --card-border: #f4c2d7;
-      }
-
       body {
         font-family: "Space Grotesk", sans-serif;
         background:
@@ -75,76 +64,12 @@
         overflow-x: hidden;
         transition: 0.3s ease;
       }
-      #theme-toggle {
-        background: transparent;
-        border: 1px solid var(--card-border);
-        border-radius: 50%;
-        width: 42px;
-        height: 42px;
-        cursor: pointer;
-        font-size: 1.2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      /* NAVBAR */
-
-      .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 20px 8%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        background: var(--nav-bg);
-        border-bottom: 1px solid rgba(210, 4, 45, 0.25);
-        z-index: 1000;
-      }
 
       .logo {
         font-size: 1.4rem;
         font-weight: 700;
         color: var(--text-color);
         text-shadow: 0 0 10px rgba(210, 4, 45, 0.5);
-      }
-
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 30px;
-      }
-      #theme-toggle:hover {
-        transform: scale(1.1);
-        box-shadow: 0 0 15px var(--hover-glow);
-      }
-      .nav-links a {
-        text-decoration: none;
-        color: var(--text-color);
-        transition: 0.3s;
-      }
-
-      .nav-links a:hover {
-        opacity: 0.7;
-      }
-      .nav-links a.active {
-        color: var(--text-color);
-        font-weight: 600;
-        position: relative;
-      }
-
-      .nav-links a.active::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -6px;
-        width: 100%;
-        height: 2px;
-        background: #d2042d;
-        border-radius: 2px;
       }
       /* HERO */
 
@@ -618,10 +543,10 @@
         >
         <a href="mailto:pavnbadiger@gmail.com">email</a>
         <a href="blogs.html">blogs</a>
-        <div class="meta">
-          <span>📍 Bengaluru, India</span>
-          <span id="clock"></span>
-        </div>
+      </div>
+      <div class="meta">
+        <span>📍 Belagavi, India</span>
+        <span id="clock"></span>
       </div>
     </section>
 
@@ -647,114 +572,6 @@
     </div>
 
     <script>
-      const toggleBtn = document.getElementById("theme-toggle");
-
-      if (localStorage.getItem("theme") === "light") {
-        document.body.classList.add("light-mode");
-        toggleBtn.innerHTML = "🌙";
-      } else {
-        toggleBtn.innerHTML = "🌸";
-      }
-
-      toggleBtn.addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
-
-        if (document.body.classList.contains("light-mode")) {
-          localStorage.setItem("theme", "light");
-          toggleBtn.innerHTML = "🌙";
-        } else {
-          localStorage.setItem("theme", "dark");
-          toggleBtn.innerHTML = "🌸";
-        }
-      });
-      const sections = document.querySelectorAll("section");
-      const navLinks = document.querySelectorAll(".nav-links a");
-
-      window.addEventListener("scroll", () => {
-        let current = "";
-
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop - 150;
-
-          if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + section.offsetHeight
-          ) {
-            current = section.getAttribute("id");
-          }
-        });
-
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-
-          if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-          }
-        });
-      });
-      const revealElements = document.querySelectorAll(
-        ".card, .about-text, .contact-box, .section-title",
-      );
-
-      const revealOnScroll = () => {
-        revealElements.forEach((el) => {
-          const windowHeight = window.innerHeight;
-          const elementTop = el.getBoundingClientRect().top;
-
-          if (elementTop < windowHeight - 100) {
-            el.classList.add("show");
-          }
-        });
-      };
-
-      window.addEventListener("scroll", revealOnScroll);
-      revealOnScroll();
-
-      const roles = [
-        "AI & Data Science Student",
-        "Software Developer",
-        "Machine Learning Enthusiast",
-        "Problem Solver",
-      ];
-
-      const typingText = document.querySelector(".typing-text");
-
-      let roleIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-
-      function typeEffect() {
-        const currentRole = roles[roleIndex];
-
-        if (!isDeleting) {
-          typingText.textContent = currentRole.substring(0, charIndex + 1);
-
-          charIndex++;
-
-          if (charIndex === currentRole.length) {
-            isDeleting = true;
-            setTimeout(typeEffect, 1500);
-            return;
-          }
-        } else {
-          typingText.textContent = currentRole.substring(0, charIndex - 1);
-
-          charIndex--;
-
-          if (charIndex === 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-          }
-        }
-
-        setTimeout(typeEffect, isDeleting ? 50 : 100);
-      }
-
-      typeEffect();
-      const modal = document.getElementById("projectModal");
-      const projectCard = document.querySelector("#projects .card");
-      const closeModal = document.querySelector(".close-modal");
-
       projectCard.addEventListener("click", () => {
         console.log("CARD CLICKED");
         modal.classList.add("active");
