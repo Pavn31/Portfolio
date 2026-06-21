@@ -67,10 +67,50 @@
         color: #94a3b8;
         text-decoration: none;
       }
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 80px;
+      }
+
+      .logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2rem;
+        color: white;
+        text-decoration: none;
+      }
+
+      .socials {
+        display: flex;
+        gap: 20px;
+      }
+
+      .socials a {
+        color: #94a3b8;
+        text-decoration: none;
+        font-size: 1.4rem;
+        transition: 0.3s;
+      }
+      .socials a:hover {
+        color: white;
+      }
     </style>
   </head>
   <body>
-    <a class="back" href="../index.html">← back home</a>
+    <div class="topbar">
+      <a href="../index.html" class="logo">Pavn31</a>
+
+      <div class="socials">
+        <a href="https://github.com/Pavn31" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <a href="https://x.com" target="_blank">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </div>
+    </div>
 
     <h1>Blog</h1>
 
@@ -79,12 +119,12 @@
     </p>
 
     <a class="post" href="smart-blind-stick.html">
-      <div class="date">JUNE 2026</div>
+      <div class="date">June 2026</div>
       <div class="title">Smart Blind Stick</div>
     </a>
 
     <a class="post" href="Student-Competition.html">
-      <div class="date">JUNE 2026</div>
+      <div class="date">June 2026</div>
       <div class="title">Student Competition</div>
     </a>
   </body>
