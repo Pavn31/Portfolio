@@ -72,13 +72,13 @@ An Arduino-powered assistive device designed to help visually impaired individua
 
 ## 📸 Preview
 
-### ❤️ Cherry Red Theme
+### Home Page
 
-<img src="assets/Cherry-Red-mode.png" alt="Cherry Red Theme" width="100%">
+<img src="assets/Home-page.png" alt="Cherry Red Theme" width="100%">
 
-### 🌸 Light Pink Theme
+### Blog Page
 
-<img src="assets/Light-Pink-mode.png" alt="Light Pink Theme" width="100%">
+<img src="assets/Blog-Section.png" alt="Light Pink Theme" width="100%">
 
 ---
 
