@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Portfolio Website | Pavn31</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --text: #f8fafc;
+        --muted: #94a3b8;
+        --bg: #020617;
+      }
+
+      body {
+        font-family: sans-serif;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(59, 130, 246, 0.15) 0%,
+            transparent 35%
+          ),
+          radial-gradient(
+            circle at bottom right,
+            rgba(99, 102, 241, 0.12) 0%,
+            transparent 35%
+          ),
+          var(--bg);
+
+        color: var(--text);
+        line-height: 1.8;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 120px auto;
+        padding: 0 20px;
+      }
+
+      .back {
+        position: fixed;
+        top: 25px;
+        left: 30px;
+
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 15px;
+      }
+
+      .back:hover {
+        color: white;
+      }
+
+      h1 {
+        font-family: "Instrument Serif", serif;
+        font-size: 4rem;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        color: var(--muted);
+        margin-bottom: 50px;
+      }
+
+      h2 {
+        font-family: "Instrument Serif", serif;
+        font-size: 2rem;
+        font-weight: 400;
+        margin-top: 50px;
+        margin-bottom: 15px;
+      }
+
+      p {
+        color: #cbd5e1;
+        margin-bottom: 20px;
+      }
+
+      ul {
+        padding-left: 20px;
+        color: #cbd5e1;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      .links {
+        display: flex;
+        gap: 20px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+      }
+
+      .links a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .links a:hover {
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="index.html" class="back">← Projects</a>
+
+    <div class="container">
+      <h1>Portfolio Website</h1>
+
+      <p class="subtitle">
+        Personal portfolio designed and developed to showcase my projects,
+        skills, and journey in technology.
+      </p>
+
+      <h2>Overview</h2>
+
+      <p>
+        This portfolio serves as my digital space on the internet. It highlights
+        my projects, interests, and experiences while providing a simple way for
+        people to learn more about me and my work.
+      </p>
+
+      <h2>Features</h2>
+
+      <ul>
+        <li>Minimal and responsive design</li>
+        <li>Project showcase pages</li>
+        <li>Direct links to GitHub, LinkedIn, and Email</li>
+        <li>Modern typography and clean UI</li>
+        <li>Mobile-friendly layout</li>
+      </ul>
+
+      <h2>Tech Stack</h2>
+
+      <p>HTML • CSS • JavaScript</p>
+
+      <h2>Design Goals</h2>
+
+      <p>
+        The goal was to create a portfolio that feels simple, professional, and
+        easy to navigate. Instead of flashy animations and heavy effects, the
+        focus was placed on readability, content, and user experience.
+      </p>
+
+      <h2>What I Learned</h2>
+
+      <ul>
+        <li>Responsive web design</li>
+        <li>UI/UX principles</li>
+        <li>Project organization</li>
+        <li>Website deployment</li>
+        <li>Performance optimization</li>
+      </ul>
+
+      <h2>Future Improvements</h2>
+
+      <ul>
+        <li>Add project screenshots</li>
+        <li>Implement dark/light theme toggle</li>
+        <li>Add animations and transitions</li>
+        <li>Improve accessibility</li>
+        <li>Add project filtering</li>
+      </ul>
+
+      <div class="links">
+        <a href="https://pavn31.dpdns.org" target="_blank"> Live Website ↗ </a>
+
+        <a href="https://github.com/Pavn31" target="_blank"> GitHub ↗ </a>
+      </div>
+    </div>
+  </body>
+</html>
