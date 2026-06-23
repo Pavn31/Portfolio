@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Smart Blind Stick | Pavn31</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --text: #f8fafc;
+        --muted: #94a3b8;
+        --bg: #020617;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: sans-serif;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(59, 130, 246, 0.15) 0%,
+            transparent 35%
+          ),
+          radial-gradient(
+            circle at bottom right,
+            rgba(99, 102, 241, 0.12) 0%,
+            transparent 35%
+          ),
+          var(--bg);
+
+        color: var(--text);
+        line-height: 1.8;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 120px auto;
+        padding: 0 20px;
+      }
+
+      .back {
+        position: fixed;
+        top: 25px;
+        left: 30px;
+
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 15px;
+      }
+
+      .back:hover {
+        color: white;
+      }
+
+      h1 {
+        font-family: "Instrument Serif", serif;
+        font-size: 4rem;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        color: var(--muted);
+        margin-bottom: 50px;
+      }
+
+      h2 {
+        font-family: "Instrument Serif", serif;
+        font-size: 2rem;
+        font-weight: 400;
+        margin-top: 50px;
+        margin-bottom: 15px;
+      }
+
+      p {
+        color: #cbd5e1;
+        margin-bottom: 20px;
+      }
+
+      ul {
+        padding-left: 20px;
+        color: #cbd5e1;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      .links {
+        margin-top: 40px;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .links a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .links a:hover {
+        opacity: 0.7;
+      }
+
+      .tech {
+        color: var(--muted);
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="index.html" class="back">← Projects</a>
+
+    <div class="container">
+      <h1>Smart Blind Stick</h1>
+
+      <p class="subtitle">
+        Arduino-based assistive device for visually impaired individuals.
+      </p>
+
+      <h2>Overview</h2>
+
+      <p>
+        Smart Blind Stick is an assistive technology project designed to help
+        visually impaired people navigate safely. The system detects obstacles
+        and environmental hazards using sensors and provides alerts through a
+        buzzer.
+      </p>
+
+      <h2>Features</h2>
+
+      <ul>
+        <li>Obstacle detection using HC-SR04 ultrasonic sensor</li>
+        <li>Water detection for puddles and wet surfaces</li>
+        <li>Audio alerts using buzzer</li>
+        <li>GPS location tracking</li>
+        <li>Emergency communication using GSM module</li>
+      </ul>
+
+      <h2>Tech Stack</h2>
+
+      <p class="tech">
+        Arduino UNO • HC-SR04 • GSM (SIM800L) • GPS (NEO-6M) • Water Sensor •
+        Embedded C
+      </p>
+
+      <h2>What I Learned</h2>
+
+      <p>
+        Through this project I gained experience working with sensors, serial
+        communication, embedded programming, GPS systems, GSM communication, and
+        real-world hardware integration.
+      </p>
+
+      <h2>Future Improvements</h2>
+
+      <ul>
+        <li>Voice navigation assistance</li>
+        <li>Mobile application integration</li>
+        <li>Machine learning based obstacle classification</li>
+        <li>Rechargeable battery system</li>
+      </ul>
+
+      <div class="links">
+        <a href="https://github.com/Pavn31/Smart-Blind-Stick" target="_blank">
+          GitHub ↗
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
