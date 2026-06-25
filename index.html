@@ -38,28 +38,8 @@
         scroll-behavior: smooth;
       }
       :root {
-        --text-color: #f8fafc;
+        --text-color: #ffffff;
         --secondary-text: #94a3b8;
-        --card-hover: rgba(255, 255, 255, 0.12);
-      }
-      body.light-mode {
-        --bg: #e6f7ff; /* light sky blue */
-        --text-color: #0b3b6e; /* dark navy */
-        --secondary-text: #436b97;
-        --card-hover: rgba(0, 80, 180, 0.08);
-
-        background:
-          radial-gradient(
-            circle at top left,
-            rgba(59, 130, 246, 0.15),
-            transparent 35%
-          ),
-          radial-gradient(
-            circle at bottom right,
-            rgba(125, 211, 252, 0.15),
-            transparent 35%
-          ),
-          var(--bg);
       }
 
       body {
@@ -67,14 +47,13 @@
         background:
           radial-gradient(
             circle at top left,
-            rgba(59, 130, 246, 0.15),
+            rgba(59, 130, 246, 0.15) 0%,
             transparent 35%
           ),
           radial-gradient(
             circle at bottom right,
             rgba(99, 102, 241, 0.12) 0%,
-            transparent 35%,
-            var(--bg)
+            transparent 35%
           ),
           #020617;
         color: var(--text-color);
@@ -109,7 +88,7 @@
       }
 
       .hero h1 {
-        color: var(--text-color);
+        color: #f8fafc;
         font-size: 3.5rem;
         font-weight: 400;
         font-family: "Instrument Serif", serif;
@@ -162,7 +141,7 @@
       }
 
       .links a {
-        color: var(--text-color);
+        color: #f8fafc;
         text-decoration: none;
         font-size: 0.95rem;
       }
@@ -176,7 +155,7 @@
         gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
-        color: var(--secondary-text);
+        color: #94a3b8;
         font-size: 0.95rem;
       }
       .subtitle {
@@ -184,7 +163,6 @@
         margin-bottom: 30px;
         color: #94a3b8;
         font-size: 1rem;
-        color: var(--secondary-text);
       }
       .about {
         margin-top: 50px;
@@ -212,7 +190,7 @@
         background: none;
         backdrop-filter: blur(10px);
 
-        color: var(--secondary-text);
+        color: #94a3b8;
         text-decoration: none;
         font-size: 15px;
 
@@ -221,9 +199,9 @@
       }
 
       .projects-btn:hover {
-        background: var(--card-hover);
+        background: rgba(255, 255, 255, 0.12);
         transform: translateY(-2px);
-        color: var(--text-color);
+        color: #fff;
       }
       #projects {
         max-width: 650px;
@@ -241,27 +219,12 @@
       #projects p {
         color: #94a3b8;
       }
-      .theme-btn {
-        right: 140px; /* adjust if needed */
-        width: 42px;
-        height: 42px;
-        padding: 0;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
     </style>
   </head>
 
   <body>
-    <div class="hero-buttons">
-      <a href="projects/index.html" class="projects-btn">Projects</a>
+    <a href="projects/index.html" class="projects-btn">Projects</a>
 
-      <button id="theme-toggle" class="projects-btn theme-btn">
-        <i class="fas fa-moon"></i>
-      </button>
-    </div>
     <section id="home" class="hero">
       <div class="hero-profile">
         <img src="assets/PFP.jpg" alt="Pavan Profile" />
@@ -330,9 +293,9 @@
       const icon = themeBtn.querySelector("i");
 
       themeBtn.addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
+        document.body.classList.toggle("dark-mode");
 
-        if (document.body.classList.contains("light-mode")) {
+        if (document.body.classList.contains("dark-mode")) {
           icon.classList.replace("fa-moon", "fa-sun");
         } else {
           icon.classList.replace("fa-sun", "fa-moon");
