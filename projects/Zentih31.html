@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Zenith31 | Pavn31</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg: #020617;
+        --card: #0f172a;
+        --text: #f8fafc;
+        --muted: #94a3b8;
+        --accent: #3b82f6;
+      }
+
+      body {
+        font-family: sans-serif;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(59, 130, 246, 0.15),
+            transparent 35%
+          ),
+          radial-gradient(
+            circle at bottom right,
+            rgba(99, 102, 241, 0.12),
+            transparent 35%
+          ),
+          var(--bg);
+        color: var(--text);
+      }
+
+      .back {
+        position: fixed;
+        top: 25px;
+        left: 30px;
+        color: var(--muted);
+        text-decoration: none;
+      }
+
+      .back:hover {
+        color: white;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 110px auto;
+        padding: 20px;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: rgba(59, 130, 246, 0.12);
+        color: #60a5fa;
+        border: 1px solid rgba(96, 165, 250, 0.25);
+        font-size: 0.8rem;
+        margin-bottom: 25px;
+      }
+
+      h1 {
+        font-family: "Instrument Serif", serif;
+        font-size: 4rem;
+        font-weight: 400;
+        margin-bottom: 15px;
+      }
+
+      .subtitle {
+        color: var(--muted);
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 60px;
+      }
+
+      .section {
+        margin-top: 60px;
+      }
+
+      .section h2 {
+        margin-bottom: 18px;
+        font-size: 1.3rem;
+      }
+
+      .section p {
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 18px;
+        margin-top: 25px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        padding: 20px;
+      }
+
+      .card h3 {
+        margin-bottom: 10px;
+        font-size: 1rem;
+      }
+
+      .card p {
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
+      .progress {
+        margin-top: 20px;
+        height: 8px;
+        border-radius: 999px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .progress span {
+        display: block;
+        height: 100%;
+        width: 12%;
+        background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      }
+
+      .status {
+        margin-top: 12px;
+        color: var(--muted);
+      }
+
+      footer {
+        margin: 80px 0;
+        text-align: center;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="projects.html" class="back">← Projects</a>
+
+    <div class="container">
+      <div class="badge">Coming Soon</div>
+
+      <h1>Zenith31</h1>
+
+      <p class="subtitle">
+        A modern Linux distribution currently in development. Built on Arch
+        Linux, Zenith31 is designed for developers, cybersecurity professionals,
+        students, and power users who want a fast, elegant, and highly
+        customizable desktop experience.
+      </p>
+
+      <div class="section">
+        <h2>Vision</h2>
+
+        <p>
+          Zenith31 combines a minimalist interface with powerful workflows.
+          Instead of copying Windows or macOS, the project focuses on creating
+          its own identity: smooth animations, a modern desktop environment,
+          curated cybersecurity and development tools, and a clean experience
+          built for productivity.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Planned Features</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Modern Desktop</h3>
+            <p>
+              Minimal interface with smooth animations and a unique design
+              language.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Cybersecurity Toolkit</h3>
+            <p>
+              A curated collection of security, networking, and development
+              tools for learning and authorized testing.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>AI Assistant</h3>
+            <p>
+              An integrated assistant for development, scripting, documentation,
+              and workflows.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Performance</h3>
+            <p>
+              Fast boot times, lightweight resource usage, and a responsive user
+              experience.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Project Status</h2>
+
+        <div class="progress">
+          <span></span>
+        </div>
+
+        <p class="status">
+          Planning • Brand Identity Complete • Development begins soon
+        </p>
+      </div>
+
+      <footer>Built with ☕ and curiosity.</footer>
+    </div>
+  </body>
+</html>
