@@ -74,9 +74,9 @@ An Arduino-powered assistive device designed to help visually impaired individua
 
 <img src="assets/Home-page.png" alt="Cherry Red Theme" width="100%">
 
-### Blog Page
+### Project Page
 
-<img src="assets/Blog-Section.png" alt="Light Pink Theme" width="100%">
+<img src="assets/Project-Section.png" alt="Light Pink Theme" width="100%">
 
 ---
 
