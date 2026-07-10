@@ -98,6 +98,7 @@ https://pavn31.dpdns.org
 
 * GitHub: https://github.com/Pavn31
 * LinkedIn: https://www.linkedin.com/in/pavn-badiger/
+* 📧 Email: [pavanbadiger@gmail.com](mailto:pavanbadiger@gmail.com)
 
 ---
 
