@@ -32,25 +32,32 @@
 
 ## 📂 Project Structure
 
+## 📂 Project Structure
+
 ```text
-Portfolio/
+PORTFOLIO-PVN31/
+│
+├── .vscode/
 │
 ├── assets/
+│   ├── Home-Page.png
+│   ├── Icon.jpg
 │   ├── PFP.jpg
-│   ├── Smart-Blind-Stick-Circuit-Banner.png
-│   ├── Cherry-Red-mode.png
-│   └── Light-Pink-mode.png
+│   └── Project-Section.png
 │
-├── blogs/
+├── projects/
+│   ├── index.html
+│   ├── Portfolio.html
 │   ├── smart-blind-stick.html
-│   └── Student-Competition.html
+│   └── Zenith31.html
 │
 ├── index.html
-├── style.css
+├── README.md
+├── robots.txt
 ├── script.js
-└── README.md
+├── sitemap.xml
+└── style.css
 ```
-
 ---
 
 ## 🌟 Featured Project
