@@ -10,10 +10,8 @@
 
 ## 🚀 Features
 
-* 🌙 Dark / Light Theme Toggle
 * 📱 Fully Responsive Design
 * 🎨 Modern & Minimal UI
-* 📝 Personal Blog Section
 * 💼 Project Showcase
 * 📬 Social & Contact Links
 * ⚡ Smooth Animations and Transitions
