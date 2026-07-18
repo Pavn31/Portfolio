@@ -1,3 +1,4 @@
+Index · HTML
 <!doctype html>
 <html lang="en">
   <head>
@@ -63,13 +64,29 @@
         top: 25px;
         left: 30px;
 
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+
+        padding: 9px 18px;
+        border-radius: 999px;
+
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+
         color: var(--muted);
         text-decoration: none;
         font-size: 15px;
+        transition: all 0.3s ease;
       }
 
       .back:hover {
         color: white;
+        background: rgba(255, 255, 255, 0.14);
+        border-color: rgba(255, 255, 255, 0.25);
+        transform: translateY(-2px);
       }
 
       h1 {
@@ -84,30 +101,112 @@
         margin-bottom: 60px;
       }
 
+      .project-list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
       .project {
+        position: relative;
         display: block;
         text-decoration: none;
         color: white;
 
-        padding: 25px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 28px 30px;
+        border-radius: 20px;
 
-        transition: 0.25s ease;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        box-shadow:
+          0 4px 24px rgba(0, 0, 0, 0.25),
+          inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+        overflow: hidden;
+        transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+
+      .project::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          120deg,
+          rgba(59, 130, 246, 0.12),
+          rgba(99, 102, 241, 0.06) 40%,
+          transparent 70%
+        );
+        opacity: 0;
+        transition: opacity 0.35s ease;
+        pointer-events: none;
       }
 
       .project:hover {
-        transform: translateX(8px);
+        transform: translateY(-6px);
+        border-color: rgba(255, 255, 255, 0.18);
+        background: rgba(255, 255, 255, 0.07);
+        box-shadow:
+          0 16px 40px rgba(0, 0, 0, 0.35),
+          0 0 40px rgba(59, 130, 246, 0.12),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      }
+
+      .project:hover::before {
+        opacity: 1;
+      }
+
+      .project-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        position: relative;
+        z-index: 1;
       }
 
       .project-title {
         font-size: 1.4rem;
         margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .project-title::after {
+        content: "↗";
+        font-size: 1rem;
+        color: var(--muted);
+        opacity: 0;
+        transform: translate(-4px, 2px);
+        transition: all 0.3s ease;
+      }
+
+      .project:hover .project-title::after {
+        opacity: 1;
+        transform: translate(0, 0);
       }
 
       .project-desc {
         color: var(--muted);
         font-size: 0.95rem;
+        position: relative;
+        z-index: 1;
       }
+
+      .badge {
+        flex-shrink: 0;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        color: #93c5fd;
+        background: rgba(59, 130, 246, 0.15);
+        border: 1px solid rgba(59, 130, 246, 0.3);
+        padding: 5px 12px;
+        border-radius: 999px;
+      }
+
       .progress {
         margin-top: 16px;
         width: 100%;
@@ -115,6 +214,8 @@
         background: rgba(255, 255, 255, 0.08);
         border-radius: 999px;
         overflow: hidden;
+        position: relative;
+        z-index: 1;
       }
 
       .progress-fill {
@@ -128,6 +229,8 @@
         margin-top: 8px;
         font-size: 0.8rem;
         color: #64748b;
+        position: relative;
+        z-index: 1;
       }
     </style>
   </head>
@@ -143,32 +246,35 @@
         technology.
       </p>
 
-      <a href="smart-blind-stick.html" class="project">
-        <div class="project-title">Smart Blind Stick</div>
-        <div class="project-desc">
-          Arduino-based assistive device with obstacle detection, GPS tracking,
-          and GSM communication.
-        </div>
-      </a>
+      <div class="project-list">
+        <a href="smart-blind-stick.html" class="project">
+          <div class="project-title">Smart Blind Stick</div>
+          <div class="project-desc">
+            Arduino-based assistive device with obstacle detection, GPS
+            tracking, and GSM communication.
+          </div>
+        </a>
 
-      <a href="Portfolio.html" class="project">
-        <div class="project-title">Portfolio Website</div>
-        <div class="project-desc">
-          Personal portfolio showcasing projects, blogs, and experiences.
-        </div>
-      </a>
-      <a href="Zentih31.html" class="project coming-soon">
-        <div class="project-header">
-          <div class="project-title">Zenith31- Linux OS</div>
-          <span class="badge">Coming Soon</span>
-        </div>
+        <a href="Portfolio.html" class="project">
+          <div class="project-title">Portfolio Website</div>
+          <div class="project-desc">
+            Personal portfolio showcasing projects, blogs, and experiences.
+          </div>
+        </a>
 
-        <div class="progress">
-          <div class="progress-fill"></div>
-        </div>
+        <a href="Zentih31.html" class="project coming-soon">
+          <div class="project-header">
+            <div class="project-title">Zenith31 - Linux OS</div>
+            <span class="badge">Coming Soon</span>
+          </div>
 
-        <p class="status">Status: Planning & Design</p>
-      </a>
+          <div class="progress">
+            <div class="progress-fill"></div>
+          </div>
+
+          <p class="status">Status: Planning &amp; Design</p>
+        </a>
+      </div>
     </div>
   </body>
 </html>
