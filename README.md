@@ -30,7 +30,6 @@
 
 ---
 
-## 📂 Project Structure
 
 ## 📂 Project Structure
 
