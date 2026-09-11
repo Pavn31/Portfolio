@@ -8,314 +8,287 @@
 
     <link rel="icon" href="assets/Icon.png" />
 
+    <!-- Font -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <style>
-      * {
-        transition:
-          background-color 0.3s ease,
-          color 0.3s ease,
-          border-color 0.3s ease,
-          box-shadow 0.3s ease,
-          transform 0.3s ease;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
 
-      html {
-        scroll-behavior: smooth;
-      }
-      :root {
-        --text-color: #ffffff;
-        --secondary-text: #94a3b8;
-      }
-
-      body {
-        font-family: "Space Grotesk", sans-serif;
-        background:
-          radial-gradient(
-            circle at top left,
-            rgba(59, 130, 246, 0.15) 0%,
-            transparent 35%
-          ),
-          radial-gradient(
-            circle at bottom right,
-            rgba(99, 102, 241, 0.12) 0%,
-            transparent 35%
-          ),
-          #020617;
-        color: var(--text-color);
-        overflow-x: hidden;
-        transition: 0.3s ease;
-        min-height: 100vh;
-        margin: 0;
-      }
-
-      /* HERO */
-
-      .hero {
-        min-height: auto;
-        max-width: 650px;
-        margin: 120px auto;
-        padding: 0 20px;
-
-        display: block;
-        text-align: center;
-      }
-
-      .hero-profile {
-        margin-bottom: 30px;
-      }
-
-      .hero-profile img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-      }
-
-      .hero h1 {
-        color: #f8fafc;
-        font-size: 3.5rem;
-        font-weight: 400;
-        font-family: "Instrument Serif", serif;
-        font-style: italic;
-      }
-
-      .hero p {
-        max-width: 650px;
-        color: var(--secondary-text);
-        line-height: 2;
-        margin-bottom: 40px;
-        font-size: 1.05rem;
-      }
-
-      /* MOBILE */
-
-      @media (max-width: 768px) {
-        .navbar {
-          flex-direction: column;
-          gap: 15px;
-          padding: 15px;
-        }
-
-        .nav-links {
-          gap: 12px;
-          flex-wrap: wrap;
-          justify-content: center;
-          font-size: 0.9rem;
-        }
-
-        .hero h1 {
-          font-size: 2.5rem;
-        }
-
-        .hero-profile img {
-          width: 180px;
-          height: 180px;
-        }
-
-        .section-title {
-          font-size: 2.2rem;
-        }
-      }
-      .links {
-        display: flex;
-        gap: 24px;
-        margin-top: 30px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .links a {
-        color: #f8fafc;
-        text-decoration: none;
-        font-size: 0.95rem;
-      }
-
-      .links a:hover {
-        opacity: 0.7;
-      }
-      .meta {
-        margin-top: 30px;
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-        color: #94a3b8;
-        font-size: 0.95rem;
-      }
-      .subtitle {
-        margin-top: 8px;
-        margin-bottom: 30px;
-        color: #94a3b8;
-        font-size: 1rem;
-      }
-      .about {
-        margin-top: 50px;
-        text-align: left;
-        max-width: 650px;
-      }
-
-      .about p {
-        color: #cbd5e1;
-        line-height: 2;
-        margin-bottom: 28px;
-        font-size: 1.05rem;
-        text-align: left;
-      }
-      .projects-btn {
-        position: fixed;
-        top: 25px;
-        right: 30px;
-
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-
-        padding: 10px 20px;
-
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-radius: 999px;
-
-        background: rgba(255, 255, 255, 0.06);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        box-shadow:
-          0 4px 20px rgba(0, 0, 0, 0.25),
-          inset 0 1px 0 rgba(255, 255, 255, 0.08);
-
-        color: #e2e8f0;
-        text-decoration: none;
-        font-size: 15px;
-        letter-spacing: 0.2px;
-
-        transition: all 0.3s ease;
-        z-index: 1000;
-      }
-
-      .projects-btn::after {
-        content: "→";
-        display: inline-block;
-        transition: transform 0.3s ease;
-      }
-
-      .projects-btn:hover {
-        background: rgba(255, 255, 255, 0.14);
-        border-color: rgba(255, 255, 255, 0.25);
-        transform: translateY(-2px);
-        color: #fff;
-        box-shadow:
-          0 8px 28px rgba(59, 130, 246, 0.25),
-          inset 0 1px 0 rgba(255, 255, 255, 0.15);
-      }
-
-      .projects-btn:hover::after {
-        transform: translateX(3px);
-      }
-      #projects {
-        max-width: 650px;
-        margin: 150px auto;
-        padding: 0 20px;
-      }
-
-      #projects h2 {
-        font-family: "Instrument Serif", serif;
-        font-size: 3rem;
-        font-weight: 400;
-        margin-bottom: 20px;
-      }
-
-      #projects p {
-        color: #94a3b8;
-      }
-    </style>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <a href="projects/index.html" class="projects-btn">Projects</a>
 
-    <section id="home" class="hero">
-      <div class="hero-profile">
-        <img src="assets/PFP.jpg" alt="Pavan Profile" />
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <nav class="navbar">
+
+      <a href="index.html" class="logo">
+        PAVN31
+      </a>
+
+      <div class="nav-links">
+
+        <a href="index.html" class="active">
+          HOME
+        </a>
+
+        <a href="projects/index.html">
+          PROJECTS
+        </a>
+
       </div>
 
-      <h1 id="hero-name">Pavan Badiger</h1>
-      <p class="subtitle">AI & Data Science Student</p>
-      <div class="about">
-        <p>
-          Hi, I'm Pavan and I'm 20 — an AI & Data Science student who enjoys
-          building things on the web, exploring new technologies, and turning
-          ideas into projects.
-        </p>
-        <p>
-          Most of my time is spent learning, coding, and experimenting with
-          software development, machine learning, and anything that sparks my
-          curiosity. I enjoy creating projects that solve problems, improve my
-          skills, or are simply fun to build. Many of them eventually find their
-          way to GitHub.
-        </p>
+    </nav>
+
+
+    <!-- =====================================================
+         HOME
+    ====================================================== -->
+
+    <main>
+
+      <section id="home" class="hero">
+
+        <!-- Profile -->
+
+        <div class="hero-profile">
+
+          <img
+            src="assets/PFP.jpg"
+            alt="Pavan Badiger"
+          />
+
+        </div>
+
+
+        <!-- Status -->
+
+        <div class="typing-text">
+          AI &amp; DATA SCIENCE STUDENT
+        </div>
+
+
+        <!-- Name -->
+
+        <h1 id="hero-name">
+          Pavan Badiger
+        </h1>
+
+
+        <!-- Short introduction -->
 
         <p>
-          Outside of academics, you'll usually find me working on personal
-          projects, reading about technology, listening to music, watching
-          anime, or exploring new ideas. I'm constantly learning, improving, and
-          looking for opportunities to challenge myself.
-        </p>
-        <p>
-          This website is a collection of my projects, blogs, and experiences as
-          I continue growing as a developer.
+          I build things on the web, explore new technologies,
+          and turn ideas into projects.
         </p>
 
-        <p>
-          growing as a developer. If you'd like to collaborate, discuss
-          technology, share an interesting idea, or just say hello, feel free to
-          reach out. I'm always open to meeting curious people and learning
-          something new.
-        </p>
-      </div>
-      <div class="links">
-        <a href="https://github.com/Pavn31" target="_blank">github</a>
-        <a href="https://www.linkedin.com/in/pavn-badiger/" target="_blank"
-          >linkedin</a
-        >
 
-        <a href="mailto:pavnbadiger@gmail.com">email</a>
-      </div>
-      <div class="meta">
-        <span>📍 Belagavi, India</span>
-        <span id="clock"></span>
-      </div>
-    </section>
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
+
+        <div class="about">
+
+          <p>
+            Hi, I'm Pavan and I'm 20 — an AI &amp; Data Science
+            student who enjoys building things on the web,
+            exploring new technologies, and turning ideas into
+            projects.
+          </p>
+
+          <p>
+            Most of my time is spent learning, coding, and
+            experimenting with software development, machine
+            learning, and anything that sparks my curiosity.
+            I enjoy creating projects that solve problems,
+            improve my skills, or are simply fun to build.
+            Many of them eventually find their way to GitHub.
+          </p>
+
+          <p>
+            Outside of academics, you'll usually find me working
+            on personal projects, reading about technology,
+            listening to music, watching anime, or exploring
+            new ideas.
+          </p>
+
+          <p>
+            I'm constantly learning, improving, and looking for
+            opportunities to challenge myself.
+          </p>
+
+          <p>
+            This website is a collection of my projects, blogs,
+            and experiences as I continue growing as a developer.
+          </p>
+
+          <p>
+            If you'd like to collaborate, discuss technology,
+            share an interesting idea, or just say hello,
+            feel free to reach out.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             SOCIAL LINKS
+        ================================================== -->
+
+        <div class="links">
+
+          <a
+            href="https://github.com/Pavn31"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+          </a>
+
+
+          <a
+            href="https://www.linkedin.com/in/pavn-badiger/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+
+
+          <a href="mailto:pavnbadiger@gmail.com">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <span>Email</span>
+
+          </a>
+
+        </div>
+
+
+        <!-- =================================================
+             META INFORMATION
+        ================================================== -->
+
+        <div class="meta">
+
+          <span>
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            Belagavi, India
+
+          </span>
+
+
+          <span>
+
+            <i class="fa-regular fa-clock"></i>
+
+            <span id="clock">
+              --:-- IST
+            </span>
+
+          </span>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         CLOCK
+    ====================================================== -->
 
     <script>
+
       function updateClock() {
-        document.getElementById("clock").textContent =
-          new Date().toLocaleTimeString("en-IN", {
+
+        const clock =
+          document.getElementById("clock");
+
+        if (!clock) return;
+
+        const now = new Date();
+
+        clock.textContent =
+          now.toLocaleTimeString("en-IN", {
             hour: "2-digit",
-            minute: "2-digit",
+            minute: "2-digit"
           }) + " IST";
       }
 
-      setInterval(updateClock, 1000);
+
       updateClock();
+
+      setInterval(updateClock, 1000);
+
     </script>
+
+
+    <!-- =====================================================
+         FALLBACK SCRIPT
+    ====================================================== -->
+
+    <script>
+
+      /*
+       * Prevent accidental broken navigation
+       * when a page is still loading.
+       */
+
+      document.addEventListener(
+        "DOMContentLoaded",
+        () => {
+
+          const links =
+            document.querySelectorAll(
+              ".nav-links a"
+            );
+
+          links.forEach((link) => {
+
+            link.addEventListener(
+              "click",
+              () => {
+
+                links.forEach((item) => {
+                  item.classList.remove("active");
+                });
+
+                link.classList.add("active");
+
+              }
+            );
+
+          });
+
+        }
+      );
+
+    </script>
+
   </body>
 </html>
 
 <!--
-  Made with ❤️ by Pavan Badiger
-  GitHub: https://github.com/Pavn31 -->
+  PAVN31 PORTFOLIO
+
+  Built by Pavan Badiger
+  GitHub:
+  https://github.com/Pavn31
+-->
