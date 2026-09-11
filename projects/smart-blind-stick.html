@@ -1,188 +1,820 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Smart Blind Stick | Pavn31</title>
 
+    <link rel="icon" type="image/png" href="../assets/Icon.png">
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="../style.css">
 
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+        /* =========================================
+           SMART BLIND STICK PROJECT PAGE
+           ========================================= */
 
-      :root {
-        --text: #f8fafc;
-        --muted: #94a3b8;
-        --bg: #020617;
-      }
+        .project-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 150px 24px 80px;
+        }
 
-      html {
-        scroll-behavior: smooth;
-      }
+        /* Header */
 
-      body {
-        font-family: sans-serif;
-        background:
-          radial-gradient(
-            circle at top left,
-            rgba(59, 130, 246, 0.15) 0%,
-            transparent 35%
-          ),
-          radial-gradient(
-            circle at bottom right,
-            rgba(99, 102, 241, 0.12) 0%,
-            transparent 35%
-          ),
-          var(--bg);
+        .project-header {
+            max-width: 900px;
+            margin-bottom: 55px;
+        }
 
-        color: var(--text);
-        line-height: 1.8;
-        min-height: 100vh;
-      }
+        .project-label {
+            display: inline-block;
+            margin-bottom: 18px;
 
-      .container {
-        max-width: 700px;
-        margin: 120px auto;
-        padding: 0 20px;
-      }
+            color: #777;
 
-      .back {
-        position: fixed;
-        top: 25px;
-        left: 30px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
 
-        color: var(--muted);
-        text-decoration: none;
-        font-size: 15px;
-      }
+        .project-header h1 {
+            margin: 0 0 18px;
 
-      .back:hover {
-        color: white;
-      }
+            color: #ededed;
 
-      h1 {
-        font-family: "Instrument Serif", serif;
-        font-size: 4rem;
-        font-weight: 400;
-        margin-bottom: 10px;
-      }
+            font-size: clamp(3rem, 7vw, 6rem);
+            font-weight: 600;
+            line-height: 0.95;
+            letter-spacing: -0.055em;
+        }
 
-      .subtitle {
-        color: var(--muted);
-        margin-bottom: 50px;
-      }
+        .project-header p {
+            max-width: 760px;
 
-      h2 {
-        font-family: "Instrument Serif", serif;
-        font-size: 2rem;
-        font-weight: 400;
-        margin-top: 50px;
-        margin-bottom: 15px;
-      }
+            margin: 0;
 
-      p {
-        color: #cbd5e1;
-        margin-bottom: 20px;
-      }
+            color: #8b8b8b;
 
-      ul {
-        padding-left: 20px;
-        color: #cbd5e1;
-      }
+            font-size: 1rem;
+            line-height: 1.8;
+        }
 
-      li {
-        margin-bottom: 10px;
-      }
+        /* Meta */
 
-      .links {
-        margin-top: 40px;
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
 
-      .links a {
-        color: white;
-        text-decoration: none;
-      }
+            margin-top: 25px;
+        }
 
-      .links a:hover {
-        opacity: 0.7;
-      }
+        .project-meta span {
+            display: inline-flex;
+            align-items: center;
 
-      .tech {
-        color: var(--muted);
-        margin-top: 10px;
-      }
+            padding: 7px 11px;
+
+            border: 1px solid #292929;
+            border-radius: 6px;
+
+            background: rgba(255, 255, 255, 0.025);
+
+            color: #888;
+
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .project-meta .status {
+            color: #d0d0d0;
+            border-color: #3b3b3b;
+        }
+
+        /* Buttons */
+
+        .project-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+
+            margin-top: 28px;
+        }
+
+        .project-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            padding: 10px 15px;
+
+            border: 1px solid #303030;
+            border-radius: 6px;
+
+            background: rgba(255, 255, 255, 0.035);
+
+            color: #cfcfcf;
+
+            text-decoration: none;
+
+            font-size: 0.8rem;
+            font-weight: 500;
+
+            transition:
+                background 0.2s ease,
+                border-color 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .project-button:hover {
+            background: rgba(255, 255, 255, 0.075);
+            border-color: #505050;
+
+            color: #fff;
+
+            transform: translateY(-2px);
+        }
+
+        .project-button.primary {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #454545;
+
+            color: #eee;
+        }
+
+        .project-button.primary:hover {
+            background: rgba(255, 255, 255, 0.13);
+            border-color: #666;
+        }
+
+        /* Sections */
+
+        .project-section {
+            margin-top: 65px;
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            margin-bottom: 18px;
+
+            color: #e5e5e5;
+
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+        }
+
+        .section-heading::before {
+            content: "";
+
+            width: 22px;
+            height: 1px;
+
+            background: #666;
+        }
+
+        .project-section > p {
+            max-width: 850px;
+
+            color: #858585;
+
+            font-size: 0.92rem;
+            line-height: 1.85;
+        }
+
+        .project-section > p + p {
+            margin-top: 14px;
+        }
+
+        /* Feature Grid */
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+
+            margin-top: 22px;
+        }
+
+        .feature-card {
+            min-height: 175px;
+
+            padding: 20px;
+
+            border: 1px solid #292929;
+            border-radius: 8px;
+
+            background: rgba(18, 18, 18, 0.68);
+
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                background 0.25s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+
+            border-color: #424242;
+            background: rgba(25, 25, 25, 0.82);
+        }
+
+        .feature-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 34px;
+            height: 34px;
+
+            margin-bottom: 20px;
+
+            border: 1px solid #303030;
+            border-radius: 6px;
+
+            background: rgba(255, 255, 255, 0.035);
+
+            color: #aaa;
+
+            font-size: 0.85rem;
+        }
+
+        .feature-card h3 {
+            margin: 0 0 8px;
+
+            color: #ddd;
+
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            margin: 0;
+
+            color: #727272;
+
+            font-size: 0.78rem;
+            line-height: 1.65;
+        }
+
+        /* Hardware / System Block */
+
+        .system-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+
+            margin-top: 22px;
+        }
+
+        .system-card {
+            padding: 20px;
+
+            border: 1px solid #292929;
+            border-radius: 8px;
+
+            background: rgba(18, 18, 18, 0.68);
+        }
+
+        .system-card span {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #5f5f5f;
+
+            font-family: monospace;
+            font-size: 0.68rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .system-card strong {
+            color: #ccc;
+
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Technology */
+
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            margin-top: 20px;
+        }
+
+        .tech-item {
+            padding: 9px 12px;
+
+            border: 1px solid #292929;
+            border-radius: 6px;
+
+            background: rgba(255, 255, 255, 0.025);
+
+            color: #858585;
+
+            font-family: monospace;
+            font-size: 0.72rem;
+
+            transition:
+                border-color 0.2s ease,
+                color 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .tech-item:hover {
+            border-color: #444;
+
+            color: #ccc;
+
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Learning */
+
+        .learning-box {
+            margin-top: 22px;
+            padding: 22px;
+
+            border: 1px solid #292929;
+            border-left: 2px solid #555;
+            border-radius: 8px;
+
+            background: rgba(18, 18, 18, 0.65);
+        }
+
+        .learning-box p {
+            margin: 0;
+
+            color: #858585;
+
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        /* Future Improvements */
+
+        .future-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+
+            margin-top: 22px;
+
+            list-style: none;
+        }
+
+        .future-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 13px;
+
+            border: 1px solid #292929;
+            border-radius: 6px;
+
+            background: rgba(255, 255, 255, 0.025);
+
+            color: #858585;
+
+            font-size: 0.78rem;
+        }
+
+        .future-list li i {
+            color: #666;
+            font-size: 0.7rem;
+        }
+
+        /* Footer */
+
+        .project-footer {
+            margin-top: 80px;
+            padding-top: 20px;
+
+            border-top: 1px solid #252525;
+
+            color: #555;
+
+            font-size: 0.7rem;
+            letter-spacing: 0.04em;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 850px) {
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .system-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .project-page {
+                padding: 125px 18px 60px;
+            }
+
+            .project-header h1 {
+                font-size: 3.5rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .future-list {
+                grid-template-columns: 1fr;
+            }
+
+            .project-actions {
+                width: 100%;
+            }
+
+            .project-button {
+                justify-content: center;
+            }
+        }
     </style>
-  </head>
+</head>
 
-  <body>
-    <a href="index.html" class="back">← Projects</a>
+<body>
 
-    <div class="container">
-      <h1>Smart Blind Stick</h1>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
 
-      <p class="subtitle">
-        Arduino-based assistive device for visually impaired individuals.
-      </p>
-
-      <h2>Overview</h2>
-
-      <p>
-        Smart Blind Stick is an assistive technology project designed to help
-        visually impaired people navigate safely. The system detects obstacles
-        and environmental hazards using sensors and provides alerts through a
-        buzzer.
-      </p>
-
-      <h2>Features</h2>
-
-      <ul>
-        <li>Obstacle detection using HC-SR04 ultrasonic sensor</li>
-        <li>Water detection for puddles and wet surfaces</li>
-        <li>Audio alerts using buzzer</li>
-        <li>GPS location tracking</li>
-        <li>Emergency communication using GSM module</li>
-      </ul>
-
-      <h2>Tech Stack</h2>
-
-      <p class="tech">
-        Arduino UNO • HC-SR04 • GSM (SIM800L) • GPS (NEO-6M) • Water Sensor •
-        Embedded C
-      </p>
-
-      <h2>What I Learned</h2>
-
-      <p>
-        Through this project I gained experience working with sensors, serial
-        communication, embedded programming, GPS systems, GSM communication, and
-        real-world hardware integration.
-      </p>
-
-      <h2>Future Improvements</h2>
-
-      <ul>
-        <li>Voice navigation assistance</li>
-        <li>Mobile application integration</li>
-        <li>Machine learning based obstacle classification</li>
-        <li>Rechargeable battery system</li>
-      </ul>
-
-      <div class="links">
-        <a href="https://github.com/Pavn31/Smart-Blind-Stick" target="_blank">
-          GitHub ↗
+        <a href="../index.html" class="nav-logo">
+            PAVN31
         </a>
-      </div>
-    </div>
-  </body>
+
+        <div class="nav-links">
+            <a href="../index.html">HOME</a>
+            <a href="index.html" class="active">PROJECTS</a>
+        </div>
+
+    </nav>
+
+
+    <!-- PROJECT PAGE -->
+    <main class="project-page">
+
+        <!-- HEADER -->
+        <header class="project-header">
+
+            <span class="project-label">
+                PROJECT // 01
+            </span>
+
+            <h1>Smart Blind Stick</h1>
+
+            <p>
+                Arduino-based assistive device designed to help visually
+                impaired individuals navigate more safely by detecting
+                obstacles and environmental hazards.
+            </p>
+
+            <div class="project-meta">
+
+                <span class="status">
+                    COMPLETED
+                </span>
+
+                <span>Arduino</span>
+                <span>GPS</span>
+                <span>GSM</span>
+                <span>Sensors</span>
+                <span>Embedded C</span>
+
+            </div>
+
+            <div class="project-actions">
+
+                <a
+                    href="https://github.com/Pavn31/Smart-Blind-Stick"
+                    class="project-button primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-github"></i>
+                    GitHub
+                </a>
+
+                <a
+                    href="index.html"
+                    class="project-button"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+                    All Projects
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- OVERVIEW -->
+        <section class="project-section">
+
+            <h2 class="section-heading">
+                Overview
+            </h2>
+
+            <p>
+                Smart Blind Stick is an assistive technology project designed
+                to help visually impaired people navigate safely. The system
+                detects obstacles and environmental hazards using sensors and
+                provides alerts through a buzzer.
+            </p>
+
+            <p>
+                The project combines embedded programming, sensors, GPS
+                tracking, and GSM communication into a compact assistive
+                hardware system.
+            </p>
+
+        </section>
+
+
+        <!-- FEATURES -->
+        <section class="project-section">
+
+            <h2 class="section-heading">
+                Features
+            </h2>
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                    </div>
+
+                    <h3>Obstacle Detection</h3>
+
+                    <p>
+                        Uses the HC-SR04 ultrasonic sensor to detect obstacles
+                        in front of the user.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+
+                    <h3>Water Detection</h3>
+
+                    <p>
+                        Detects water and wet surfaces such as puddles to help
+                        identify environmental hazards.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </div>
+
+                    <h3>Audio Alerts</h3>
+
+                    <p>
+                        Provides warning signals through a buzzer when hazards
+                        are detected.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <h3>GPS Tracking</h3>
+
+                    <p>
+                        Uses the NEO-6M GPS module to obtain the device's
+                        location.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-tower-cell"></i>
+                    </div>
+
+                    <h3>Emergency GSM</h3>
+
+                    <p>
+                        Uses the SIM800L GSM module for emergency communication
+                        and location-based alerts.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+
+                    <h3>Embedded Control</h3>
+
+                    <p>
+                        Arduino UNO coordinates the sensors, alerts, GPS, and
+                        GSM communication.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- SYSTEM -->
+        <section class="project-section">
+
+            <h2 class="section-heading">
+                System Components
+            </h2>
+
+            <div class="system-grid">
+
+                <div class="system-card">
+                    <span>Microcontroller</span>
+                    <strong>Arduino UNO</strong>
+                </div>
+
+                <div class="system-card">
+                    <span>Distance Sensor</span>
+                    <strong>HC-SR04 Ultrasonic Sensor</strong>
+                </div>
+
+                <div class="system-card">
+                    <span>GPS Module</span>
+                    <strong>NEO-6M GPS</strong>
+                </div>
+
+                <div class="system-card">
+                    <span>Communication</span>
+                    <strong>SIM800L GSM Module</strong>
+                </div>
+
+                <div class="system-card">
+                    <span>Environmental Sensor</span>
+                    <strong>Water Sensor</strong>
+                </div>
+
+                <div class="system-card">
+                    <span>Alert System</span>
+                    <strong>Buzzer</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TECHNOLOGY -->
+        <section class="project-section">
+
+            <h2 class="section-heading">
+                Technology
+            </h2>
+
+            <div class="tech-grid">
+
+                <span class="tech-item">Arduino UNO</span>
+                <span class="tech-item">Embedded C</span>
+                <span class="tech-item">HC-SR04</span>
+                <span class="tech-item">NEO-6M</span>
+                <span class="tech-item">SIM800L</span>
+                <span class="tech-item">Water Sensor</span>
+                <span class="tech-item">Buzzer</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- LEARNING -->
+        <section class="project-section">
+
+            <h2 class="section-heading">
+                What I Learned
+            </h2>
+
+            <div class="learning-box">
+
+                <p>
+                    Through this project I gained experience working with
+                    sensors, serial communication, embedded programming, GPS
+                    systems, GSM communication, and real-world hardware
+                    integration.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- FUTURE -->
+        <section class="project-section">
+
+            <h2 class="section-heading">
+                Future Improvements
+            </h2>
+
+            <ul class="future-list">
+
+                <li>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    Voice navigation assistance
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    Mobile application integration
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    Machine learning based obstacle classification
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    Rechargeable battery system
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- GITHUB -->
+        <section class="project-section">
+
+            <h2 class="section-heading">
+                Source
+            </h2>
+
+            <div class="project-actions">
+
+                <a
+                    href="https://github.com/Pavn31/Smart-Blind-Stick"
+                    class="project-button primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-github"></i>
+                    View Source on GitHub
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="project-footer">
+            SMART BLIND STICK // ARDUINO + EMBEDDED C // PAVN31
+        </footer>
+
+    </main>
+
+</body>
 </html>
