@@ -2,276 +2,662 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
     <title>Projects | Pavn31</title>
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
-      rel="stylesheet"
+      rel="icon"
+      href="../assets/Icon.png"
     />
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- Main Portfolio CSS -->
+    <link
+      rel="stylesheet"
+      href="../style.css"
+    />
+  </head>
+
+  <body>
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <nav class="navbar">
+
+      <a
+        href="../index.html"
+        class="logo"
+      >
+        PAVN31
+      </a>
+
+      <div class="nav-links">
+
+        <a href="../index.html">
+          HOME
+        </a>
+
+        <a
+          href="index.html"
+          class="active"
+        >
+          PROJECTS
+        </a>
+
+      </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         PROJECTS
+    ====================================================== -->
+
+    <main>
+
+      <section class="projects-page">
+
+        <!-- Header -->
+
+        <div class="projects-header">
+
+          <div class="page-label">
+            PROJECT DIRECTORY // 02
+          </div>
+
+          <h1>
+            Projects
+          </h1>
+
+          <p>
+            A collection of things I've built while learning,
+            experimenting, and exploring technology.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             PROJECT LIST
+        ================================================== -->
+
+        <div class="project-list">
+
+
+          <!-- =================================================
+               PROJECT 01
+          ================================================== -->
+
+          <a
+            href="smart-blind-stick.html"
+            class="project"
+          >
+
+            <div class="project-number">
+              01
+            </div>
+
+            <div class="project-content">
+
+              <div class="project-header">
+
+                <div>
+
+                  <h2 class="project-title">
+                    Smart Blind Stick
+                  </h2>
+
+                  <p class="project-desc">
+                    Arduino-based assistive device with obstacle
+                    detection, GPS tracking, and GSM communication.
+                  </p>
+
+                </div>
+
+                <span class="project-arrow">
+                  ↗
+                </span>
+
+              </div>
+
+
+              <div class="project-meta">
+
+                <span>
+                  ARDUINO
+                </span>
+
+                <span>
+                  GPS
+                </span>
+
+                <span>
+                  GSM
+                </span>
+
+                <span>
+                  SENSORS
+                </span>
+
+              </div>
+
+
+              <div class="project-status">
+
+                <span class="status-dot"></span>
+
+                COMPLETED
+
+              </div>
+
+            </div>
+
+          </a>
+
+
+          <!-- =================================================
+               PROJECT 02
+          ================================================== -->
+
+          <a
+            href="ghost-files.html"
+            class="project"
+          >
+
+            <div class="project-number">
+              02
+            </div>
+
+            <div class="project-content">
+
+              <div class="project-header">
+
+                <div>
+
+                  <h2 class="project-title">
+                    Ghost Files
+                  </h2>
+
+                  <p class="project-desc">
+                    Cross-platform desktop utility for detecting
+                    duplicate, temporary, unnecessary, and large
+                    files with safe Trash and Recycle Bin support.
+                  </p>
+
+                </div>
+
+                <span class="project-badge">
+                  v1.1.0
+                </span>
+
+              </div>
+
+
+              <div class="project-meta">
+
+                <span>
+                  PYTHON
+                </span>
+
+                <span>
+                  PYSIDE6
+                </span>
+
+                <span>
+                  DESKTOP
+                </span>
+
+                <span>
+                  FILE SYSTEM
+                </span>
+
+              </div>
+
+
+              <div class="project-status">
+
+                <span class="status-dot"></span>
+
+                ACTIVE
+
+              </div>
+
+            </div>
+
+          </a>
+
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         PROJECT PAGE CSS
+    ====================================================== -->
+
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
 
-      :root {
-        --text: #f8fafc;
-        --muted: #94a3b8;
-        --bg: #020617;
-      }
+      /* =====================================================
+         PROJECT PAGE
+      ====================================================== */
 
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        font-family: sans-serif;
-        background:
-          radial-gradient(
-            circle at top left,
-            rgba(59, 130, 246, 0.15) 0%,
-            transparent 35%
-          ),
-          radial-gradient(
-            circle at bottom right,
-            rgba(99, 102, 241, 0.12) 0%,
-            transparent 35%
-          ),
-          var(--bg);
-
-        color: var(--text);
+      .projects-page {
         min-height: 100vh;
+
+        padding-top: 150px;
+        padding-bottom: 100px;
+
+        max-width: 1200px;
+
+        margin: 0 auto;
       }
 
-      .container {
-        max-width: 700px;
-        margin: 120px auto;
-        padding: 0 20px;
+
+      /* =====================================================
+         HEADER
+      ====================================================== */
+
+      .projects-header {
+        margin-bottom: 55px;
       }
 
-      .back {
-        position: fixed;
-        top: 25px;
-        left: 30px;
+      .page-label {
+        margin-bottom: 18px;
 
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
+        color: #555;
 
-        padding: 9px 18px;
-        border-radius: 999px;
+        font-family: monospace;
 
-        background: rgba(255, 255, 255, 0.06);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
+        font-size: 0.7rem;
 
-        color: var(--muted);
-        text-decoration: none;
-        font-size: 15px;
-        transition: all 0.3s ease;
+        letter-spacing: 2px;
       }
 
-      .back:hover {
-        color: white;
-        background: rgba(255, 255, 255, 0.14);
-        border-color: rgba(255, 255, 255, 0.25);
-        transform: translateY(-2px);
+      .projects-header h1 {
+        font-size: clamp(3.5rem, 8vw, 6rem);
+
+        line-height: 0.95;
+
+        letter-spacing: -4px;
+
+        font-weight: 600;
+
+        margin-bottom: 22px;
       }
 
-      h1 {
-        font-family: "Instrument Serif", serif;
-        font-size: 4rem;
-        font-weight: 400;
-        margin-bottom: 15px;
+      .projects-header p {
+        max-width: 600px;
+
+        color: var(--secondary-text);
+
+        font-size: 0.95rem;
+
+        line-height: 1.8;
       }
 
-      .subtitle {
-        color: var(--muted);
-        margin-bottom: 60px;
-      }
+
+      /* =====================================================
+         PROJECT LIST
+      ====================================================== */
 
       .project-list {
         display: flex;
+
         flex-direction: column;
-        gap: 18px;
+
+        gap: 14px;
       }
+
+
+      /* =====================================================
+         PROJECT CARD
+      ====================================================== */
 
       .project {
         position: relative;
-        display: block;
+
+        display: grid;
+
+        grid-template-columns: 55px 1fr;
+
+        gap: 20px;
+
+        padding: 25px;
+
+        color: var(--text-color);
+
         text-decoration: none;
-        color: white;
 
-        padding: 28px 30px;
-        border-radius: 20px;
+        background: var(--surface);
 
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(18px);
-        -webkit-backdrop-filter: blur(18px);
-        box-shadow:
-          0 4px 24px rgba(0, 0, 0, 0.25),
-          inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border-color);
+
+        border-radius: var(--radius);
+
+        backdrop-filter: blur(14px);
+
+        -webkit-backdrop-filter: blur(14px);
 
         overflow: hidden;
-        transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease,
+          background 0.25s ease,
+          box-shadow 0.25s ease;
       }
 
       .project::before {
         content: "";
+
         position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          120deg,
-          rgba(59, 130, 246, 0.12),
-          rgba(99, 102, 241, 0.06) 40%,
-          transparent 70%
-        );
+
+        left: 0;
+        top: 0;
+
+        width: 2px;
+        height: 100%;
+
+        background: #777;
+
         opacity: 0;
-        transition: opacity 0.35s ease;
-        pointer-events: none;
+
+        transition: opacity 0.25s ease;
       }
 
       .project:hover {
-        transform: translateY(-6px);
-        border-color: rgba(255, 255, 255, 0.18);
-        background: rgba(255, 255, 255, 0.07);
+        transform: translateX(4px);
+
+        border-color: var(--border-hover);
+
+        background: rgba(25, 25, 25, 0.85);
+
         box-shadow:
-          0 16px 40px rgba(0, 0, 0, 0.35),
-          0 0 40px rgba(59, 130, 246, 0.12),
-          inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          0 15px 40px rgba(0, 0, 0, 0.35),
+          inset 0 1px 0 rgba(255, 255, 255, 0.035);
       }
 
       .project:hover::before {
         opacity: 1;
       }
 
+
+      /* =====================================================
+         PROJECT NUMBER
+      ====================================================== */
+
+      .project-number {
+        color: #454545;
+
+        font-family: monospace;
+
+        font-size: 0.75rem;
+
+        padding-top: 5px;
+
+        letter-spacing: 1px;
+      }
+
+
+      /* =====================================================
+         PROJECT CONTENT
+      ====================================================== */
+
+      .project-content {
+        min-width: 0;
+      }
+
       .project-header {
         display: flex;
-        align-items: center;
+
         justify-content: space-between;
-        gap: 12px;
-        position: relative;
-        z-index: 1;
+
+        align-items: flex-start;
+
+        gap: 20px;
       }
+
+
+      /* =====================================================
+         PROJECT TITLE
+      ====================================================== */
 
       .project-title {
-        font-size: 1.4rem;
-        margin-bottom: 6px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
+        font-size: 1.25rem;
+
+        font-weight: 500;
+
+        margin: 0 0 8px;
+
+        letter-spacing: -0.3px;
       }
 
-      .project-title::after {
-        content: "↗";
-        font-size: 1rem;
-        color: var(--muted);
+      .project-arrow {
+        color: #555;
+
+        font-size: 1.1rem;
+
         opacity: 0;
-        transform: translate(-4px, 2px);
-        transition: all 0.3s ease;
+
+        transform: translate(-5px, 5px);
+
+        transition:
+          opacity 0.25s ease,
+          transform 0.25s ease;
       }
 
-      .project:hover .project-title::after {
+      .project:hover .project-arrow {
         opacity: 1;
+
         transform: translate(0, 0);
+
+        color: var(--text-color);
       }
+
+
+      /* =====================================================
+         DESCRIPTION
+      ====================================================== */
 
       .project-desc {
-        color: var(--muted);
-        font-size: 0.95rem;
-        position: relative;
-        z-index: 1;
+        max-width: 750px;
+
+        color: var(--secondary-text);
+
+        font-size: 0.88rem;
+
+        line-height: 1.7;
+
+        margin: 0;
       }
 
-      .badge {
+
+      /* =====================================================
+         BADGE
+      ====================================================== */
+
+      .project-badge {
         flex-shrink: 0;
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 0.3px;
-        color: #93c5fd;
-        background: rgba(59, 130, 246, 0.15);
-        border: 1px solid rgba(59, 130, 246, 0.3);
-        padding: 5px 12px;
-        border-radius: 999px;
+
+        color: #999;
+
+        font-family: monospace;
+
+        font-size: 0.65rem;
+
+        padding: 5px 8px;
+
+        border: 1px solid var(--border-color);
+
+        border-radius: 4px;
+
+        background: rgba(255, 255, 255, 0.025);
       }
 
-      .progress {
-        margin-top: 16px;
-        width: 100%;
-        height: 6px;
-        background: rgba(255, 255, 255, 0.08);
-        border-radius: 999px;
-        overflow: hidden;
-        position: relative;
-        z-index: 1;
+
+      /* =====================================================
+         PROJECT META
+      ====================================================== */
+
+      .project-meta {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 7px;
+
+        margin-top: 20px;
       }
 
-      .progress-fill {
-        width: 8%;
-        height: 100%;
-        background: linear-gradient(90deg, #3b82f6, #06b6d4);
-        border-radius: inherit;
+      .project-meta span {
+        color: #666;
+
+        font-family: monospace;
+
+        font-size: 0.6rem;
+
+        letter-spacing: 0.7px;
+
+        padding: 5px 7px;
+
+        border: 1px solid #252525;
+
+        border-radius: 4px;
+
+        background: rgba(255, 255, 255, 0.015);
       }
 
-      .status {
-        margin-top: 8px;
-        font-size: 0.8rem;
-        color: #64748b;
-        position: relative;
-        z-index: 1;
+
+      /* =====================================================
+         STATUS
+      ====================================================== */
+
+      .project-status {
+        display: flex;
+
+        align-items: center;
+
+        gap: 7px;
+
+        margin-top: 17px;
+
+        color: #555;
+
+        font-family: monospace;
+
+        font-size: 0.62rem;
+
+        letter-spacing: 1px;
       }
+
+      .status-dot {
+        width: 5px;
+
+        height: 5px;
+
+        border-radius: 50%;
+
+        background: #777;
+
+        box-shadow:
+          0 0 7px rgba(255, 255, 255, 0.3);
+      }
+
+
+      /* =====================================================
+         MOBILE
+      ====================================================== */
+
+      @media (max-width: 768px) {
+
+        .projects-page {
+          padding-top: 130px;
+
+          padding-left: 6%;
+
+          padding-right: 6%;
+        }
+
+        .projects-header {
+          margin-bottom: 40px;
+        }
+
+        .projects-header h1 {
+          font-size: 3.5rem;
+
+          letter-spacing: -2px;
+        }
+
+        .project {
+          grid-template-columns: 35px 1fr;
+
+          gap: 12px;
+
+          padding: 20px;
+        }
+
+        .project-header {
+          gap: 10px;
+        }
+
+        .project-title {
+          font-size: 1.05rem;
+        }
+
+        .project-desc {
+          font-size: 0.82rem;
+        }
+
+        .project-badge {
+          font-size: 0.58rem;
+        }
+
+      }
+
+
+      @media (max-width: 480px) {
+
+        .projects-header h1 {
+          font-size: 2.8rem;
+        }
+
+        .project {
+          grid-template-columns: 1fr;
+
+          gap: 5px;
+        }
+
+        .project-number {
+          padding: 0;
+
+          margin-bottom: 8px;
+        }
+
+        .project-arrow {
+          display: none;
+        }
+
+      }
+
     </style>
-  </head>
 
-  <body>
-    <a href="../index.html" class="back">← Home</a>
-
-    <div class="container">
-      <h1>Projects</h1>
-
-      <p class="subtitle">
-        A collection of things I've built while learning and exploring
-        technology.
-      </p>
-
-      <div class="project-list">
-        <a href="smart-blind-stick.html" class="project">
-          <div class="project-title">Smart Blind Stick</div>
-          <div class="project-desc">
-            Arduino-based assistive device with obstacle detection, GPS
-            tracking, and GSM communication.
-          </div>
-        </a>
-
-        
-
-          <a href="ghost-files.html" class="project">
-            <div class="project-header">
-              <div>
-                <div class="project-title">Ghost Files</div>
-                <div class="project-desc">
-                  Cross-platform desktop utility for detecting duplicate,
-                  temporary, unnecessary, and large files with safe Trash and
-                  Recycle Bin support.
-                </div>
-              </div>
-
-              <span class="badge">v1.1.0</span>
-            </div>
-          </a>
-        </a>
-      </div>
-    </div>
   </body>
 </html>
