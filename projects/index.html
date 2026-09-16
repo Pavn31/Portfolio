@@ -4,17 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects | Pavn31</title>
+
     <link rel="icon" href="../assets/Icon.png" />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
     />
+
     <link rel="stylesheet" href="../style.css" />
   </head>
 
   <body>
     <nav class="navbar">
       <a href="../index.html" class="logo">PAVN31</a>
+
       <div class="nav-links">
         <a href="../index.html">HOME</a>
         <a href="index.html" class="active">PROJECTS</a>
@@ -25,7 +29,9 @@
       <section class="projects-page">
         <header class="projects-header">
           <div class="page-label">PROJECT DIRECTORY // 02</div>
+
           <h1>Projects</h1>
+
           <p>
             A collection of things I've built while learning, experimenting, and
             exploring technology.
@@ -33,49 +39,67 @@
         </header>
 
         <div class="project-list">
+          <!-- PROJECT 01 -->
           <a href="smart-blind-stick.html" class="project">
             <div class="project-number">01</div>
+
             <div class="project-content">
               <div class="project-header">
                 <div>
                   <h2 class="project-title">Smart Blind Stick</h2>
+
                   <p class="project-desc">
                     Arduino-based assistive device with obstacle detection, GPS
                     tracking, GSM communication, and environmental sensing.
                   </p>
                 </div>
+
                 <span class="project-arrow">↗</span>
               </div>
+
               <div class="project-meta">
-                <span>ARDUINO</span><span>GPS</span><span>GSM</span
-                ><span>SENSORS</span>
+                <span>ARDUINO</span>
+                <span>GPS</span>
+                <span>GSM</span>
+                <span>SENSORS</span>
               </div>
+
               <div class="project-status">
-                <span class="status-dot"></span>COMPLETED
+                <span class="status-dot"></span>
+                COMPLETED
               </div>
             </div>
           </a>
 
+          <!-- PROJECT 02 -->
           <a href="ghost-files.html" class="project">
             <div class="project-number">02</div>
+
             <div class="project-content">
               <div class="project-header">
                 <div>
                   <h2 class="project-title">Ghost Files</h2>
+
                   <p class="project-desc">
                     Cross-platform desktop utility for detecting duplicate,
                     temporary, unnecessary, and large files with safe Trash and
                     Recycle Bin support.
                   </p>
                 </div>
+
                 <span class="project-badge">v1.1.0</span>
               </div>
+
               <div class="project-meta">
-                <span>PYTHON</span><span>PYSIDE6</span><span>DESKTOP</span
-                ><span>FILE SYSTEM</span>
+                <span>PYTHON</span>
+                <span>PYSIDE6</span>
+                <span>DESKTOP</span>
+                <span>FILE SYSTEM</span>
               </div>
+
               <div class="project-status">
-                <span class="status-dot"></span>ACTIVE
+                <span class="status-dot"></span>
+                ACTIVE
               </div>
             </div>
           </a>
@@ -84,97 +108,140 @@
     </main>
 
     <style>
-      :root {
-        --olive: #69734a;
-        --tomato: #e0523e;
-        --paper: #f3edda;
-        --ink: #171813;
-        --muted: #67675d;
-        --line: #25271d;
-      }
+      /* ================================
+         PROJECT PAGE
+      ================================= */
 
       .projects-page {
         min-height: 100vh;
+        padding-top: 150px;
+        padding-bottom: 100px;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 150px 6% 100px;
-        color: var(--ink);
       }
+
+      /* ================================
+         HEADER
+      ================================= */
 
       .projects-header {
         margin-bottom: 55px;
       }
 
       .page-label {
-        display: inline-block;
         margin-bottom: 18px;
-        padding: 7px 10px;
-        color: var(--paper);
-        background: var(--olive);
+        color: #555;
         font-family: monospace;
         font-size: 0.7rem;
         letter-spacing: 2px;
       }
 
       .projects-header h1 {
-        margin: 0 0 22px;
-        font-size: clamp(4rem, 10vw, 8rem);
-        line-height: 0.86;
-        letter-spacing: -6px;
-        font-weight: 700;
+        font-size: clamp(3.5rem, 8vw, 6rem);
+        line-height: 0.95;
+        letter-spacing: -4px;
+        font-weight: 600;
+        margin-bottom: 22px;
       }
 
       .projects-header p {
-        max-width: 620px;
-        margin: 0;
-        color: var(--muted);
-        font-size: 1rem;
-        line-height: 1.7;
+        max-width: 600px;
+        color: var(--secondary-text);
+        font-size: 0.95rem;
+        line-height: 1.8;
       }
+
+      /* ================================
+         PROJECT LIST
+      ================================= */
 
       .project-list {
         display: flex;
         flex-direction: column;
-        gap: 18px;
+        gap: 14px;
       }
+
+      /* ================================
+         PROJECT CARD
+      ================================= */
 
       .project {
         position: relative;
+
         display: grid;
-        grid-template-columns: 70px 1fr;
-        gap: 25px;
-        padding: 30px;
-        color: var(--ink);
+        grid-template-columns: 55px 1fr;
+        gap: 20px;
+
+        padding: 25px;
+
+        color: var(--text-color);
         text-decoration: none;
-        background: var(--paper);
-        border: 2px solid var(--line);
-        border-radius: 0;
+
+        background: var(--surface);
+
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius);
+
         overflow: hidden;
+
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+
         transition:
-          transform 0.2s ease,
-          background 0.2s ease;
+          transform 0.25s ease,
+          border-color 0.25s ease,
+          background 0.25s ease,
+          box-shadow 0.25s ease;
       }
 
-      .project:nth-child(1) {
-        transform: rotate(-0.35deg);
-      }
-      .project:nth-child(2) {
-        transform: rotate(0.35deg);
+      .project::before {
+        content: "";
+
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: 2px;
+        height: 100%;
+
+        background: #777;
+
+        opacity: 0;
+
+        transition: opacity 0.25s ease;
       }
 
       .project:hover {
-        transform: translateX(8px) rotate(0);
-        background: #e9dfc4;
+        transform: translateX(4px);
+
+        border-color: var(--border-hover);
+
+        background: rgba(25, 25, 25, 0.85);
+
+        box-shadow:
+          0 15px 40px rgba(0, 0, 0, 0.35),
+          inset 0 1px 0 rgba(255, 255, 255, 0.035);
       }
 
-      .project-number {
-        color: var(--tomato);
-        font-family: monospace;
-        font-size: 0.85rem;
-        font-weight: 700;
-        letter-spacing: 1px;
-        padding-top: 4px;
+      .project:hover::before {
+        opacity: 1;
       }
+
+      /* ================================
+         PROJECT NUMBER
+      ================================= */
+
+      .project-number {
+        color: #454545;
+        font-family: monospace;
+        font-size: 0.75rem;
+        padding-top: 5px;
+        letter-spacing: 1px;
+      }
+
+      /* ================================
+         PROJECT CONTENT
+      ================================= */
 
       .project-content {
         min-width: 0;
@@ -187,110 +254,183 @@
         gap: 20px;
       }
 
-      .project-title {
-        margin: 0 0 10px;
-        font-size: 1.7rem;
-        font-weight: 700;
-        letter-spacing: -0.8px;
-      }
+      /* ================================
+         TITLE
+      ================================= */
 
-      .project-desc {
-        max-width: 760px;
-        margin: 0;
-        color: var(--muted);
-        font-size: 0.92rem;
-        line-height: 1.7;
+      .project-title {
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin: 0 0 8px;
+        letter-spacing: -0.3px;
       }
 
       .project-arrow {
-        color: var(--tomato);
-        font-size: 1.5rem;
-        font-weight: 700;
-        transition: transform 0.2s ease;
+        color: #555;
+
+        font-size: 1.1rem;
+
+        opacity: 0;
+
+        transform: translate(-5px, 5px);
+
+        transition:
+          opacity 0.25s ease,
+          transform 0.25s ease;
       }
 
       .project:hover .project-arrow {
-        transform: translate(4px, -4px);
+        opacity: 1;
+        transform: translate(0, 0);
+        color: var(--text-color);
       }
+
+      /* ================================
+         DESCRIPTION
+      ================================= */
+
+      .project-desc {
+        max-width: 750px;
+        color: var(--secondary-text);
+        font-size: 0.88rem;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      /* ================================
+         BADGE
+      ================================= */
 
       .project-badge {
         flex-shrink: 0;
-        padding: 6px 9px;
-        color: var(--paper);
-        background: var(--tomato);
+
+        color: #999;
+
         font-family: monospace;
         font-size: 0.65rem;
-        font-weight: 700;
+
+        padding: 5px 8px;
+
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+
+        background: rgba(255, 255, 255, 0.025);
       }
+
+      /* ================================
+         PROJECT META
+      ================================= */
 
       .project-meta {
         display: flex;
         flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 22px;
+        gap: 7px;
+        margin-top: 20px;
       }
 
       .project-meta span {
-        padding: 6px 9px;
-        color: var(--paper);
-        background: var(--olive);
+        color: #666;
+
         font-family: monospace;
-        font-size: 0.62rem;
-        font-weight: 700;
+        font-size: 0.6rem;
+
         letter-spacing: 0.7px;
+
+        padding: 5px 7px;
+
+        border: 1px solid #252525;
+        border-radius: 4px;
+
+        background: rgba(255, 255, 255, 0.015);
       }
+
+      /* ================================
+         STATUS
+      ================================= */
 
       .project-status {
         display: flex;
         align-items: center;
-        gap: 8px;
-        margin-top: 18px;
-        color: var(--muted);
+        gap: 7px;
+
+        margin-top: 17px;
+
+        color: #555;
+
         font-family: monospace;
         font-size: 0.62rem;
-        font-weight: 700;
         letter-spacing: 1px;
       }
 
       .status-dot {
-        width: 7px;
-        height: 7px;
-        background: var(--tomato);
-        display: inline-block;
+        width: 5px;
+        height: 5px;
+
+        border-radius: 50%;
+
+        background: #777;
+
+        box-shadow: 0 0 7px rgba(255, 255, 255, 0.3);
       }
+
+      /* ================================
+         MOBILE
+      ================================= */
 
       @media (max-width: 768px) {
         .projects-page {
-          padding: 130px 6% 80px;
+          padding-top: 130px;
+          padding-left: 6%;
+          padding-right: 6%;
         }
+
+        .projects-header {
+          margin-bottom: 40px;
+        }
+
         .projects-header h1 {
-          font-size: 4.5rem;
-          letter-spacing: -4px;
+          font-size: 3.5rem;
+          letter-spacing: -2px;
         }
+
         .project {
-          grid-template-columns: 40px 1fr;
-          gap: 14px;
-          padding: 22px;
+          grid-template-columns: 35px 1fr;
+          gap: 12px;
+          padding: 20px;
         }
+
+        .project-header {
+          gap: 10px;
+        }
+
         .project-title {
-          font-size: 1.3rem;
+          font-size: 1.05rem;
+        }
+
+        .project-desc {
+          font-size: 0.82rem;
+        }
+
+        .project-badge {
+          font-size: 0.58rem;
         }
       }
 
       @media (max-width: 480px) {
         .projects-header h1 {
-          font-size: 3.4rem;
+          font-size: 2.8rem;
         }
+
         .project {
           grid-template-columns: 1fr;
-          gap: 8px;
+          gap: 5px;
         }
+
         .project-number {
           padding: 0;
+          margin-bottom: 8px;
         }
-        .project-header {
-          gap: 10px;
-        }
+
         .project-arrow {
           display: none;
         }
