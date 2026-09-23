@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f6f2" />
+    <meta name="description" content="Explore projects by Pavan Badiger across assistive technology, desktop software, and web development." />
+    <script>
+      try {
+        if (localStorage.getItem("pavan-portfolio-theme") === "dark") {
+          document.documentElement.dataset.theme = "dark";
+        }
+      } catch {}
+    </script>
+    <title>Projects — Pavan Badiger</title>
+    <link rel="icon" href="assets/pavan.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile-nav.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="projects.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="wordmark" href="index.html" aria-label="Pavan Badiger home"><span class="wordmark-icon">P</span><span>PAVAN BADIGER</span></a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="projects.html" aria-current="page">Projects</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" title="Switch to dark theme"><span class="theme-icon" aria-hidden="true">☾</span></button>
+      </header>
+
+      <main id="top" class="projects-page">
+        <section class="projects-intro section-wrap">
+          <div>
+            <p class="eyebrow reveal"><span class="eyebrow-line"></span> SELECTED PROJECTS · 01—03</p>
+            <h1 class="reveal delay-1">Built to make<br /><span>ideas useful.</span></h1>
+          </div>
+          <p class="projects-summary reveal delay-2">A mix of assistive technology, desktop software, and web development. Each project is a chance to learn by building something practical.</p>
+        </section>
+
+        <section class="work section-wrap" aria-label="Project list">
+          <div class="project-grid">
+            <article class="project-card project-ghost reveal">
+              <a class="project-image" href="https://github.com/Pavn31/GhostFiles" target="_blank" rel="noreferrer" aria-label="View Ghost Files on GitHub"><img src="assets/ghost-files.png" alt="Ghost Files desktop app dashboard" /><span class="image-index">01 / DESKTOP TOOL</span><span class="image-arrow">↗</span></a>
+              <div class="project-info"><div><p class="project-type">PYTHON · PYSIDE6 · DESKTOP</p><h2>Ghost Files</h2><p class="project-description">A cross-platform file analysis tool for finding duplicates, reclaiming storage, and cleaning up with confidence. Includes scan history, storage analytics, and safe trash-based cleanup.</p></div><a class="circle-link" href="https://github.com/Pavn31/GhostFiles" target="_blank" rel="noreferrer" aria-label="Open Ghost Files repository">↗</a></div>
+            </article>
+            <article class="project-card project-stick reveal delay-1">
+              <a class="project-image hardware-art" href="https://github.com/Pavn31/Smart-Blind-Stick" target="_blank" rel="noreferrer" aria-label="View Smart Blind Stick on GitHub">
+                <span class="image-index">02 / ASSISTIVE TECHNOLOGY</span>
+                <span class="sensor-wave wave-a"></span><span class="sensor-wave wave-b"></span>
+                <span class="hardware-device"><span class="device-screen"><span class="device-dot"></span><span class="device-line"></span><span class="device-line short"></span><span class="device-readout">42<span>cm</span></span></span><span class="device-caption">DISTANCE SENSOR</span></span>
+                <span class="hardware-caption"><span class="live-dot"></span> OBSTACLE DETECTED <b>42 CM</b></span>
+                <span class="image-arrow">↗</span>
+              </a>
+              <div class="project-info"><div><p class="project-type">ARDUINO · SENSORS · IOT</p><h2>Smart Blind Stick</h2><p class="project-description">An Arduino-based assistive navigation project using ultrasonic sensing and real-time sound or vibration alerts to help users detect nearby obstacles.</p></div><a class="circle-link" href="https://github.com/Pavn31/Smart-Blind-Stick" target="_blank" rel="noreferrer" aria-label="Open Smart Blind Stick repository">↗</a></div>
+            </article>
+            <article class="project-card project-portfolio reveal">
+              <a class="project-image portfolio-art" href="https://github.com/Pavn31/Portfolio" target="_blank" rel="noreferrer" aria-label="View first portfolio repository"><img src="assets/portfolio-preview.png" alt="Preview of Pavan's first personal portfolio" /><span class="image-index">03 / PERSONAL WEBSITE</span><span class="image-arrow">↗</span></a>
+              <div class="project-info"><div><p class="project-type">HTML · CSS · JAVASCRIPT</p><h2>Portfolio, version 01</h2><p class="project-description">My first personal website, built to share projects, skills, and progress as I learn and grow as a developer.</p></div><a class="circle-link" href="https://github.com/Pavn31/Portfolio" target="_blank" rel="noreferrer" aria-label="Open portfolio repository">↗</a></div>
+            </article>
+          </div>
+          <div class="all-work reveal"><span>Follow along as I keep learning and building.</span><a href="https://github.com/Pavn31?tab=repositories" target="_blank" rel="noreferrer">GitHub repositories <span>↗</span></a></div>
+        </section>
+      </main>
+
+      <footer class="footer"><a class="wordmark" href="index.html"><span class="wordmark-icon">P</span><span>PAVAN BADIGER</span></a><span>DESIGNED WITH CURIOSITY · © <span id="year"></span></span><a href="#top" class="back-top" aria-label="Back to top">↑</a></footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

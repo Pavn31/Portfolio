@@ -1,0 +1,109 @@
+:root {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #151815;
+  --ink: #eef1e9;
+  --muted: #a0aaa0;
+  --line: #353b35;
+  --blue: #a0adff;
+  --orange: #ff9c7e;
+}
+
+:root[data-theme="dark"] body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+:root[data-theme="dark"] .topbar {
+  background: rgba(21, 24, 21, 0.92);
+}
+
+:root[data-theme="dark"] .wordmark-icon {
+  background: #e9eee4;
+  color: #151815;
+}
+
+:root[data-theme="dark"] .nav-links a,
+:root[data-theme="dark"] .eyebrow,
+:root[data-theme="dark"] .hero-intro,
+:root[data-theme="dark"] .hero-meta,
+:root[data-theme="dark"] .section-note,
+:root[data-theme="dark"] .project-type,
+:root[data-theme="dark"] .project-description,
+:root[data-theme="dark"] .all-work,
+:root[data-theme="dark"] .about-copy p,
+:root[data-theme="dark"] .contact-bottom p,
+:root[data-theme="dark"] .footer > span,
+:root[data-theme="dark"] .scroll-cue {
+  color: #a0aaa0;
+}
+
+:root[data-theme="dark"] .hero-meta strong,
+:root[data-theme="dark"] .all-work a,
+:root[data-theme="dark"] .project-info h3 {
+  color: var(--ink);
+}
+
+:root[data-theme="dark"] .button-dark {
+  background: #e9eee4;
+  color: #151815;
+}
+
+:root[data-theme="dark"] .about {
+  background: #202520;
+}
+
+:root[data-theme="dark"] .about-copy .about-lead {
+  color: var(--ink);
+}
+
+:root[data-theme="dark"] .skill-list span,
+:root[data-theme="dark"] .circle-link,
+:root[data-theme="dark"] .contact-mark,
+:root[data-theme="dark"] .back-top {
+  border-color: #485048;
+}
+
+:root[data-theme="dark"] .contact-email {
+  border-color: #596259;
+}
+
+.theme-toggle {
+  justify-self: end;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.theme-toggle:hover {
+  background: var(--lime);
+  border-color: var(--lime);
+  transform: rotate(-12deg);
+}
+
+.theme-icon {
+  font-size: 19px;
+  line-height: 1;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle {
+    transition: none;
+  }
+}
