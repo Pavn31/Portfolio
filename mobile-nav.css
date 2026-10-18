@@ -1,0 +1,23 @@
+@media (max-width: 650px) {
+  .topbar {
+    height: auto;
+    min-height: 94px;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 48px 30px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .nav-links {
+    display: flex;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: flex-start;
+    align-self: start;
+    gap: 25px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+}
