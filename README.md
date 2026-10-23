@@ -11,6 +11,8 @@
   <a href="mailto:pavanbadiger@gmail.com"><img src="https://img.shields.io/badge/EMAIL-CONTACT-11152d?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
+Live portfolio: [https://pavn31.dpdns.org/](https://pavn31.dpdns.org/)
+
 <p align="center">
   <img src="assets/Profile.jpeg" alt="Pavan Badiger" width="210" />
 </p>
