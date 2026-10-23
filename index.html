@@ -7,7 +7,7 @@
       name="description"
       content="Pavan Badiger is an AI & Data Science student building thoughtful software, useful tools, and connected experiences."
     />
-    <meta name="theme-color" content="#0a0708" />
+    <meta name="theme-color" content="#05060b" />
     <title>Portfolio | Pavan Badiger</title>
 
     <!-- Favicon -->
@@ -26,20 +26,15 @@
   <body>
     <div class="grain"></div>
     <div class="scanlines"></div>
-    <div class="cursor-glow"></div>
-
-    <header class="topbar">
-      <a class="brand" href="#top">PB<span>—</span>31</a>
-      <div class="status"><i></i> AI &amp; DATA SCIENCE · BELAGAVI, INDIA</div>
-
-      <button class="menu-toggle" aria-expanded="false">INDEX ＋</button>
-
-      <nav id="site-nav">
-        <a href="#projects">PROJECTS</a>
-        <a href="#about">ABOUT</a>
-        <a href="#contact">CONTACT</a>
-      </nav>
-    </header>
+    <div class="spacecraft" aria-hidden="true">
+      <span class="ship-window"></span>
+      <span class="ship-wing ship-wing-left"></span>
+      <span class="ship-wing ship-wing-right"></span>
+      <span class="ship-flame"></span>
+    </div>
+    <a class="brand brand-mark floating-logo" href="#top" aria-label="Back to top">
+      <span class="star-logo" aria-hidden="true">✦</span>
+    </a>
 
     <main id="top">
       <section class="hero section">
@@ -52,7 +47,7 @@
           <div class="hero-copy">
             <p class="eyebrow">AI &amp; DATA SCIENCE · BELAGAVI, INDIA</p>
 
-            <h1>hmmmmmmmm<br /><em>Jst Build</em></h1>
+            <h1>Hmmmm<br /><em>Jst Build Gng!!</em></h1>
 
             <p class="description">
               I'm Pavan, a student and developer drawn to the space between
@@ -62,7 +57,7 @@
 
             <div class="hero-actions">
               <a class="button" href="#projects"
-                >SEE MY PROJECTS <span>↗</span></a
+                >SEE MA WORKS <span>↗</span></a
               >
               <a class="button ghost" href="mailto:pavanbadiger@gmail.com"
                 >LET'S TALK <span>↗</span></a
@@ -73,9 +68,26 @@
               Currently studying at
               <strong>Angadi Institute of Technology &amp; Management</strong>
             </p>
+
+            <div class="hero-metrics" aria-label="Portfolio highlights">
+              <div><strong>03</strong><span>CORE DOMAINS</span></div>
+              <div><strong>∞</strong><span>IDEAS IN MOTION</span></div>
+              <div><strong>01</strong><span>INTENTION</span></div>
+            </div>
           </div>
 
           <div class="hero-art">
+            <div class="orbital-stage" aria-hidden="true">
+              <span class="orbital-ring ring-a"></span>
+              <span class="orbital-ring ring-b"></span>
+              <span class="orbital-ring ring-c"></span>
+              <span class="orbital-core"></span>
+              <span class="orbital-dot dot-a"></span>
+              <span class="orbital-dot dot-b"></span>
+            </div>
+            <div class="floating-note note-top" aria-hidden="true">
+              <small>BUILD STATUS</small><strong><i></i> IN PROGRESS</strong>
+            </div>
             <div class="art-frame">
               <img
                 src="assets/Profile.jpeg"
@@ -85,6 +97,9 @@
               <div class="art-label">FIG. 01 — PAVAN BADIGER</div>
               <div class="stamp">IDEAS<br />INTO<br />INTERFACES</div>
               <div class="crosshair"></div>
+            </div>
+            <div class="floating-note note-bottom" aria-hidden="true">
+              <small>STACK / 2026</small><strong>AI · WEB · IOT ↗</strong>
             </div>
           </div>
         </div>
@@ -162,28 +177,31 @@
 
       <section id="about" class="manifesto">
         <div class="section manifesto-inner">
-          <p class="eyebrow">02 / A LITTLE ABOUT ME</p>
+          <div class="section-heading manifesto-heading">
+            <div>
+              <p class="eyebrow">02 / A LITTLE ABOUT ME</p>
+              <h2>TECHNOLOGY WITH <em>REAL-WORLD PURPOSE.</em></h2>
+            </div>
+            <p class="side-note">HOW I THINK<br />HOW I BUILD.</p>
+          </div>
 
-          <h2>TECHNOLOGY WITH <em>REAL-WORLD PURPOSE.</em></h2>
-
-          <div class="manifesto-bottom">
+          <div class="manifesto-bottom about-card">
+            <div class="about-card-meta"><span>PROFILE NOTE</span><span>PB / 2026</span></div>
             <span class="asterisk">✳</span>
             <div>
               <p>
-                I'm an Artificial Intelligence &amp; Data Science student at
-                Angadi Institute of Technology and Management in Belagavi. I'm
-                interested in building technology that makes a practical
-                difference.
+                I’m Pavan — an Artificial Intelligence &amp; Data Science
+                student who likes turning strange questions into useful,
+                working things.
               </p>
               <p>
-                I enjoy exploring the space where software, artificial
-                intelligence, and embedded systems meet. My projects have taken
-                me from an Arduino-based assistive navigation system to desktop
-                software and web development.
+                My work lives where software, intelligent systems, and the
+                physical world overlap. I’m most interested in ideas that can
+                move beyond a screen and make everyday life a little better.
               </p>
               <p>
-                I want to keep building applications that bring AI, modern web
-                technologies, and IoT together to solve real-world challenges.
+                I learn by building: prototyping quickly, understanding the
+                details, and refining the rough edges until an idea feels real.
               </p>
             </div>
           </div>
@@ -210,16 +228,16 @@
 
         <div class="contact-links">
           <a class="button" href="mailto:pavanbadiger@gmail.com"
-            >pavanbadiger@gmail.com <span>↗</span></a
+            ><svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5h18v11H3z"/><path d="m3 7 9 6 9-6"/></svg><span>pavanbadiger@gmail.com</span><span>↗</span></a
           >
           <a href="https://github.com/Pavn31" target="_blank" rel="noopener"
-            >GitHub ↗</a
+            ><svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 .9-4-2-5.5-2.5M14.5 21v-3.4c0-1 .1-1.8-.5-2.6 2.9-.3 6-1.4 6-6.2a4.8 4.8 0 0 0-1.3-3.3 4.5 4.5 0 0 0-.1-3.3s-1-.3-3.4 1.3a11.7 11.7 0 0 0-6.2 0C6.6 1.9 5.6 2.2 5.6 2.2a4.5 4.5 0 0 0-.1 3.3 4.8 4.8 0 0 0-1.3 3.3c0 4.8 3.1 5.9 6 6.2-.6.5-.6 1.1-.6 2v3"/></svg><span>GitHub</span><span>↗</span></a
           >
           <a
             href="https://www.linkedin.com/in/pavn-badiger/"
             target="_blank"
             rel="noopener"
-            >LinkedIn ↗</a
+            ><svg class="contact-icon contact-icon-fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.2H2.3V21h2.9V8.2ZM3.7 3A1.7 1.7 0 1 0 3.7 6.4 1.7 1.7 0 0 0 3.7 3ZM21.7 13.7c0-3.9-2-5.7-4.7-5.7-2.2 0-3.2 1.2-3.8 2v-1.8H10.3V21h2.9v-6.3c0-1.7.3-3.4 2.5-3.4 2.1 0 2.1 2 2.1 3.5V21h2.9v-7.3Z"/></svg><span>LinkedIn</span><span>↗</span></a
           >
           <p class="location">BASED IN BELAGAVI, INDIA</p>
         </div>
@@ -229,9 +247,7 @@
     <footer class="section footer">
       <a class="brand" href="#top">PB<span>—</span>31</a>
       <span>DESIGNED WITH CURIOSITY · © 2026</span>
-      <button id="panic" aria-label="Back to top">TOP ↑</button>
+      <button id="panic" type="button" aria-label="Back to top"><span>TOP</span><b aria-hidden="true">↑</b></button>
     </footer>
-
-    <div class="panic-overlay" id="panic-overlay"></div>
   </body>
 </html>
