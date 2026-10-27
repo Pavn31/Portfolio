@@ -31,3 +31,20 @@ if (reducedMotion) {
 
   reveals.forEach((element) => observer.observe(element));
 }
+
+document.querySelectorAll(".project-card[data-repo]").forEach((card) => {
+  const openRepository = () => {
+    window.open(card.dataset.repo, "_blank", "noopener,noreferrer");
+  };
+
+  card.addEventListener("click", (event) => {
+    if (event.target.closest("a")) return;
+    openRepository();
+  });
+
+  card.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    openRepository();
+  });
+});

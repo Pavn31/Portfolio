@@ -301,6 +301,8 @@ h2 {
   border-left: var(--line);
 }
 .project-card {
+  cursor: pointer;
+
   min-height: 580px;
   display: flex;
   flex-direction: column;
