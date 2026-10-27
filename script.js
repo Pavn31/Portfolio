@@ -1,41 +1,33 @@
-const heroArt = document.querySelector(".hero-art");
+const reducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
+const progress = document.querySelector("#progress");
 
-// CURSOR LIGHT
+const updateProgress = () => {
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.width = `${scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0}%`;
+};
 
-window.addEventListener("pointermove", event => {
-  if (window.matchMedia("(pointer: fine)").matches) {
-    if (heroArt && heroArt.matches(":hover")) {
-      const bounds = heroArt.getBoundingClientRect();
-      const x = (event.clientX - bounds.left) / bounds.width - 0.5;
-      const y = (event.clientY - bounds.top) / bounds.height - 0.5;
-      heroArt.style.setProperty("--tilt-x", `${y * -7}deg`);
-      heroArt.style.setProperty("--tilt-y", `${x * 9}deg`);
-    }
-  }
-});
+window.addEventListener("scroll", updateProgress, { passive: true });
+updateProgress();
 
-heroArt?.addEventListener("pointerleave", () => {
-  heroArt.style.setProperty("--tilt-x", "0deg");
-  heroArt.style.setProperty("--tilt-y", "0deg");
-});
+const reveals = document.querySelectorAll(".reveal");
+if (reducedMotion) {
+  reveals.forEach((element) => element.classList.add("is-visible"));
+} else {
+  const observer = new IntersectionObserver(
+    (entries, currentObserver) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const siblings = [...entry.target.parentElement.children];
+        const index = siblings.indexOf(entry.target);
+        entry.target.style.transitionDelay = `${Math.min(index * 70, 280)}ms`;
+        entry.target.classList.add("is-visible");
+        currentObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.14 },
+  );
 
-// Small interactive depth cues on the page's major surfaces.
-if (window.matchMedia("(pointer: fine)").matches) {
-  document.querySelectorAll(".card").forEach(panel => {
-    panel.addEventListener("pointermove", event => {
-      const bounds = panel.getBoundingClientRect();
-      const x = (event.clientX - bounds.left) / bounds.width - 0.5;
-      const y = (event.clientY - bounds.top) / bounds.height - 0.5;
-      panel.style.transform = `perspective(900px) rotateX(${y * -2.5}deg) rotateY(${x * 3}deg) translateZ(8px)`;
-    });
-    panel.addEventListener("pointerleave", () => {
-      panel.style.transform = "";
-    });
-  });
+  reveals.forEach((element) => observer.observe(element));
 }
-
-// BACK TO TOP
-
-document.querySelector("#panic").addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});

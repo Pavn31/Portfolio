@@ -7,247 +7,286 @@
       name="description"
       content="Pavan Badiger is an AI & Data Science student building thoughtful software, useful tools, and connected experiences."
     />
-    <meta name="theme-color" content="#05060b" />
+    <meta name="theme-color" content="#0D0D0D" />
     <title>Portfolio | Pavan Badiger</title>
-
-    <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="assets/Icon.jpeg" />
     <link rel="apple-touch-icon" href="assets/Icon.jpeg" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Unbounded:wght@400;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="grain"></div>
-    <div class="scanlines"></div>
-    <div class="spacecraft" aria-hidden="true">
-      <span class="ship-window"></span>
-      <span class="ship-wing ship-wing-left"></span>
-      <span class="ship-wing ship-wing-right"></span>
-      <span class="ship-flame"></span>
-    </div>
-    <a class="brand brand-mark floating-logo" href="#top" aria-label="Back to top">
-      <span class="star-logo" aria-hidden="true">✦</span>
-    </a>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Pavan Badiger home"
+        >PB<span>/</span>31</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#projects">Works</a><a href="#about">About</a
+        ><a href="#contact">Contact</a>
+      </nav>
+      <span class="header-index">01—03</span>
+    </header>
 
     <main id="top">
-      <section class="hero section">
-        <div class="meta">
-          <span>PORTFOLIO / PAVAN BADIGER</span>
-          <span>15° 50' N — 74° 30' E · KA / IN</span>
+      <section class="hero page-grid" aria-labelledby="hero-title">
+        <div class="hero-meta mono">
+          <span>PORTFOLIO / PAVAN BADIGER</span
+          ><span>15° 50' N — 74° 30' E</span>
         </div>
-
-        <div class="hero-layout">
-          <div class="hero-copy">
-            <p class="eyebrow">AI &amp; DATA SCIENCE · BELAGAVI, INDIA</p>
-
-            <h1>Hmmmm<br /><em>Jst Build Gng!!</em></h1>
-
-            <p class="description">
-              I'm Pavan, a student and developer drawn to the space between
-              intelligent software and the real world. I turn curious ideas into
-              useful things.
-            </p>
-
-            <div class="hero-actions">
-              <a class="button" href="#projects"
-                >SEE MA WORKS <span>↗</span></a
-              >
-              <a class="button ghost" href="mailto:pavanbadiger@gmail.com"
-                >LET'S TALK <span>↗</span></a
-              >
-            </div>
-
-            <p class="studying">
-              Currently studying at
-              <strong>Angadi Institute of Technology &amp; Management</strong>
-            </p>
-
-            <div class="hero-metrics" aria-label="Portfolio highlights">
-              <div><strong>03</strong><span>CORE DOMAINS</span></div>
-              <div><strong>∞</strong><span>IDEAS IN MOTION</span></div>
-              <div><strong>01</strong><span>INTENTION</span></div>
-            </div>
+        <div class="hero-copy">
+          <p class="kicker reveal hero-line">AI &amp; DATA SCIENCE STUDENT</p>
+          <h1 id="hero-title">
+            <span class="mask"><span class="reveal hero-line">Hmmmm</span></span
+            ><span class="mask accent-line"
+              ><span class="reveal hero-line">Jst Build Gng!!</span></span
+            >
+          </h1>
+          <p class="hero-intro reveal">
+            I turn curious ideas into useful things — building software where
+            intelligence meets the physical world.
+          </p>
+          <div class="hero-actions reveal">
+            <a class="button button-solid" href="#projects"
+              >See my works <span>↗</span></a
+            ><a
+              class="button button-outline"
+              href="mailto:pavanbadiger@gmail.com"
+              >Let's talk <span>↗</span></a
+            >
           </div>
-
-          <div class="hero-art">
-            <div class="orbital-stage" aria-hidden="true">
-              <span class="orbital-ring ring-a"></span>
-              <span class="orbital-ring ring-b"></span>
-              <span class="orbital-ring ring-c"></span>
-              <span class="orbital-core"></span>
-              <span class="orbital-dot dot-a"></span>
-              <span class="orbital-dot dot-b"></span>
-            </div>
-            <div class="floating-note note-top" aria-hidden="true">
-              <small>BUILD STATUS</small><strong><i></i> IN PROGRESS</strong>
-            </div>
-            <div class="art-frame">
+          <p class="study-note reveal mono">
+            CURRENTLY STUDYING AT<br /><strong
+              >Angadi Institute of Technology &amp; Management</strong
+            ><br />Belagavi, India
+          </p>
+        </div>
+        <figure class="portrait-block reveal">
+          <div class="portrait-frame">
+            <picture
+              ><source srcset="assets/Profile.webp" type="image/webp" />
               <img
                 src="assets/Profile.jpeg"
-                alt="Pavan Badiger"
-                class="portrait"
-              />
-              <div class="art-label">FIG. 01 — PAVAN BADIGER</div>
-              <div class="stamp">IDEAS<br />INTO<br />INTERFACES</div>
-              <div class="crosshair"></div>
-            </div>
-            <div class="floating-note note-bottom" aria-hidden="true">
-              <small>STACK / 2026</small><strong>AI · WEB · IOT ↗</strong>
-            </div>
+                width="736"
+                height="737"
+                alt="Portrait of Pavan Badiger"
+                fetchpriority="high" /></picture
+            ><span class="portrait-mark mono">PB<br />↘</span>
           </div>
-        </div>
-
-        <div class="hero-footer">
-          <span>BUILDING WITH INTENTION</span>
-          <span>— SCROLL TO EXPLORE —</span>
-          <span>AI · WEB · EMBEDDED · PROBLEM SOLVING</span>
+          <figcaption class="mono">FIG. 01 — PAVAN BADIGER</figcaption>
+        </figure>
+        <div class="hero-footer mono">
+          <span>BUILDING WITH INTENTION</span><span>SCROLL TO EXPLORE ↓</span
+          ><span>AI · WEB · EMBEDDED · IOT</span>
         </div>
       </section>
 
-      <section id="projects" class="section projects">
+      <section
+        class="section page-grid"
+        id="projects"
+        aria-labelledby="projects-title"
+      >
+        <div class="section-number mono">01 / SELECTED WORK</div>
         <div class="section-heading">
-          <div>
-            <p class="eyebrow">01 / SELECTED WORK</p>
-            <h2>THINGS I'VE <em>BUILT</em></h2>
-          </div>
-          <p class="side-note">PROJECTS FROM<br />CLASS AND BEYOND.</p>
+          <h2 id="projects-title">Things I've <em>built.</em></h2>
+          <p class="section-note mono">PROJECTS FROM<br />CLASS AND BEYOND.</p>
         </div>
-
         <div class="cards">
-          <article class="card">
-            <div class="card-meta">
+          <article class="project-card reveal">
+            <div class="card-top mono">
               <span>PRJ. 001</span><span>EMBEDDED</span>
             </div>
-            <div class="signal-visual">
-              <span>ARDUINO</span><span>IoT</span><span>AI</span>
+            <div class="card-signal signal-stick" aria-hidden="true">
+              <span>ULTRASONIC</span><b>→</b><span>GPS / GSM</span>
             </div>
-            <h3>SMART BLIND<br />STICK</h3>
+            <h3>Smart Blind<br />Stick</h3>
             <p>
-              An assistive device for visually impaired users that detects
-              obstacles with an ultrasonic sensor and sends real-time buzzer
-              alerts, with optional GPS and GSM for tracking and emergency SMS.
+              Assistive device for visually impaired users with ultrasonic
+              obstacle detection, buzzer alerts, optional GPS tracking and
+              emergency SMS.
             </p>
-            <div class="tags">
+            <div class="tags mono">
               <span>Arduino</span><span>HC-SR04</span><span>GPS</span
               ><span>GSM</span>
             </div>
             <a
-              class="card-link"
+              class="card-link mono"
               href="https://github.com/Pavn31/Smart-Blind-Stick"
               target="_blank"
               rel="noopener"
               >VIEW ON GITHUB ↗</a
             >
           </article>
-
-          <article class="card">
-            <div class="card-meta">
+          <article class="project-card reveal">
+            <div class="card-top mono">
               <span>PRJ. 002</span><span>DESKTOP</span>
             </div>
-            <div class="signal-visual">
-              <span>PYTHON</span><span>PYSIDE6</span>
+            <div class="card-signal signal-files" aria-hidden="true">
+              <span>SCAN / SORT</span><b>×</b><span>TRASH SAFE</span>
             </div>
-            <h3>GHOST<br />FILES</h3>
+            <h3>Ghost<br />Files</h3>
             <p>
-              A lightweight cross-platform desktop utility that scans folders
-              for ghost files, duplicates, large files, caches and broken
-              symlinks, with a health score and safe trash-based cleanup.
+              Cross-platform utility that finds ghost files, duplicates, large
+              files, caches and broken symlinks, with a health score and safe
+              trash-based cleanup.
             </p>
-            <div class="tags">
-              <span>Python</span><span>PySide6</span><span>Desktop</span
-              ><span>Linux · Windows · macOS</span>
+            <div class="tags mono">
+              <span>Python</span><span>PySide6</span><span>Desktop</span>
             </div>
             <a
-              class="card-link"
+              class="card-link mono"
               href="https://github.com/Pavn31/GhostFiles"
               target="_blank"
               rel="noopener"
               >VIEW ON GITHUB ↗</a
             >
           </article>
+          <article class="project-card reveal">
+            <div class="card-top mono">
+              <span>PRJ. 003</span><span>COMMUNITY / V1.0.0</span>
+            </div>
+            <div class="card-signal signal-phish" aria-hidden="true">
+              <span>URL CHECK</span><b>!</b><span>RISK FOUND</span>
+            </div>
+            <h3>Catch<br />Phish</h3>
+            <p>
+              Community project designed to help users analyze suspicious URLs
+              and identify potential phishing threats.
+            </p>
+            <div class="tags mono">
+              <span>HTML / CSS / JS</span><span>Python</span
+              ><span>FastAPI</span>
+            </div>
+            <div class="contributors">
+              <span class="contributors-label mono">CONTRIBUTORS / TEAM</span>
+              <div class="contributor-links mono">
+                <a
+                  href="https://github.com/Seema-patil24"
+                  target="_blank"
+                  rel="noopener"
+                  >@Seema-patil24 ↗</a
+                ><a
+                  href="https://github.com/Shetty22"
+                  target="_blank"
+                  rel="noopener"
+                  >@Shetty22 ↗</a
+                ><a
+                  href="https://github.com/skk-07"
+                  target="_blank"
+                  rel="noopener"
+                  >@skk-07 ↗</a
+                ><a
+                  href="https://github.com/Pavn31"
+                  target="_blank"
+                  rel="noopener"
+                  >@Pavn31 ↗</a
+                >
+              </div>
+            </div>
+            <a
+              class="card-link mono"
+              href="https://github.com/Pavn31/CatchPhish"
+              target="_blank"
+              rel="noopener"
+              >VIEW PROJECT ON GITHUB ↗</a
+            >
+          </article>
         </div>
       </section>
 
-      <section id="about" class="manifesto">
-        <div class="section manifesto-inner">
-          <div class="section-heading manifesto-heading">
-            <div>
-              <p class="eyebrow">02 / A LITTLE ABOUT ME</p>
-              <h2>TECHNOLOGY WITH <em>REAL-WORLD PURPOSE.</em></h2>
-            </div>
-            <p class="side-note">HOW I THINK<br />HOW I BUILD.</p>
+      <section
+        class="section about-section"
+        id="about"
+        aria-labelledby="about-title"
+      >
+        <div class="page-grid">
+          <div class="section-number mono">02 / ABOUT</div>
+          <div class="section-heading">
+            <h2 id="about-title">
+              Software with<br /><em>physical purpose.</em>
+            </h2>
+            <p class="section-note mono">HOW I THINK<br />HOW I BUILD.</p>
           </div>
-
-          <div class="manifesto-bottom about-card">
-            <div class="about-card-meta"><span>PROFILE NOTE</span><span>PB / 2026</span></div>
-            <span class="asterisk">✳</span>
-            <div>
-              <p>
-                I’m Pavan — an Artificial Intelligence &amp; Data Science
-                student who likes turning strange questions into useful,
-                working things.
-              </p>
-              <p>
-                My work lives where software, intelligent systems, and the
-                physical world overlap. I’m most interested in ideas that can
-                move beyond a screen and make everyday life a little better.
-              </p>
-              <p>
-                I learn by building: prototyping quickly, understanding the
-                details, and refining the rough edges until an idea feels real.
-              </p>
-            </div>
+          <div class="about-copy reveal">
+            <p>
+              I’m an AI &amp; Data Science student who builds software where
+              intelligence meets the physical world.
+            </p>
+            <p>
+              I learn by turning curious ideas into useful things — from
+              embedded systems to desktop tools and web technologies.
+            </p>
           </div>
-
-          <div class="tags skills">
-            <span>AI &amp; Data Science</span>
-            <span>Software Development</span>
-            <span>Embedded Systems</span>
-            <span>Arduino</span>
-            <span>Web Technologies</span>
-            <span>IoT</span>
+          <div class="tags skills reveal">
+            <span>AI &amp; Data Science</span><span>Software Development</span
+            ><span>Embedded Systems</span><span>Arduino</span
+            ><span>Web Technologies</span><span>IoT</span>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="section contact">
-        <div>
-          <p class="eyebrow">03 / HAVE A GOOD IDEA?</p>
-          <h2>LET'S MAKE<br /><em>SOMETHING MATTER.</em></h2>
-          <p class="description">
-            Got an idea, a project, or just want to talk? Send me an email.
-          </p>
+      <section
+        class="section contact-section page-grid"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="section-number mono">03 / CONTACT</div>
+        <div class="contact-copy">
+          <h2 id="contact-title">Let's make<br /><em>something matter.</em></h2>
+          <p>Got an idea, a project, or just want to talk? Send me an email.</p>
         </div>
-
-        <div class="contact-links">
-          <a class="button" href="mailto:pavanbadiger@gmail.com"
-            ><svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5h18v11H3z"/><path d="m3 7 9 6 9-6"/></svg><span>pavanbadiger@gmail.com</span><span>↗</span></a
-          >
-          <a href="https://github.com/Pavn31" target="_blank" rel="noopener"
-            ><svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 .9-4-2-5.5-2.5M14.5 21v-3.4c0-1 .1-1.8-.5-2.6 2.9-.3 6-1.4 6-6.2a4.8 4.8 0 0 0-1.3-3.3 4.5 4.5 0 0 0-.1-3.3s-1-.3-3.4 1.3a11.7 11.7 0 0 0-6.2 0C6.6 1.9 5.6 2.2 5.6 2.2a4.5 4.5 0 0 0-.1 3.3 4.8 4.8 0 0 0-1.3 3.3c0 4.8 3.1 5.9 6 6.2-.6.5-.6 1.1-.6 2v3"/></svg><span>GitHub</span><span>↗</span></a
-          >
+        <div class="contact-links reveal">
           <a
+            href="mailto:pavanbadiger@gmail.com"
+            aria-label="Email Pavan Badiger at pavanbadiger@gmail.com"
+            ><span class="contact-icon contact-icon-mail" aria-hidden="true"
+              ><svg viewBox="0 0 24 24" role="img">
+                <path d="M3 5.5h18v13H3zM3 6l9 7 9-7" /></svg></span
+            ><span
+              ><small class="mono">EMAIL</small
+              ><strong>pavanbadiger@gmail.com</strong></span
+            ><span class="contact-arrow">↗</span></a
+          ><a
+            href="https://github.com/Pavn31"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open Pavan Badiger on GitHub"
+            ><span class="contact-icon contact-icon-github" aria-hidden="true"
+              ><svg viewBox="0 0 24 24" role="img">
+                <path
+                  d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.5-.29-5.13-1.25-5.13-5.55 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.63 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.55.23 2.69.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.31-2.63 5.26-5.14 5.54.4.35.76 1.04.76 2.1v3.1c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"
+                /></svg></span
+            ><span
+              ><small class="mono">GITHUB</small
+              ><strong>github.com/Pavn31</strong></span
+            ><span class="contact-arrow">↗</span></a
+          ><a
             href="https://www.linkedin.com/in/pavn-badiger/"
             target="_blank"
             rel="noopener"
-            ><svg class="contact-icon contact-icon-fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.2H2.3V21h2.9V8.2ZM3.7 3A1.7 1.7 0 1 0 3.7 6.4 1.7 1.7 0 0 0 3.7 3ZM21.7 13.7c0-3.9-2-5.7-4.7-5.7-2.2 0-3.2 1.2-3.8 2v-1.8H10.3V21h2.9v-6.3c0-1.7.3-3.4 2.5-3.4 2.1 0 2.1 2 2.1 3.5V21h2.9v-7.3Z"/></svg><span>LinkedIn</span><span>↗</span></a
+            aria-label="Open Pavan Badiger on LinkedIn"
+            ><span class="contact-icon contact-icon-linkedin" aria-hidden="true"
+              ><svg viewBox="0 0 24 24" role="img">
+                <path
+                  d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V8.71h3.41v1.6h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.54ZM5.34 7.1a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V8.71h3.57v11.74ZM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0Z"
+                /></svg></span
+            ><span
+              ><small class="mono">LINKEDIN</small
+              ><strong>linkedin.com/in/pavn-badiger</strong></span
+            ><span class="contact-arrow">↗</span></a
           >
-          <p class="location">BASED IN BELAGAVI, INDIA</p>
+          <p class="location mono">BASED IN BELAGAVI, INDIA</p>
         </div>
       </section>
     </main>
-
-    <footer class="section footer">
-      <a class="brand" href="#top">PB<span>—</span>31</a>
-      <span>DESIGNED WITH CURIOSITY · © 2026</span>
-      <button id="panic" type="button" aria-label="Back to top"><span>TOP</span><b aria-hidden="true">↑</b></button>
+    <footer class="site-footer mono">
+      <span>PVN-DESIGN / © 2026 PAVAN BADIGER</span
+      ><a href="#top" aria-label="Back to top">BACK TO TOP ↑</a>
     </footer>
   </body>
 </html>
