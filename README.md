@@ -51,7 +51,7 @@ The experience is organized around three questions:
 | Section | Purpose |
 | --- | --- |
 | Hero | Introduction, portrait, location, study status, and primary actions |
-| Selected work | Smart Blind Stick, Ghost Files, and Catch Phish project cards |
+| Selected work | Public GitHub projects presented as project cards |
 | About | Pavan's approach to AI, software, embedded systems, and IoT |
 | Contact | Email, GitHub, LinkedIn, and location links |
 
@@ -74,6 +74,30 @@ A cross-platform desktop utility for finding ghost files, duplicates, large file
 A community project that helps users analyze suspicious URLs and identify potential phishing threats.
 
 **Built with:** HTML, CSS, JavaScript, Python, FastAPI
+
+### PixelVault
+
+A Python project from Pavan's public engineering work.
+
+**Repository:** [Pavn31/PixelVault](https://github.com/Pavn31/PixelVault)
+
+### Prjwl
+
+A CSS-led web project exploring portfolio presentation and responsive interface design.
+
+**Built with:** CSS
+
+### GitTest
+
+A small Python repository for practicing Git workflows and project development.
+
+**Built with:** Python, Git
+
+### Portfolio
+
+A personal developer portfolio for presenting projects, technical work, experiments, and development progress.
+
+**Built with:** HTML, CSS, JavaScript
 
 ## Tech stack
 
