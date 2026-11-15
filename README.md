@@ -81,24 +81,6 @@ A Python project from Pavan's public engineering work.
 
 **Repository:** [Pavn31/PixelVault](https://github.com/Pavn31/PixelVault)
 
-### Prjwl
-
-A CSS-led web project exploring portfolio presentation and responsive interface design.
-
-**Built with:** CSS
-
-### GitTest
-
-A small Python repository for practicing Git workflows and project development.
-
-**Built with:** Python, Git
-
-### Portfolio
-
-A personal developer portfolio for presenting projects, technical work, experiments, and development progress.
-
-**Built with:** HTML, CSS, JavaScript
-
 ## Tech stack
 
 | Layer | Tools |
